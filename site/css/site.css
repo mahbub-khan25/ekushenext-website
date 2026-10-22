@@ -139,12 +139,11 @@ html[lang="en"] .section-lede { font-size: var(--s1); max-width: 54ch; }
 .stage-roman { height: 1.6em; font: 500 var(--s2)/1.6 var(--f-body); color: var(--mint); letter-spacing: .01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .stage-roman:empty::before, .stage.live .stage-roman span:empty::before { content: attr(data-placeholder); color: var(--faint); }
 .stage-text {
-  margin: 0; min-height: 1.15em;
-  font: 680 clamp(2.6rem, 8.4vw, 7.25rem)/1.15 var(--f-display);
+  margin: 0; min-height: 2.3em; /* room for two lines, so the hero never jumps or resizes */
+  font: 680 clamp(2.4rem, 6.6vw, 5.75rem)/1.15 var(--f-display);
   font-stretch: 88%; letter-spacing: -0.01em;
   overflow-wrap: anywhere; text-wrap: balance;
 }
-.stage-text.long { font-size: clamp(2rem, 5.4vw, 4.5rem); }
 .preedit { text-decoration: underline 3px var(--mint); text-underline-offset: .14em; text-decoration-skip-ink: none; }
 .caret { display: inline-block; width: .06em; min-width: 3px; height: .9em; margin-left: .04em; vertical-align: -.05em; background: var(--mint-hi); border-radius: 2px; animation: blink 1.05s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
@@ -371,6 +370,7 @@ code { font: 500 .86em/1.4 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; 
   .hero-kicker { font-size: var(--s-1); margin-bottom: 18px; }
   .stage { margin: 0 -12px; padding: 10px 12px 16px; }
   .stage-roman { font-size: var(--s0); }
+  .stage-text { min-height: 3.45em; }
   .hero-lede { font-size: var(--s1); }
   .hero-actions .btn { width: 100%; }
   .section-lede { font-size: var(--s1); }

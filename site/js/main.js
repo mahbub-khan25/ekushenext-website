@@ -69,7 +69,6 @@ function render() {
   preeditEl.textContent = roman ? (cands[sel]?.text ?? '') : '';
   romanLine.textContent = roman || (live && !committed ? '' : romanLine.dataset.keep || '');
   romanLine.dataset.placeholder = live && !committed && !roman ? t('hero.placeholder') : '';
-  stageText.classList.toggle('long', (committed + preeditEl.textContent).length > 26);
   if (roman && cands.length) {
     popupRoman.textContent = roman;
     popupCands.innerHTML = candList(cands, sel, 6);
