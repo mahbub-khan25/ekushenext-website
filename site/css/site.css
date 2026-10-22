@@ -285,6 +285,8 @@ html[lang="en"] .studio-tabs button { font-family: var(--f-body); }
 .ekushe-copy p { color: var(--muted); max-width: 46ch; text-wrap: pretty; }
 .ekushe-names { display: flex; flex-wrap: wrap; gap: 6px 0; margin-top: 30px; color: var(--ink) !important; font: 600 var(--s3)/1.3 var(--f-display); font-stretch: 92%; }
 .ekushe-names span:not(:last-child)::after { content: ''; display: inline-block; width: 6px; height: 6px; margin: 0 14px; border-radius: 50%; background: var(--sun); vertical-align: .3em; }
+.ekushe-next { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--rim); }
+.ekushe-next .h3 { font-size: var(--s2); }
 .petals { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .75; }
 .petal { position: absolute; top: -40px; border-radius: 70% 10% 70% 10%; background: var(--sun); opacity: .7; animation: fall linear infinite; }
 @keyframes fall { to { transform: translate3d(var(--dx, 40px), 115vh, 0) rotate(var(--rot, 540deg)); } }
