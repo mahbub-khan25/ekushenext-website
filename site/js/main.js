@@ -297,12 +297,12 @@ const REPO = 'mahbub-khan25/ekushenext';
 const COMING_SOON = true;
 // Used when GitHub's API can't be reached; updated with each release.
 const FALLBACK = {
-  tag_name: 'v0.1.0-beta.7', published_at: '2026-10-22T00:10:00Z', html_url: `https://github.com/${REPO}/releases/tag/v0.1.0-beta.7`,
+  tag_name: 'v0.1.0-beta.8', published_at: '2026-10-22T20:50:13Z', html_url: `https://github.com/${REPO}/releases/tag/v0.1.0-beta.8`,
   assets: [
-    ['Ekushe-Setup.exe', 18090800], ['Ekushe-Setup.zip', 15991201], ['Ekushe-Portable.exe', 18090800],
-    ['Ekushe-macOS.pkg', 33922797], ['Ekushe-macOS.zip', 33921051],
-    ['ekushe_0.1.0-beta.7_amd64.deb', 31132186], ['ekushe-0.1.0-beta.7.x86_64.rpm', 31376730], ['Ekushe-0.1.0-beta.7-x86_64.AppImage', 31447544],
-  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.1.0-beta.7/${name}` })),
+    ['Ekushe-Setup.exe', 18127664], ['Ekushe-Setup.zip', 16003100], ['Ekushe-Portable.exe', 18127664],
+    ['Ekushe-macOS.pkg', 33954170], ['Ekushe-macOS.zip', 33952935],
+    ['ekushe_0.1.0-beta.8_amd64.deb', 31159912], ['ekushe-0.1.0-beta.8.x86_64.rpm', 31382413], ['Ekushe-0.1.0-beta.8-x86_64.AppImage', 31472120],
+  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.1.0-beta.8/${name}` })),
 };
 const FILES = {
   windows: [[/^Ekushe-Setup\.exe$/, 'winSetup', 'windows'], [/^Ekushe-Setup\.zip$/, 'winZip', 'windows'], [/^Ekushe-Portable\.exe$/, 'winPortable', 'windows']],
