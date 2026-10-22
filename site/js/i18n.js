@@ -119,8 +119,6 @@ export const EN = {
   'faq.title': 'Common questions',
   'faq.1.q': 'Is Ekushe Next really free?',
   'faq.1.a': 'Yes. No hidden costs, ads or premium version. The code is open under MPL-2.0 and the dictionary under CC BY-SA 4.0.',
-  'faq.name.q': 'Why is there an English word in the name?',
-  'faq.name.a': 'Ekushe comes from 21 February 1952, and Next stands for the next generation and the next step in typing Bangla. Together they make a Banglish name, the way we type Bangla in English letters and Ekushe turns it into correct Bangla. The fight on 21 February was for the right to our own language, not against any other language.',
   'faq.2.q': 'I use Avro. Do I need to learn anything new?',
   'faq.2.a': 'No. The phonetic rules work like Avro’s, so you can type the way your hands are used to. The difference is that Ekushe still understands you when a conjunct isn’t typed exactly.',
   'faq.3.q': 'Which apps can I type in?',
