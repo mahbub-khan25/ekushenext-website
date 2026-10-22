@@ -293,6 +293,8 @@ function bijoyLive() {
 
 /* ───────────────────────── Downloads ───────────────────────── */
 const REPO = 'mahbub-khan25/ekushenext';
+// Downloads are shown greyed out with "Coming soon" until launch. Set to false to open them.
+const COMING_SOON = true;
 // Used when GitHub's API can't be reached; updated with each release.
 const FALLBACK = {
   tag_name: 'v0.1.0-beta.7', published_at: '2026-10-22T00:10:00Z', html_url: `https://github.com/${REPO}/releases/tag/v0.1.0-beta.7`,
@@ -344,6 +346,10 @@ function renderDownloads() {
     box.innerHTML = FILES[osKey].map(([re, key, icon], i) => {
       const a = release.assets.find((x) => re.test(x.name));
       if (!a) return '';
+      if (COMING_SOON) return `<div class="file is-soon" aria-disabled="true">
+        <svg aria-hidden="true"><use href="#i-${icon}"/></svg>
+        <div><b>${t(`file.${key}`)}</b><span>${t(`file.${key}Sub`)}</span></div>
+        <span class="size">${t('soon.short')}</span></div>`;
       return `<a class="file${i === 0 ? ' recommended' : ''}" href="${a.browser_download_url}" download>
         <svg aria-hidden="true"><use href="#i-${icon}"/></svg>
         <div><b>${t(`file.${key}`)}</b><span>${t(`file.${key}Sub`)}</span><span class="fname">${esc(a.name)}</span></div>
@@ -352,7 +358,8 @@ function renderDownloads() {
   }
   const v = release.tag_name.replace(/^v/, '');
   const d = new Date(release.published_at).toLocaleDateString(lang === 'bn' ? 'bn-BD' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-  $('#dlVersion').textContent = t('dl.versionFmt').replace('{v}', v).replace('{d}', d);
+  $('#dlVersion').textContent = COMING_SOON ? '' : t('dl.versionFmt').replace('{v}', v).replace('{d}', d);
+  if (COMING_SOON) { renderComingSoon(); return; }
 
   // the big button: this computer's download, with the others one click away
   const prim = $('#dlPrimary'), heroBtn = $('#heroDownload'), heroLbl = $('#heroDownloadLabel');
@@ -372,6 +379,20 @@ function renderDownloads() {
   heroLbl.textContent = t(`dl.for.${os}`); heroLbl.dataset.t = `dl.for.${os}`;
   $$('[data-pick]', prim).forEach((l) => l.addEventListener('click', () => pickOS(l.dataset.pick)));
 }
+function renderComingSoon() {
+  const label = `<svg class="os-ico" aria-hidden="true"><use href="#i-clock"/></svg>${t('soon.label')}`;
+  $('#dlPrimary').innerHTML = `<button class="btn btn-lg btn-soon" type="button" disabled>${label}</button><span class="alt">${t('soon.note')}</span>`;
+  const hero = $('#heroDownload');
+  const btn = document.createElement('button');
+  btn.className = 'btn btn-lg btn-soon'; btn.type = 'button'; btn.disabled = true; btn.id = 'heroDownload';
+  btn.innerHTML = `<svg class="os-ico" aria-hidden="true"><use href="#i-clock"/></svg><span id="heroDownloadLabel">${t('soon.label')}</span>`;
+  hero.replaceWith(btn);
+  $('#heroMeta').textContent = t('soon.meta'); $('#heroMeta').dataset.t = 'soon.meta';
+  const more = $('.hero-meta a'); if (more) more.remove();
+  $$('.dl-files').forEach((b) => b.setAttribute('aria-label', t('soon.label')));
+  const cta = $('.nav-cta'); cta.textContent = t('soon.short'); cta.dataset.t = 'soon.short'; cta.classList.replace('btn-primary', 'btn-soon');
+  const lede = $('#dlLede'); lede.textContent = t('soon.lede'); lede.dataset.t = 'soon.lede';
+}
 function pickOS(key) {
   $$('.dl-tabs [data-os]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.os === key)));
   $$('.dl-panel').forEach((p) => { p.hidden = p.dataset.panel !== key; });
@@ -380,7 +401,7 @@ $$('.dl-tabs [data-os]').forEach((b) => b.addEventListener('click', () => pickOS
 pickOS(os === 'mobile' ? 'windows' : os);
 renderDownloads();
 langListeners.push(renderDownloads);
-loadRelease().then((r) => { release = r; renderDownloads(); });
+if (!COMING_SOON) loadRelease().then((r) => { release = r; renderDownloads(); });
 
 /* ───────────────────────── Film ───────────────────────── */
 const film = $('#film'), video = $('#filmVideo');
