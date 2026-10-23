@@ -31,7 +31,7 @@ const meta = {
   mode: (q.get('mode') || '').slice(0, 60),
   from: q.get('from') === 'app' ? 'app' : 'web',
 };
-const LABELS = { v: ['সংস্করণ', 'Version'], os: ['কম্পিউটার', 'Computer'], layout: ['লেআউট', 'Layout'], mode: ['টাইপিং মোড', 'Typing mode'] };
+const LABELS = { v: ['সংস্করণ', 'Version'], os: ['ডিভাইস', 'Device'], layout: ['লেআউট', 'Layout'], mode: ['টাইপিং মোড', 'Typing mode'] };
 $('#metaList').innerHTML = Object.entries(LABELS).map(([k, [bn, en]]) =>
   `<div><dt><span lang="bn">${bn}</span><span lang="en">${en}</span></dt><dd>${(meta[k] || '—').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))}</dd></div>`).join('');
 

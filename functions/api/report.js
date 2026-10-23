@@ -91,7 +91,7 @@ export async function onRequestPost({ request, env }) {
     typed ? `\n### কী টাইপ করছিলেন · What they were typing\n${quote(typed)}` : null,
     app ? `\n### কোন অ্যাপে · In which app\n${quote(app)}` : null,
     '',
-    '| Version | Computer | Layout | Typing mode |',
+    '| Version | Device | Layout | Typing mode |',
     '|---|---|---|---|',
     `| ${field(version)} | ${field(m.os)} | ${field(m.layout)} | ${field(m.mode)} |`,
     '',
