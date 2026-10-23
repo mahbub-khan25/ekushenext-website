@@ -118,8 +118,8 @@
   <div class="note">
     <svg aria-hidden="true"><use href="#i-info"/></svg>
     <div>
-      <p lang="bn">একুশে নেক্সট এখন বিটা পর্যায়ে। নিচের নির্দেশনা সর্বশেষ সংস্করণ (<b>v0.1.0-beta.9</b>) অনুযায়ী লেখা। কোথাও কিছু না মিললে <a href="https://github.com/mahbub-khan25/ekushenext/issues">GitHub-এ জানান</a>।</p>
-      <p lang="en">Ekushe Next is in beta. This guide follows the latest version (<b>v0.1.0-beta.9</b>). If something here doesn’t match what you see, please <a href="https://github.com/mahbub-khan25/ekushenext/issues">tell us on GitHub</a>.</p>
+      <p lang="bn">একুশে নেক্সট এখন বিটা পর্যায়ে। নিচের নির্দেশনা সর্বশেষ সংস্করণ (<b>v0.1.0-beta.10</b>) অনুযায়ী লেখা। কোথাও কিছু না মিললে <a href="https://github.com/mahbub-khan25/ekushenext/issues">GitHub-এ জানান</a>।</p>
+      <p lang="en">Ekushe Next is in beta. This guide follows the latest version (<b>v0.1.0-beta.10</b>). If something here doesn’t match what you see, please <a href="https://github.com/mahbub-khan25/ekushenext/issues">tell us on GitHub</a>.</p>
     </div>
   </div>
 </section>
@@ -306,8 +306,8 @@
   </div>
 
   <h3 id="per-app"><span lang="bn">কোন অ্যাপে কোন ভাষা, একুশে মনে রাখে</span><span lang="en">Ekushe remembers the language for each app</span></h3>
-  <p lang="bn">উইন্ডোজ আর ম্যাকে একুশে মনে রাখে কোন অ্যাপে শেষবার কোন ভাষায় লিখছিলেন। যেমন Word-এ বাংলা আর ব্রাউজারে ইংরেজি রাখলে, অ্যাপ বদলালেই ভাষাও নিজে থেকে বদলে যাবে। উইন্ডোজে টার্মিনাল (Windows Terminal, Command Prompt, PowerShell) সব সময় ইংরেজিতে শুরু হয়, যাতে কমান্ড লিখতে ঝামেলা না হয়; দরকার হলে সেখানে দুবার Shift চেপে বাংলা লিখতে পারেন। লিনাক্সে ভাষা সব অ্যাপে একই থাকে।</p>
-  <p lang="en">On Windows and Mac, Ekushe remembers which language you last used in each app. Keep Word in Bangla and your browser in English, and the language follows you as you switch apps. On Windows, terminals (Windows Terminal, Command Prompt, PowerShell) always start in English so commands aren’t mangled; double-tap Shift there if you do want Bangla. On Linux, the language is the same in every app.</p>
+  <p lang="bn">উইন্ডোজ আর ম্যাকে একুশে মনে রাখে কোন অ্যাপে শেষবার কোন ভাষায় লিখছিলেন। যেমন Word-এ বাংলা আর ব্রাউজারে ইংরেজি রাখলে, অ্যাপ বদলালেই ভাষাও নিজে থেকে বদলে যাবে। টার্মিনাল (উইন্ডোজে Windows Terminal, Command Prompt, PowerShell; ম্যাকে Terminal, iTerm) ইংরেজিতে শুরু হয়, যাতে কমান্ড লিখতে ঝামেলা না হয়; দরকার হলে সেখানে দুবার Shift চেপে বাংলা লিখতে পারেন, একুশে সেটাও মনে রাখে। এটা না চাইলে সেটিংসে <a href="#settings">টার্মিনালে ইংরেজি</a> বন্ধ করুন। লিনাক্সে ভাষা সব অ্যাপে একই থাকে।</p>
+  <p lang="en">On Windows and Mac, Ekushe remembers which language you last used in each app. Keep Word in Bangla and your browser in English, and the language follows you as you switch apps. Terminals (Windows Terminal, Command Prompt and PowerShell on Windows; Terminal and iTerm on a Mac) start in English so commands aren’t mangled; double-tap Shift there if you do want Bangla, and Ekushe remembers that too. Don’t want this? Turn off <a href="#settings">English in terminals</a>. On Linux, the language is the same in every app.</p>
   <div class="note">
     <svg aria-hidden="true"><use href="#i-info"/></svg>
     <div>
@@ -601,6 +601,24 @@
   <p lang="bn">নিজের স্নিপেট (ঠিকানা, ফোন নম্বর, স্বাক্ষর) যোগ করুন স্টুডিওর <a href="#settings">সেটিংস → স্নিপেট</a> থেকে। শর্টকাট <code>;</code> দিয়ে শুরু করলে সাধারণ শব্দের সাথে মিশে যায় না, যেমন <code>;addr</code>।</p>
   <p lang="en">Add your own (an address, a phone number, a signature) in Studio’s <a href="#settings">Settings → Snippets</a>. Starting the code with <code>;</code>, such as <code>;addr</code>, keeps it from clashing with real words.</p>
 
+  <h3 id="convert-selection"><span lang="bn">যেকোনো অ্যাপে বেছে নেওয়া লেখা বাংলা করা</span><span lang="en">Convert selected text in any app</span></h3>
+  <div data-os="win">
+    <p lang="bn">উইন্ডোজে যেকোনো অ্যাপে লেখা বেছে নিয়ে (মাউস দিয়ে বা <kbd>Shift</kbd>+তীরচিহ্ন) <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd> চাপুন। একুশে নিজেই বুঝে নেয় লেখাটি কী:</p>
+    <p lang="en">On Windows, select text in any app (with the mouse or <kbd>Shift</kbd>+arrows) and press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd>. Ekushe works out what the text is:</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th><span lang="bn">বেছে নেওয়া লেখা</span><span lang="en">Selected text</span></th><th><span lang="bn">হয়ে যায়</span><span lang="en">Becomes</span></th></tr></thead>
+        <tbody>
+          <tr><td><code>Avgvi †mvbvi evsjv</code> <small><span lang="bn">(পুরনো বিজয়)</span><span lang="en">(old Bijoy)</span></small></td><td class="bn">আমার সোনার বাংলা</td></tr>
+          <tr><td><code>amar sonar bangla</code> <small><span lang="bn">(বাংলিশ)</span><span lang="en">(Banglish)</span></small></td><td class="bn">আমার সোনার বাংলা</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p lang="bn">বাংলিশের প্রতিটি শব্দ সেভাবেই বসে যেভাবে Space চাপলে বসত। একুশে কাজটি করে কপি-পেস্ট দিয়ে, তবে আপনার ক্লিপবোর্ডে আগে যা ছিল তা পরে ফিরিয়ে দেয়। বাংলা বা ইংরেজি যেকোনো মোডে কাজ করে, পাসওয়ার্ডের ঘরে করে না। লেখা বেছে না নিলে একটি ছোট বার্তা দেখায়। অনেক লম্বা লেখা (২০,০০০ অক্ষরের বেশি) বা ম্যাক ও লিনাক্সে স্টুডিওর <a href="#studio-converter">রূপান্তর</a> ব্যবহার করুন।</p>
+    <p lang="en">Each Banglish word is placed the way Space would place it. Ekushe does this by copying and pasting, but it puts back whatever was on your clipboard before. It works in Bangla or English mode, but not in password boxes. With nothing selected, a short message says so. For very long text (over 20,000 characters), or on Mac and Linux, use Studio’s <a href="#studio-converter">converter</a>.</p>
+  </div>
+  <p data-os="mac linux"><span lang="bn">ম্যাক ও লিনাক্সে বিজয় বা বাংলিশ লেখা বদলাতে স্টুডিওর <a href="#studio-converter">রূপান্তর</a> ব্যবহার করুন।</span><span lang="en">On Mac and Linux, use Studio’s <a href="#studio-converter">converter</a> for Bijoy or Banglish text.</span></p>
+
   <h3><span lang="bn">ইমোজি</span><span lang="en">Emoji</span></h3>
   <p lang="bn">কিছু শব্দের সাথে মানানসই ইমোজিও পরামর্শে আসে: <button class="try" type="button" data-try="bangladesh"><code>bangladesh</code></button> লিখলে তালিকায় 🇧🇩, <code>bhalobasha</code> লিখলে ❤️, <code>kanna</code> লিখলে 😢। Tab চেপে বা ক্লিক করে নিন।</p>
   <p lang="en">Some words bring a matching emoji into the suggestions: <button class="try" type="button" data-try="bangladesh"><code>bangladesh</code></button> offers 🇧🇩, <code>bhalobasha</code> ❤️ and <code>kanna</code> 😢. Take it with Tab or a click.</p>
@@ -670,8 +688,8 @@
 
   <h3 id="studio-converter"><span lang="bn">রূপান্তর</span><span lang="en">Converter</span></h3>
   <figure class="shot-fig"><img src="/img/studio-converter-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's converter"></figure>
-  <p lang="bn">পুরনো বিজয় (SutonnyMJ ফন্টে লেখা) লেখাকে ইউনিকোডে, আর ইউনিকোডকে বিজয়ে বদলায়। বাংলিশে (রোমান হরফে) লেখা পুরো অনুচ্ছেদও একবারে বাংলা করা যায়। ফলাফল <b>কপি করুন</b> চেপে নিয়ে নিন।</p>
-  <p lang="en">Turns old Bijoy text (typed with SutonnyMJ-style fonts) into Unicode, and Unicode into Bijoy. It can also turn a whole paragraph of Banglish (Bangla in Roman letters) into Bangla at once. Press <b>ফলাফল কপি করুন</b> (copy result) to take it.</p>
+  <p lang="bn">পুরনো বিজয় (SutonnyMJ ফন্টে লেখা) লেখাকে ইউনিকোডে, আর ইউনিকোডকে বিজয়ে বদলায়। বাংলিশে (রোমান হরফে) লেখা পুরো অনুচ্ছেদও একবারে বাংলা করা যায়। ফলাফল <b>কপি করুন</b> চেপে নিয়ে নিন। <span data-os="win">উইন্ডোজে স্টুডিও না খুলেও যেকোনো অ্যাপে লেখা বেছে <a href="#convert-selection"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd></a> চাপলে একই কাজ হয়।</span></p>
+  <p lang="en">Turns old Bijoy text (typed with SutonnyMJ-style fonts) into Unicode, and Unicode into Bijoy. It can also turn a whole paragraph of Banglish (Bangla in Roman letters) into Bangla at once. Press <b>ফলাফল কপি করুন</b> (copy result) to take it. <span data-os="win">On Windows you can skip Studio: select text in any app and press <a href="#convert-selection"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd></a>.</span></p>
 </section>
 
 <!-- ═════════════ Settings ═════════════ -->
@@ -713,7 +731,7 @@
       <thead><tr><th><span lang="bn">সেটিং</span><span lang="en">Setting</span></th><th><span lang="bn">শুরুতে</span><span lang="en">Default</span></th><th><span lang="bn">কী করে</span><span lang="en">What it does</span></th></tr></thead>
       <tbody>
         <tr><td><span lang="bn">ছোট পপ-আপ</span><span lang="en">Compact popup</span></td><td><span lang="bn">বন্ধ</span><span lang="en">Off</span></td><td><span lang="bn">উইন্ডোজের পপ-আপে সংকেতের সারি লুকায়, শুধু পরামর্শ থাকে (চিহ্নের টিপ তবুও দেখায়)। পপ-আপের “যুক্তবর্ণ লুকান” বোতামও একই কাজ করে।</span><span lang="en">Hides the hint row in the Windows popup, leaving just the suggestions (mark tips still show). The popup’s “যুক্তবর্ণ লুকান” button does the same.</span></td></tr>
-        <tr><td><span lang="bn">টার্মিনালে ইংরেজি</span><span lang="en">English in terminals</span></td><td><span lang="bn">চালু</span><span lang="en">On</span></td><td><span lang="bn">উইন্ডোজে Windows Terminal, Command Prompt আর PowerShell ইংরেজিতে শুরু হয়। এই বিটায় সুইচটি বন্ধ করলেও টার্মিনাল ইংরেজিতেই শুরু হয়; সেখানে বাংলা লিখতে দুবার Shift চাপুন।</span><span lang="en">On Windows, Windows Terminal, Command Prompt and PowerShell start in English. In this beta, turning the switch off doesn’t change that yet; double-tap Shift in the terminal to type Bangla there.</span></td></tr>
+        <tr><td><span lang="bn">টার্মিনালে ইংরেজি</span><span lang="en">English in terminals</span></td><td><span lang="bn">চালু</span><span lang="en">On</span></td><td><span lang="bn">টার্মিনাল (Windows Terminal, Command Prompt, PowerShell, ম্যাকের Terminal ও iTerm) ইংরেজিতে শুরু হয়; দুবার Shift চাপলে সেখানেও বাংলা লেখা যায়। বন্ধ করলে টার্মিনাল অন্য যেকোনো অ্যাপের মতো আচরণ করে।</span><span lang="en">Terminals (Windows Terminal, Command Prompt, PowerShell, and Terminal and iTerm on a Mac) start in English; double-tap Shift to type Bangla there anyway. Turn it off and terminals behave like any other app.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -777,6 +795,8 @@
   <p lang="en">The same folder holds <code>learned.tsv</code>, where Ekushe remembers the words you pick. Here is a sample <code>config.toml</code> with explanations (lines starting with <code>#</code> are comments):</p>
   <div class="cmd-box"><pre><code># Bangla ⇄ English switch: DoubleTapShift, CtrlSpace, F12 or CtrlAltB
 switch_hotkey = "DoubleTapShift"
+# Windows: convert the selected text in any app (Ctrl, Alt or Win plus a letter, digit or F-key)
+convert_selection_hotkey = "Ctrl+Alt+C"
 # AvroPhonetic, Probhat, NationalJatiya, Bornona or MunirOptima
 active_layout = "AvroPhonetic"
 # Smart, PhoneticFirst or PhoneticOnly
@@ -787,6 +807,8 @@ bangla_digits = true
 show_sign_and_conjunct_hints = true
 # Hide the hint row (Windows popup)
 compact_popup = false
+# Terminals start in English
+auto_english_in_terminals = true
 # Offer emoji for some words (bangladesh → 🇧🇩)
 enable_emoji_suggestions = true
 # Suggest the next word after one is placed
@@ -805,10 +827,6 @@ auto_chandrabindu_fix = true
 # The language an app starts in. Windows: the program file name.
 # Mac: the app's bundle ID, in small letters.
 [per_app_defaults]
-"windowsterminal.exe" = "English"
-"cmd.exe" = "English"
-"powershell.exe" = "English"
-"pwsh.exe" = "English"
 "code.exe" = "English"
 "winword.exe" = "Bangla"
 
