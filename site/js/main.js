@@ -395,7 +395,7 @@ if (!COMING_SOON) latestRelease(FALLBACK).then((r) => { release = r; renderDownl
 (function androidShowcase() {
   const phone = $('#phone'), img = $('#phoneKb'), chips = $$('#themeChips [data-kb]');
   if (!phone) return;
-  const alts = { ekushe: 'একুশে', krishnachura: 'কৃষ্ণচূড়া', padma: 'পদ্মা', shapla: 'শাপলা', kashful: 'কাশফুল', night: 'রাত', photo: 'নিজের ছবি', '3d': 'থ্রিডি কী' };
+  const alts = { default: 'একুশে ডিফল্ট', smooth: 'একুশে মসৃণ', ekushe: 'একুশে', krishnachura: 'কৃষ্ণচূড়া', padma: 'পদ্মা', shapla: 'শাপলা', kashful: 'কাশফুল', night: 'রাত', photo: 'নিজের ছবি', '3d': 'থ্রিডি কী' };
   let current = 'ekushe', userPicked = false;
   const show = (k) => {
     if (k === current) return;
