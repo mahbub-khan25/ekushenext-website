@@ -6,6 +6,7 @@ export const EN = {
   'nav.studio': 'Studio',
   'nav.ekushe': '21 February',
   'nav.faq': 'Questions',
+  'nav.guide': 'Guide',
   'nav.download': 'Download',
 
   'hero.kicker': 'A Bangla keyboard for Windows, Mac and Linux',
@@ -111,6 +112,7 @@ export const EN = {
   'dl.linux.2': 'Then run:<code class="cmd">ibus restart</code>or log out and back in once.',
   'dl.linux.3': 'Add it in Settings → Keyboard → Input Sources → + → Bengali → Ekushe Bangla. Switch with Super+Space.',
   'dl.linux.note': 'Needs IBus, which Ubuntu, Fedora, Debian and GNOME already have. The AppImage works on any distribution.',
+  'dl.guide': 'See the full guide to installing, settings and everyday use →',
   'file.winSetup': 'Installer', 'file.winSetupSub': 'Recommended. Starts with Windows.',
   'file.winZip': 'Installer in a .zip', 'file.winZipSub': 'If your browser blocks the .exe',
   'file.winPortable': 'Portable', 'file.winPortableSub': 'Runs without installing',
@@ -138,6 +140,7 @@ export const EN = {
   'faq.7.a': 'Open an issue on GitHub. Saying what happened and which app you were typing in helps get it fixed quickly.',
 
   'foot.copy': 'Free and open source. Code under MPL-2.0, dictionary under CC BY-SA 4.0. Made by A S M Mahbub Afzal Khan.',
+  'foot.guide': 'User guide',
   'foot.releases': 'All versions',
   'foot.issues': 'Report a problem',
 };

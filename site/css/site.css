@@ -392,3 +392,5 @@ code { font: 500 .86em/1.4 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; 
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .petals { display: none; }
 }
+.dl-guide { margin: 36px 0 0; }
+.dl-guide a { color: var(--mint); font-weight: 600; text-underline-offset: 4px; }
