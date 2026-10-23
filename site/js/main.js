@@ -309,10 +309,11 @@ const FILES = {
   windows: [[/^Ekushe-Setup\.exe$/, 'winSetup', 'windows'], [/^Ekushe-Setup\.zip$/, 'winZip', 'windows'], [/^Ekushe-Portable\.exe$/, 'winPortable', 'windows']],
   mac: [[/^Ekushe-macOS\.pkg$/, 'macPkg', 'apple'], [/^Ekushe-macOS\.zip$/, 'macZip', 'apple']],
   linux: [[/\.deb$/, 'deb', 'linux'], [/\.rpm$/, 'rpm', 'linux'], [/\.AppImage$/, 'appimage', 'linux']],
+  android: [[/^Ekushe-Next-Android\.apk$/, 'android', 'android']],
 };
 function detectOS() {
   const ua = navigator.userAgent, p = (navigator.userAgentData?.platform || navigator.platform || '').toLowerCase();
-  if (/android/i.test(ua)) return 'mobile';
+  if (/android/i.test(ua)) return 'android';
   if (/iphone|ipad|ipod/i.test(ua) || (p.includes('mac') && navigator.maxTouchPoints > 1)) return 'mobile';
   if (p.includes('win') || /windows/i.test(ua)) return 'windows';
   if (p.includes('mac') || /mac os/i.test(ua)) return 'mac';
@@ -330,7 +331,8 @@ function renderDownloads() {
     const box = $(`[data-files="${osKey}"]`);
     box.innerHTML = FILES[osKey].map(([re, key, icon], i) => {
       const a = release.assets.find((x) => re.test(x.name));
-      if (!a) return '';
+      // before launch every platform shows its "coming soon" tile, even one the fallback release lacks
+      if (!a && !COMING_SOON) return '';
       if (COMING_SOON) return `<div class="file is-soon" aria-disabled="true">
         <svg aria-hidden="true"><use href="#i-${icon}"/></svg>
         <div><b>${t(`file.${key}`)}</b><span>${t(`file.${key}Sub`)}</span></div>
@@ -348,15 +350,16 @@ function renderDownloads() {
 
   // the big button: this computer's download, with the others one click away
   const prim = $('#dlPrimary'), heroBtn = $('#heroDownload'), heroLbl = $('#heroDownloadLabel');
-  const icon = { windows: 'windows', mac: 'apple', linux: 'linux' }[os];
+  const icon = { windows: 'windows', mac: 'apple', linux: 'linux', android: 'android' }[os];
   if (os === 'mobile') {
     prim.innerHTML = `<p class="alt">${t('dl.mobileNote')}</p>`;
     heroLbl.textContent = t('dl.for.mobile'); heroLbl.dataset.t = 'dl.for.mobile'; heroBtn.href = '#download';
     return;
   }
   const a = fileOf(os);
-  const others = ['windows', 'mac', 'linux'].filter((x) => x !== os)
-    .map((x) => `<a href="#download" data-pick="${x}">${{ windows: 'Windows', mac: 'macOS', linux: 'Linux' }[x]}</a>`).join(lang === 'bn' ? ' বা ' : ' or ');
+  if (!a) { prim.innerHTML = `<p class="alt">${t('dl.notYet')}</p>`; return; }
+  const others = ['windows', 'mac', 'linux', 'android'].filter((x) => x !== os)
+    .map((x) => `<a href="#download" data-pick="${x}">${{ windows: 'Windows', mac: 'macOS', linux: 'Linux', android: 'Android' }[x]}</a>`).join(lang === 'bn' ? ' বা ' : ' or ');
   prim.innerHTML = `<a class="btn btn-primary btn-lg" href="${a.browser_download_url}" download><svg class="os-ico" aria-hidden="true"><use href="#i-${icon}"/></svg>${t(`dl.for.${os}`)}</a>
     <span class="alt">${fmtSize(a.size)}${os === 'windows' ? `. ${t('dl.signed')}` : ''}. ${t('dl.alt')} ${others}</span>`;
   heroBtn.href = a.browser_download_url; heroBtn.setAttribute('download', '');
@@ -387,6 +390,48 @@ pickOS(os === 'mobile' ? 'windows' : os);
 renderDownloads();
 langListeners.push(renderDownloads);
 if (!COMING_SOON) latestRelease(FALLBACK).then((r) => { release = r; renderDownloads(); });
+
+/* ───────────────────────── Android showcase ───────────────────────── */
+(function androidShowcase() {
+  const phone = $('#phone'), img = $('#phoneKb'), chips = $$('#themeChips [data-kb]');
+  if (!phone) return;
+  const alts = { ekushe: 'একুশে', krishnachura: 'কৃষ্ণচূড়া', padma: 'পদ্মা', shapla: 'শাপলা', kashful: 'কাশফুল', night: 'রাত', photo: 'নিজের ছবি', '3d': 'থ্রিডি কী' };
+  let current = 'ekushe', userPicked = false;
+  const show = (k) => {
+    if (k === current) return;
+    current = k;
+    chips.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.kb === k)));
+    const pre = new Image(); pre.src = `/img/android/kb-${k}.webp`;
+    img.classList.add('fade');
+    pre.decode().catch(() => {}).then(() => setTimeout(() => {
+      img.src = pre.src; img.alt = `একুশে নেক্সট অ্যান্ড্রয়েড কিবোর্ড, ${alts[k]} থিম`;
+      phone.dataset.theme = k; img.classList.remove('fade');
+    }, 160));
+  };
+  chips.forEach((c) => c.addEventListener('click', () => { userPicked = true; show(c.dataset.kb); }));
+  // preload once the section is near
+  new IntersectionObserver(([e], obs) => {
+    if (!e.isIntersecting) return;
+    obs.disconnect();
+    chips.forEach((c) => { const i = new Image(); i.src = `/img/android/kb-${c.dataset.kb}.webp`; });
+    if (reduceMotion) return;
+    // walk through the themes until the visitor picks one
+    const order = chips.map((c) => c.dataset.kb);
+    setInterval(() => { if (!userPicked && !document.hidden) show(order[(order.indexOf(current) + 1) % order.length]); }, 3200);
+    // the message being typed
+    const phrases = ['একুশে এবার ফোনেও', 'আমার সোনার বাংলা', 'শুভ নববর্ষ! 🎉', 'কাল দেখা হবে, ইনশাআল্লাহ', 'ধন্যবাদ, ভালো থেকো'];
+    const out = $('#phoneTyping');
+    const seg = (s) => Array.from(new Intl.Segmenter('bn', { granularity: 'grapheme' }).segment(s), (g) => g.segment);
+    (async () => {
+      for (let i = 1; ; i = (i + 1) % phrases.length) {
+        await sleep(2600);
+        const g = seg(phrases[i]);
+        out.textContent = '';
+        for (const ch of g) { out.textContent += ch; await sleep(90 + Math.random() * 80); }
+      }
+    })();
+  }, { rootMargin: '200px' }).observe(phone);
+})();
 
 /* ───────────────────────── Film ───────────────────────── */
 const film = $('#film'), video = $('#filmVideo');

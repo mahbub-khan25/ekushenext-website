@@ -28,6 +28,7 @@ applyLang(lang);
 /* ───────── Platform filter ───────── */
 function detectOs() {
   const p = (navigator.userAgentData?.platform || navigator.platform || navigator.userAgent || '').toLowerCase();
+  if (/android/i.test(navigator.userAgent)) return 'android';
   if (p.includes('win')) return 'win';
   if (p.includes('mac')) return 'mac';
   if (p.includes('linux') && !/android/i.test(navigator.userAgent)) return 'linux';
@@ -39,7 +40,7 @@ function applyOs(os) {
   $$('[data-os-pick]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.osPick === os)));
 }
 const urlOs = new URLSearchParams(location.search).get('os');
-let os = ['all', 'win', 'mac', 'linux'].includes(urlOs) ? urlOs : store.get('ekushe-guide-os') || detectOs();
+let os = ['all', 'win', 'mac', 'linux', 'android'].includes(urlOs) ? urlOs : store.get('ekushe-guide-os') || detectOs();
 applyOs(os);
 $$('[data-os-pick]').forEach((b) => b.addEventListener('click', () => {
   os = b.dataset.osPick;

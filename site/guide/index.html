@@ -17,8 +17,8 @@
 <meta property="og:image" content="https://ekushenext.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/hind-siliguri-bengali-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=2">
-<link rel="stylesheet" href="/css/guide.css?v=2">
+<link rel="stylesheet" href="/css/site.css?v=3">
+<link rel="stylesheet" href="/css/guide.css?v=3">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"TechArticle","headline":"Ekushe Next guide","alternativeHeadline":"একুশে নেক্সট ব্যবহার নির্দেশিকা","url":"https://ekushenext.com/guide/","inLanguage":["bn","en"],"about":{"@type":"SoftwareApplication","name":"Ekushe Next","operatingSystem":"Windows 10, Windows 11, macOS 11+, Linux"}}
 </script>
@@ -54,14 +54,15 @@
   <div class="wrap">
     <p class="g-kicker"><span lang="bn">ব্যবহার নির্দেশিকা</span><span lang="en">User guide</span></p>
     <h1 class="g-title"><span lang="bn">একুশে নেক্সট: শুরু থেকে শেষ পর্যন্ত</span><span lang="en">Ekushe Next, from start to finish</span></h1>
-    <p class="g-lede"><span lang="bn">ইনস্টল করা, প্রথমবার চালু করা, বাংলা লেখার নিয়ম, স্টুডিও, প্রতিটি সেটিং আর সমস্যা হলে কী করবেন, সব এক জায়গায়। নিচে আপনার কম্পিউটার বেছে নিন, তাহলে শুধু সেটার নির্দেশনাই দেখাবে।</span><span lang="en">Installing, first-time setup, the typing rules, Studio, every setting and what to do when something goes wrong, all in one place. Pick your computer below to see only the steps for it.</span></p>
+    <p class="g-lede"><span lang="bn">ইনস্টল করা, প্রথমবার চালু করা, বাংলা লেখার নিয়ম, স্টুডিও, প্রতিটি সেটিং আর সমস্যা হলে কী করবেন, সব এক জায়গায়। নিচে আপনার কম্পিউটার বা ফোন বেছে নিন, তাহলে শুধু সেটার নির্দেশনাই দেখাবে।</span><span lang="en">Installing, first-time setup, the typing rules, Studio, every setting and what to do when something goes wrong, all in one place. Pick your computer or phone below to see only the steps for it.</span></p>
     <div class="g-os">
-      <span class="g-os-label" id="osLabel"><span lang="bn">আমার কম্পিউটার:</span><span lang="en">My computer:</span></span>
+      <span class="g-os-label" id="osLabel"><span lang="bn">আমার ডিভাইস:</span><span lang="en">My device:</span></span>
       <div class="seg" role="group" aria-labelledby="osLabel">
         <button type="button" data-os-pick="all" aria-pressed="true"><span lang="bn">সব</span><span lang="en">All</span></button>
         <button type="button" data-os-pick="win" aria-pressed="false"><svg aria-hidden="true"><use href="#i-windows"/></svg>Windows</button>
         <button type="button" data-os-pick="mac" aria-pressed="false"><svg aria-hidden="true"><use href="#i-apple"/></svg>macOS</button>
         <button type="button" data-os-pick="linux" aria-pressed="false"><svg aria-hidden="true"><use href="#i-linux"/></svg>Linux</button>
+        <button type="button" data-os-pick="android" aria-pressed="false"><svg aria-hidden="true"><use href="#i-android"/></svg>Android</button>
       </div>
     </div>
   </div>
@@ -80,10 +81,11 @@
       <li><a href="#marks"><span lang="bn">নির্দিষ্ট বানানের চিহ্ন</span><span lang="en">Exact-spelling marks</span></a></li>
       <li><a href="#popup"><span lang="bn">পরামর্শের পপ-আপ</span><span lang="en">The suggestion popup</span></a></li>
       <li><a href="#shortcuts"><span lang="bn">ইংরেজি শব্দ, স্নিপেট, ইমোজি</span><span lang="en">English words, snippets, emoji</span></a></li>
-      <li><a href="#studio"><span lang="bn">একুশে স্টুডিও</span><span lang="en">Ekushe Studio</span></a></li>
-      <li><a href="#settings"><span lang="bn">সেটিংস</span><span lang="en">Settings</span></a></li>
-      <li><a href="#layouts"><span lang="bn">অন্যান্য লেআউট</span><span lang="en">Other layouts</span></a></li>
-      <li><a href="#advanced"><span lang="bn">উন্নত কনফিগারেশন</span><span lang="en">Advanced configuration</span></a></li>
+      <li><a href="#android"><span lang="bn">অ্যান্ড্রয়েড কিবোর্ড</span><span lang="en">The Android keyboard</span></a></li>
+      <li data-os="win mac linux"><a href="#studio"><span lang="bn">একুশে স্টুডিও</span><span lang="en">Ekushe Studio</span></a></li>
+      <li data-os="win mac linux"><a href="#settings"><span lang="bn">সেটিংস</span><span lang="en">Settings</span></a></li>
+      <li data-os="win mac linux"><a href="#layouts"><span lang="bn">অন্যান্য লেআউট</span><span lang="en">Other layouts</span></a></li>
+      <li data-os="win mac linux"><a href="#advanced"><span lang="bn">উন্নত কনফিগারেশন</span><span lang="en">Advanced configuration</span></a></li>
       <li><a href="#privacy"><span lang="bn">গোপনীয়তা ও পাসওয়ার্ড</span><span lang="en">Privacy and passwords</span></a></li>
       <li><a href="#update"><span lang="bn">আপডেট ও আনইনস্টল</span><span lang="en">Update and uninstall</span></a></li>
       <li><a href="#trouble"><span lang="bn">সমস্যা সমাধান</span><span lang="en">Troubleshooting</span></a></li>
@@ -100,8 +102,8 @@
 <!-- ═════════════ Before you start ═════════════ -->
 <section class="g-sec" id="start">
   <h2><span lang="bn">শুরু করার আগে</span><span lang="en">Before you start</span><a class="anchor" href="#start" aria-label="link">#</a></h2>
-  <p lang="bn">একুশে নেক্সট একটি বাংলা কিবোর্ড। আপনি ইংরেজি অক্ষরে উচ্চারণ অনুযায়ী লেখেন (যেমন <code>amar sonar bangla</code>), আর একুশে সেটাকে সঠিক বানানে বাংলা করে দেয় (আমার সোনার বাংলা)। এর নিজস্ব অভিধান আছে, যেটা বাংলা একাডেমির প্রমিত বানান আগে দেখায়। সবকিছু আপনার কম্পিউটারেই চলে; ইন্টারনেট লাগে না, আর আপনার লেখা কোথাও পাঠানো হয় না।</p>
-  <p lang="en">Ekushe Next is a Bangla keyboard. You type the way a word sounds, in English letters (say <code>amar sonar bangla</code>), and Ekushe writes it in correctly spelled Bangla (আমার সোনার বাংলা). It has its own dictionary, which puts the Bangla Academy standard spelling first. Everything runs on your own computer: no internet is needed and nothing you type is sent anywhere.</p>
+  <p lang="bn">একুশে নেক্সট একটি বাংলা কিবোর্ড। আপনি ইংরেজি অক্ষরে উচ্চারণ অনুযায়ী লেখেন (যেমন <code>amar sonar bangla</code>), আর একুশে সেটাকে সঠিক বানানে বাংলা করে দেয় (আমার সোনার বাংলা)। এর নিজস্ব অভিধান আছে, যেটা বাংলা একাডেমির প্রমিত বানান আগে দেখায়। সবকিছু আপনার কম্পিউটার বা ফোনেই চলে; ইন্টারনেট লাগে না, আর আপনার লেখা কোথাও পাঠানো হয় না।</p>
+  <p lang="en">Ekushe Next is a Bangla keyboard. You type the way a word sounds, in English letters (say <code>amar sonar bangla</code>), and Ekushe writes it in correctly spelled Bangla (আমার সোনার বাংলা). It has its own dictionary, which puts the Bangla Academy standard spelling first. Everything runs on your own computer or phone: no internet is needed and nothing you type is sent anywhere.</p>
 
   <h3><span lang="bn">যা যা লাগবে</span><span lang="en">What you need</span></h3>
   <div class="tbl">
@@ -111,6 +113,7 @@
         <tr data-os="win"><td><b>Windows</b></td><td lang="bn">Windows 10 বা 11, ৬৪-বিট। অ্যাডমিন অধিকার লাগে না।</td><td lang="en">Windows 10 or 11, 64-bit. No admin rights needed.</td><td lang="bn">প্রায় সব অ্যাপে: Word, Chrome, Edge, Firefox, WhatsApp, Notepad, ইমেইল।</td><td lang="en">Almost every app: Word, Chrome, Edge, Firefox, WhatsApp, Notepad, email.</td></tr>
         <tr data-os="mac"><td><b>macOS</b></td><td lang="bn">macOS 11 (Big Sur) বা পরের সংস্করণ। Apple silicon (M1 থেকে) আর Intel দুটোতেই চলে।</td><td lang="en">macOS 11 (Big Sur) or later, on Apple silicon (M1 and newer) and Intel.</td><td lang="bn">যে অ্যাপে macOS-এর ইনপুট সোর্স কাজ করে, সব জায়গায়।</td><td lang="en">Any app that accepts macOS input sources.</td></tr>
         <tr data-os="linux"><td><b>Linux</b></td><td lang="bn">৬৪-বিট, IBus সহ। Ubuntu, Debian, Mint, Pop!_OS, Fedora আর GNOME-এ IBus আগে থেকেই থাকে; KDE-তেও চলে।</td><td lang="en">64-bit, with IBus. Ubuntu, Debian, Mint, Pop!_OS, Fedora and GNOME already have it; it also works on KDE.</td><td lang="bn">GTK আর Qt অ্যাপ, ব্রাউজার, LibreOffice ইত্যাদি।</td><td lang="en">GTK and Qt apps, browsers, LibreOffice and so on.</td></tr>
+        <tr data-os="android"><td><b>Android</b></td><td lang="bn">অ্যান্ড্রয়েড ৭ বা নতুন, ফোন ও ট্যাবলেট। ইংরেজির জন্য Gboard থাকলে ভালো (প্রায় সব ফোনেই থাকে)।</td><td lang="en">Android 7 or later, phones and tablets. Gboard is handy for English (most phones have it).</td><td lang="bn">ফোনের সব অ্যাপে: WhatsApp, Messenger, Facebook, Gmail, ব্রাউজার।</td><td lang="en">Every app on the phone: WhatsApp, Messenger, Facebook, Gmail, the browser.</td></tr>
       </tbody>
     </table>
   </div>
@@ -208,6 +211,23 @@
     <p lang="bn">অথবা একবার লগ আউট করে আবার ঢুকুন। তারপর <a href="#setup">প্রথমবার চালু</a> অংশে যান।</p>
     <p lang="en">Or log out and back in once. Then continue with <a href="#setup">First-time setup</a>.</p>
   </div>
+
+  <!-- Android -->
+  <div class="os-block" data-os="android" id="install-android">
+    <p class="os-tag"><svg aria-hidden="true"><use href="#i-android"/></svg>Android</p>
+    <p lang="bn">অ্যান্ড্রয়েডে একুশে নেক্সট একটি কিবোর্ড অ্যাপ। এখন এটি সরাসরি এই সাইট থেকে APK ফাইল হিসেবে পাওয়া যায়; Play Store-এ শীঘ্রই আসছে।</p>
+    <p lang="en">On Android, Ekushe Next is a keyboard app. For now it comes straight from this site as an APK file; it’s coming to the Play Store soon.</p>
+    <ol class="steps">
+      <li lang="bn"><b>APK ডাউনলোড করুন</b>ফোনে এই সাইটের <a href="/#download">ডাউনলোড অংশ</a> খুলে <b>Android</b> থেকে <code>Ekushe-Next-Android.apk</code> নিন।</li>
+      <li lang="en"><b>Download the APK</b>On your phone, open this site’s <a href="/#download">download section</a> and get <code>Ekushe-Next-Android.apk</code> under <b>Android</b>.</li>
+      <li lang="bn"><b>ফাইলটি খুলুন</b>ডাউনলোড শেষ হলে নোটিফিকেশন বা Files/My Files অ্যাপ থেকে ফাইলটি খুলুন। ফোন যদি বলে “এই উৎস থেকে অ্যাপ ইনস্টলের অনুমতি নেই”, <b>Settings</b> চেপে আপনার ব্রাউজার বা Files অ্যাপের জন্য <b>Allow from this source</b> চালু করুন, তারপর ফিরে এসে <b>Install</b> চাপুন।</li>
+      <li lang="en"><b>Open the file</b>When it finishes, open it from the notification or the Files / My Files app. If the phone says installing from this source isn’t allowed, tap <b>Settings</b>, turn on <b>Allow from this source</b> for your browser or Files app, then go back and tap <b>Install</b>.</li>
+      <li lang="bn"><b>Play Protect দেখালে</b>Play Store-এর বাইরের নতুন অ্যাপে Google Play Protect “অচেনা অ্যাপ” দেখাতে পারে। <b>More details → Install anyway</b> চাপুন। একুশে নেক্সটের ইন্টারনেট ব্যবহারের অনুমতিই নেই, তাই আপনার লেখা কোথাও যেতে পারে না।</li>
+      <li lang="en"><b>If Play Protect warns you</b>For a new app from outside the Play Store, Google Play Protect may call it unrecognised. Tap <b>More details → Install anyway</b>. Ekushe Next has no permission to use the internet, so what you type can’t go anywhere.</li>
+    </ol>
+    <p lang="bn">তারপর <a href="#setup">প্রথমবার চালু</a> অংশে যান।</p>
+    <p lang="en">Then continue with <a href="#setup">First-time setup</a>.</p>
+  </div>
 </section>
 
 <!-- ═════════════ First-time setup ═════════════ -->
@@ -263,6 +283,24 @@
     <p lang="bn">একুশে বেছে নেওয়া থাকলে IBus-এর মেনুতে (ওপরের বারে) পাবেন <b>Open Ekushe Studio</b>, <b>Settings</b> আর <b>Bangla ⇄ English</b>। অ্যাপের তালিকাতেও <b>Ekushe Studio</b> থাকে।</p>
     <p lang="en">While Ekushe is selected, the IBus menu in the top bar has <b>Open Ekushe Studio</b>, <b>Settings</b> and <b>Bangla ⇄ English</b>. <b>Ekushe Studio</b> is also in your applications menu.</p>
   </div>
+  <div class="os-block" data-os="android">
+    <p class="os-tag"><svg aria-hidden="true"><use href="#i-android"/></svg>Android</p>
+    <p lang="bn">অ্যাপটি খুললেই সেটআপের পাতা দেখায়। দুটি ধাপ শেষ হলে সবুজ টিক চিহ্ন আসে।</p>
+    <p lang="en">Open the app and it shows the setup page. Each step gets a green tick when it’s done.</p>
+    <ol class="steps">
+      <li lang="bn"><b>কিবোর্ডটি চালু করুন</b><b>চালু করুন</b> চাপলে ফোনের কিবোর্ড সেটিংস খোলে। সেখানে <b>Ekushe Next</b> চালু করুন। অ্যান্ড্রয়েড সব কিবোর্ডের ক্ষেত্রেই একটি সাধারণ সতর্কবার্তা দেখায় যে কিবোর্ড লেখা দেখতে পারে; একুশে নেক্সটের ইন্টারনেটের অনুমতি নেই, তাই কিছুই বাইরে পাঠাতে পারে না। <b>OK</b> চাপুন।</li>
+      <li lang="en"><b>Turn the keyboard on</b>Tap <b>চালু করুন</b> to open the phone’s keyboard settings, and switch on <b>Ekushe Next</b>. Android shows the same warning for every keyboard, that it can see what you type; Ekushe Next has no internet permission, so it can’t send anything out. Tap <b>OK</b>.</li>
+      <li lang="bn"><b>বেছে নিন</b>অ্যাপে ফিরে <b>বেছে নিন</b> চাপুন, তালিকা থেকে <b>বাংলা ও English (একুশে নেক্সট)</b> বেছে নিন।</li>
+      <li lang="en"><b>Choose it</b>Back in the app, tap <b>বেছে নিন</b> and pick <b>বাংলা ও English (একুশে নেক্সট)</b> from the list.</li>
+      <li lang="bn"><b>লিখে দেখুন</b>অ্যাপের “লিখে দেখুন” ঘরে <code>amar sonar bangla</code> লিখে Space চাপুন। এরপর যেকোনো অ্যাপে একুশে নেক্সটই আপনার কিবোর্ড।</li>
+      <li lang="en"><b>Try it</b>In the app’s “লিখে দেখুন” box, type <code>amar sonar bangla</code> and press Space. From now on Ekushe Next is your keyboard in every app.</li>
+    </ol>
+    <div class="g-shots">
+      <figure><img src="/img/android/app-setup.webp" width="540" height="1200" alt="একুশে নেক্সট অ্যাপের সেটআপ পাতা" loading="lazy" decoding="async"><figcaption><span lang="bn">সেটআপ শেষ: দুটি ধাপেই টিক</span><span lang="en">Set up: both steps ticked</span></figcaption></figure>
+    </div>
+    <p lang="bn">কিবোর্ডের সব কিছু জানতে <a href="#android">অ্যান্ড্রয়েড কিবোর্ড</a> অংশ দেখুন।</p>
+    <p lang="en">For everything on the keyboard itself, see <a href="#android">The Android keyboard</a>.</p>
+  </div>
 </section>
 
 <!-- ═════════════ Switching ═════════════ -->
@@ -314,6 +352,20 @@
       <p lang="bn">পাসওয়ার্ড বা PIN-এর ঘরে একুশে নিজে থেকেই সরে দাঁড়ায়: সেখানে সাধারণ ইংরেজি অক্ষরই বসে। বিস্তারিত <a href="#privacy">গোপনীয়তা</a> অংশে।</p>
       <p lang="en">In password and PIN boxes Ekushe steps aside on its own: plain English characters are typed there. See <a href="#privacy">Privacy</a> for details.</p>
     </div>
+  </div>
+  <div class="os-block" data-os="android">
+    <p class="os-tag"><svg aria-hidden="true"><use href="#i-android"/></svg>Android</p>
+    <ul>
+      <li lang="bn"><b>EN চাপুন</b> (কিবোর্ডের ওপরের <b>বাংলা | EN</b> সুইচ বা নিচের <b>বাং/EN</b> কী)। ফোনে Gboard থাকলে ইংরেজি লেখার জন্য Gboard খুলে যায়, তার অটোকারেক্ট, গ্লাইড টাইপিং আর ভয়েস টাইপিং সহ।</li>
+      <li lang="en"><b>Tap EN</b> (the <b>বাংলা | EN</b> switch at the top of the keyboard, or the <b>বাং/EN</b> key at the bottom). If the phone has Gboard, it opens for English, with its autocorrect, glide typing and voice typing.</li>
+      <li lang="bn"><b>বাংলায় ফিরতে</b> Gboard-এর 🌐 বোতাম চাপুন, অথবা তার Space চেপে ধরে একুশে নেক্সট বেছে নিন। ফিরে এলে একুশে সবসময় বাংলাতেই থাকে।</li>
+      <li lang="en"><b>To come back to Bangla,</b> tap Gboard’s 🌐 key, or press and hold its space bar and choose Ekushe Next. Ekushe always comes back in Bangla.</li>
+      <li lang="bn">Gboard না চাইলে একুশের সেটিংসে <b>ইংরেজির জন্য Gboard</b> বন্ধ করুন; তখন ইংরেজিও একুশে নেক্সটেই লেখা হয়। Gboard না থাকলেও তাই হয়।</li>
+      <li lang="en">Don’t want Gboard? Turn off <b>ইংরেজির জন্য Gboard</b> in Ekushe’s settings and English is typed in Ekushe Next itself. The same happens on a phone without Gboard.</li>
+      <li lang="bn"><b>অন্য কিবোর্ডে যেতে</b> Space বা বাং/EN কী চেপে ধরুন: ফোনের কিবোর্ড বাছাইয়ের তালিকা আসে।</li>
+      <li lang="en"><b>To pick another keyboard,</b> press and hold Space or the বাং/EN key: the phone’s keyboard picker opens.</li>
+    </ul>
+    <div class="g-kb"><img src="/img/android/kb-gboard.webp" width="720" height="573" alt="EN চাপার পর Gboard" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
@@ -628,8 +680,100 @@
   <p lang="en">After you place a word, Ekushe guesses what may come next (“সকাল” or “জন্মদিন” after “শুভ”). It also learns the words you pick, so over time the suggestions start to match the way you write.</p>
 </section>
 
+<!-- ═════════════ Android ═════════════ -->
+<section class="g-sec" id="android">
+  <h2><span lang="bn">অ্যান্ড্রয়েড কিবোর্ড</span><span lang="en">The Android keyboard</span><a class="anchor" href="#android" aria-label="link">#</a></h2>
+  <p lang="bn">ফোনের একুশে নেক্সট কম্পিউটারের একই ইঞ্জিন আর অভিধান দিয়ে চলে, তাই ফোনেটিক নিয়ম, নির্দিষ্ট বানানের চিহ্ন, স্নিপেট সবই একই। নিচে শুধু ফোনের নিজস্ব জিনিসগুলো।</p>
+  <p lang="en">Ekushe Next on a phone runs the same engine and dictionary as on a computer, so the phonetic rules, exact-spelling marks and snippets are all the same. Below are the things that are particular to the phone.</p>
+
+  <div class="g-kb"><img src="/img/android/kb-ekushe.webp" width="720" height="552" alt="একুশে নেক্সট অ্যান্ড্রয়েড কিবোর্ড" loading="lazy" decoding="async"></div>
+
+  <h3 id="android-keys"><span lang="bn">কিবোর্ড এক নজরে</span><span lang="en">The keyboard at a glance</span></h3>
+  <ul>
+    <li lang="bn"><b>ওপরের সারি:</b> লেখার সময় পরামর্শ, প্রথমটি সবুজ বা থিমের রঙে, যেটি Space চাপলে বসে। যেকোনোটায় চাপলে সেটা বসে, বেশি থাকলে আঙুলে সরিয়ে দেখুন। শব্দ বসানোর পর পরের শব্দের পরামর্শ আসে। কিছু না লিখলে এখানে বাংলা | EN সুইচ, ইমোজি, সেটিংস ⚙ আর কিবোর্ড লুকানোর ⌄ বোতাম থাকে।</li>
+    <li lang="en"><b>The top strip:</b> while you type, suggestions, the first in green (or your theme’s colour), which is what Space places. Tap any to place it; swipe for more. After a word, next-word suggestions appear. When you’re not typing, it holds the বাংলা | EN switch, emoji, settings ⚙ and ⌄ to hide the keyboard.</li>
+    <li lang="bn"><b>কীর কোণে বাংলা অক্ষর:</b> প্রতিটি কী কোন বাংলা অক্ষর দেয় তা ছোট করে লেখা। Shift চাপলে বড় হাতের অক্ষরের বাংলা দেখায় (t → ত, T → ট)। সেটিংস থেকে বন্ধ করা যায়।</li>
+    <li lang="en"><b>Bangla letters in the corners:</b> each key shows the Bangla letter it types, small in the corner. With Shift on, they show the capital letter’s sound (t → ত, T → ট). You can turn them off in settings.</li>
+    <li lang="bn"><b>চেপে ধরুন:</b> অক্ষর চেপে ধরলে বিকল্প আসে, আঙুল সরিয়ে বেছে নিন। যেমন <b>t</b>: T (ট), t`` (ৎ), th (থ); <b>n</b>: N (ণ), ng (ং), NG (ঞ); <b>s</b>: sh (শ), Sh (ষ); <b>r</b>: R (ড়), rr (রেফ), rri (ঋ)।</li>
+    <li lang="en"><b>Press and hold:</b> hold a letter for its choices, then slide to the one you want. For example <b>t</b>: T (ট), t`` (ৎ), th (থ); <b>n</b>: N (ণ), ng (ং), NG (ঞ); <b>s</b>: sh (শ), Sh (ষ); <b>r</b>: R (ড়), rr (রেফ), rri (ঋ).</li>
+    <li lang="bn"><b>কমা আর দাঁড়ি কী:</b> কমা চেপে ধরলে <code>,,</code> (হসন্ত), <code>+</code> (যুক্ত), <code>`</code> (আলাদা) আর উদ্ধৃতিচিহ্ন; ফুলস্টপ চেপে ধরলে <code>..</code> (বিন্দু), <code>^</code> (চন্দ্রবিন্দু), <code>:</code> (বিসর্গ), <code>/</code> (ইংরেজি শব্দ), <code>$</code> (৳)।</li>
+    <li lang="en"><b>Comma and full-stop keys:</b> hold the comma for <code>,,</code> (hasanta), <code>+</code> (join), <code>`</code> (keep apart) and quotes; hold the full stop for <code>..</code> (dot), <code>^</code> (chandrabindu), <code>:</code> (bisarga), <code>/</code> (English word) and <code>$</code> (৳).</li>
+    <li lang="bn"><b>Space টেনে কার্সর সরান:</b> Space-এ আঙুল রেখে বাঁয়ে-ডানে টানুন। <b>দুবার Space</b> চাপলে দাঁড়ি (।) বসে।</li>
+    <li lang="en"><b>Slide on Space to move the cursor:</b> keep a finger on Space and slide left or right. <b>Double-tap Space</b> for a dari (।).</li>
+    <li lang="bn"><b>⌫ দিয়ে ফেরত:</b> শব্দ বসানোর ঠিক পরে ⌫ চাপলে আপনার রোমান অক্ষরগুলো ফিরে আসে, আবার বেছে নিতে পারেন। ⌫ চেপে ধরলে একটানা মোছে।</li>
+    <li lang="en"><b>⌫ to undo:</b> press ⌫ right after a word and your Roman letters come back to choose again. Hold ⌫ to keep deleting.</li>
+    <li lang="bn"><b>?১২৩</b> সংখ্যা আর চিহ্ন, সেখান থেকে <b>=\&lt;</b> আরও চিহ্ন। সংখ্যার ঘরে (ফোন নম্বর, পিন) নিজে থেকেই সংখ্যার কিবোর্ড আসে।</li>
+    <li lang="en"><b>?১২৩</b> for numbers and symbols, and <b>=\&lt;</b> there for more. Number boxes (phone numbers, PINs) get a number pad by themselves.</li>
+  </ul>
+
+  <h3 id="android-emoji"><span lang="bn">ইমোজি</span><span lang="en">Emoji</span></h3>
+  <p lang="bn">Space-এর বাঁ পাশের <b>☺</b> বোতাম (বা ওপরের সারির ইমোজি) চাপলে ইমোজির তালিকা খোলে: সম্প্রতি ব্যবহার করা, মুখ, হাত, ভালোবাসা, খাবার, খেলা, পতাকা। <b>ABC</b> চাপলে অক্ষরে ফেরেন। সেটিংসের <b>ইমোজি বোতাম</b> বন্ধ করলে Space আবার চওড়া হয়। লেখার সময়েও কিছু শব্দে ইমোজির পরামর্শ আসে, যেমন <code>bangladesh</code> → 🇧🇩।</p>
+  <p lang="en">The <b>☺</b> key left of Space (or emoji in the top strip) opens the emoji panel: recent, faces, hands, love, food, sport and flags. <b>ABC</b> takes you back to letters. Turn off <b>ইমোজি বোতাম</b> in settings and Space gets wider again. Some words also suggest an emoji as you type, such as <code>bangladesh</code> → 🇧🇩.</p>
+  <div class="g-kb"><img src="/img/android/kb-emoji.webp" width="720" height="552" alt="ইমোজির তালিকা" loading="lazy" decoding="async"></div>
+
+  <h3 id="android-themes"><span lang="bn">থিম, ছবি আর কী চাপার ধরন</span><span lang="en">Themes, photo and key-press effects</span></h3>
+  <p lang="bn">অ্যাপের <b>কিবোর্ড</b> অংশে থিমগুলো ছোট কিবোর্ডের ছবি হিসেবে সাজানো; চাপলেই কিবোর্ড বদলে যায়, কিবোর্ড খোলা থাকলেও।</p>
+  <p lang="en">In the app’s <b>Keyboard</b> section the themes are shown as small keyboard pictures; tap one and the keyboard changes at once, even while it’s open.</p>
+  <div class="tbl"><table>
+    <thead><tr><th><span lang="bn">থিম</span><span lang="en">Theme</span></th><th><span lang="bn">কেমন</span><span lang="en">What it looks like</span></th></tr></thead>
+    <tbody>
+      <tr><td><b>একুশে</b> <small>Ekushe</small></td><td lang="bn">গাঢ় সবুজ কী, লাল সূর্যের মতো Enter। শহীদ মিনারের ভোর। নতুন ইনস্টলে এটাই থাকে।</td><td lang="en">Deep green keys with a red-sun Enter: the Shaheed Minar at dawn. The default on a new install.</td></tr>
+      <tr><td><b>কৃষ্ণচূড়া</b> <small>Krishnachura</small></td><td lang="bn">উষ্ণ লাল-কমলা, আলোয় ভরা।</td><td lang="en">Warm flame red and orange, bright.</td></tr>
+      <tr><td><b>পদ্মা</b> <small>Padma</small></td><td lang="bn">সন্ধ্যার নদীর শান্ত নীল।</td><td lang="en">The calm blues of the river at dusk.</td></tr>
+      <tr><td><b>শাপলা</b> <small>Shapla</small></td><td lang="bn">শাপলার নরম গোলাপি আর সাদা।</td><td lang="en">The water lily’s soft pink and white.</td></tr>
+      <tr><td><b>কাশফুল</b> <small>Kashful</small></td><td lang="bn">হালকা অফ-হোয়াইট আর ধূসর, একদম সাদামাটা।</td><td lang="en">Airy off-white and grey, very minimal.</td></tr>
+      <tr><td><b>রাত</b> <small>Night</small></td><td lang="bn">পুরো কালো; OLED স্ক্রিনে চার্জ বাঁচায়।</td><td lang="en">Pure black; saves battery on OLED screens.</td></tr>
+      <tr><td><b>ফোনের মতো</b> <small>Follow system</small></td><td lang="bn">ফোন দিনের আলোয় থাকলে হালকা সবুজ, রাতের মোডে গাঢ় সবুজ।</td><td lang="en">Light green when the phone is in light mode, dark green in dark mode.</td></tr>
+      <tr><td><b>ফোনের রঙে</b> <small>Match my phone</small></td><td lang="bn">ওয়ালপেপারের রঙ নেয় (অ্যান্ড্রয়েড ১২ বা নতুন)।</td><td lang="en">Takes the colours of your wallpaper (Android 12 or later).</td></tr>
+      <tr><td><b>সবুজ দিন / সবুজ রাত</b> <small>Classic light / dark</small></td><td lang="bn">একুশে নেক্সটের আসল সবুজ, সবসময় হালকা বা সবসময় গাঢ়।</td><td lang="en">Ekushe Next’s original green, always light or always dark.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="g-shots">
+    <figure><img src="/img/android/app-gallery.webp" width="540" height="1200" alt="থিমের তালিকা" loading="lazy" decoding="async"><figcaption><span lang="bn">থিমের তালিকা</span><span lang="en">The theme gallery</span></figcaption></figure>
+    <figure><img src="/img/android/app-photo-settings.webp" width="540" height="1200" alt="ছবির ব্যাকগ্রাউন্ড" loading="lazy" decoding="async"><figcaption><span lang="bn">কীর আলাদা ঘর, ছবির ব্যাকগ্রাউন্ড</span><span lang="en">Key borders and photo background</span></figcaption></figure>
+  </div>
+  <ul>
+    <li lang="bn"><b>কীর আলাদা ঘর:</b> বন্ধ করলে কীগুলোর চারপাশের ঘর থাকে না, শুধু অক্ষর; আধুনিক সমতল চেহারা।</li>
+    <li lang="en"><b>Key borders:</b> turn off for a flat modern look, with letters and no key shapes.</li>
+    <li lang="bn"><b>ছবির ব্যাকগ্রাউন্ড:</b> চালু করলে ফোনের ছবি বাছাইয়ের পাতা খোলে; বেছে নেওয়া ছবি কিবোর্ডের পেছনে বসে, ওপরে কীগুলো একটু স্বচ্ছ। স্লাইডার দিয়ে ছবি হালকা বা গাঢ় করুন যেন অক্ষর পরিষ্কার পড়া যায়। ছবির একটি ছোট কপি শুধু অ্যাপের ভেতরেই থাকে; কোনো স্টোরেজ অনুমতি লাগে না।</li>
+    <li lang="en"><b>Photo background:</b> switch it on and the phone’s photo picker opens; the photo sits behind slightly see-through keys. Use the slider to dim it so the letters stay clear. Only a small copy is kept, inside the app; no storage permission is needed.</li>
+    <li lang="bn"><b>কী চাপার ধরন:</b> সাধারণ (কী একটু গাঢ় হয়), থ্রিডি (উঁচু কী চাপলে নিচে দেবে যায়), আলো (কীর চারপাশে আলো), ঢেউ (আঙুলের জায়গা থেকে ঢেউ), লাফ (কী একটু ছোট হয়ে ফেরে)।</li>
+    <li lang="en"><b>Key press effect:</b> Classic (the key darkens), 3D (raised keys sink when pressed), Glow (a ring of light), Ripple (a wave from your finger) or Bounce (the key shrinks and springs back).</li>
+  </ul>
+  <div class="g-shots">
+    <figure><img src="/img/android/kb-3d.webp" width="720" height="552" alt="থ্রিডি কী" loading="lazy" decoding="async"><figcaption><span lang="bn">থ্রিডি: f চাপা অবস্থায়</span><span lang="en">3D, with f pressed</span></figcaption></figure>
+    <figure><img src="/img/android/kb-photo.webp" width="720" height="552" alt="ছবির ওপর কিবোর্ড" loading="lazy" decoding="async"><figcaption><span lang="bn">নিজের ছবির ওপর</span><span lang="en">Over your own photo</span></figcaption></figure>
+  </div>
+
+  <h3 id="android-settings"><span lang="bn">অ্যাপের সেটিংস</span><span lang="en">The app’s settings</span></h3>
+  <p lang="bn">একুশে নেক্সট অ্যাপ খুলুন, অথবা কিবোর্ডের ওপরের ⚙ চাপুন।</p>
+  <p lang="en">Open the Ekushe Next app, or tap ⚙ at the top of the keyboard.</p>
+  <div class="tbl"><table>
+    <thead><tr><th><span lang="bn">সেটিং</span><span lang="en">Setting</span></th><th><span lang="bn">কী করে</span><span lang="en">What it does</span></th></tr></thead>
+    <tbody>
+      <tr><td><b>টাইপিং মোড</b></td><td lang="bn">স্মার্ট (অভিধানের সেরা শব্দ আগে), ফোনেটিক আগে (যা লিখলেন হুবহু সেটাই আগে), শুধু ফোনেটিক (কোনো পরামর্শ নেই)। কম্পিউটারের মতোই।</td><td lang="en">Smart (the dictionary’s best word first), Phonetic first (exactly what you typed first) or Phonetic only (no suggestions). Same as on a computer.</td></tr>
+      <tr><td><b>বাংলা সংখ্যা</b></td><td lang="bn">সংখ্যা ০-৯ হিসেবে আসে। বন্ধ করলে 0-9।</td><td lang="en">Digits come out as ০-৯; off gives 0-9.</td></tr>
+      <tr><td><b>পরের শব্দের পরামর্শ</b> · <b>ইমোজি পরামর্শ</b></td><td lang="bn">শব্দের পর পরের শব্দ, আর কিছু শব্দে ইমোজি।</td><td lang="en">Next-word suggestions, and emoji for some words.</td></tr>
+      <tr><td><b>⌫ চাপলে রোমান অক্ষর ফেরে</b></td><td lang="bn">শব্দের ঠিক পরে ⌫ চাপলে অক্ষর ফেরত।</td><td lang="en">⌫ right after a word brings your letters back.</td></tr>
+      <tr><td><b>দুবার Space-এ দাঁড়ি</b></td><td lang="bn">দুবার Space চাপলে “।” বসে।</td><td lang="en">Double Space types “।”.</td></tr>
+      <tr><td><b>ইংরেজির জন্য Gboard</b></td><td lang="bn">EN চাপলে Gboard খোলে (<a href="#switch">বাংলা ⇄ ইংরেজি</a> দেখুন)।</td><td lang="en">EN opens Gboard (see <a href="#switch">Bangla ⇄ English</a>).</td></tr>
+      <tr><td><b>থিম</b> · <b>কীর আলাদা ঘর</b> · <b>ছবির ব্যাকগ্রাউন্ড</b> · <b>কী চাপার ধরন</b></td><td lang="bn">ওপরে দেখুন।</td><td lang="en">See above.</td></tr>
+      <tr><td><b>ইমোজি বোতাম</b></td><td lang="bn">Space-এর পাশে ☺ কী।</td><td lang="en">The ☺ key next to Space.</td></tr>
+      <tr><td><b>উচ্চতা</b></td><td lang="bn">ছোট, সাধারণ বা বড় কিবোর্ড।</td><td lang="en">A small, normal or tall keyboard.</td></tr>
+      <tr><td><b>কীতে বাংলা অক্ষর দেখান</b> · <b>সংখ্যার সারি</b></td><td lang="bn">কোণের বাংলা অক্ষর, আর ওপরে আলাদা সংখ্যার সারি।</td><td lang="en">The Bangla letters in the corners, and a row of numbers on top.</td></tr>
+      <tr><td><b>কম্পন</b> · <b>শব্দ</b></td><td lang="bn">কী চাপলে হালকা কম্পন আর শব্দ।</td><td lang="en">A light vibration and click on each key press.</td></tr>
+      <tr><td><b>স্নিপেট</b></td><td lang="bn">নিজের শর্টকাট যোগ করুন, যেমন <code>;addr</code> → পুরো ঠিকানা।</td><td lang="en">Add your own shortcuts, such as <code>;addr</code> → your full address.</td></tr>
+      <tr><td><b>শেখা শব্দগুলো মুছে দিন</b></td><td lang="bn">একুশে আপনার বাছাই থেকে যা শিখেছে, সব মুছে দেয়।</td><td lang="en">Forgets every word Ekushe has learned from your choices.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="android-privacy"><span lang="bn">ফোনে গোপনীয়তা</span><span lang="en">Privacy on the phone</span></h3>
+  <p lang="bn">একুশে নেক্সট অ্যান্ড্রয়েড অ্যাপের <b>ইন্টারনেট ব্যবহারের অনুমতিই নেই</b>, তাই আপনার লেখা ফোন থেকে বের হওয়ার কোনো পথ নেই। পাসওয়ার্ড, ইমেইল আর ওয়েব ঠিকানার ঘরে একুশে সাধারণ ইংরেজি অক্ষর দেয় আর কিছুই শেখে না; যেসব অ্যাপ “ব্যক্তিগত শেখা বন্ধ” চায় (যেমন ইনকগনিটো ট্যাব), সেখানেও শেখা বন্ধ থাকে। “সমস্যা জানান” লিংক শুধু আপনি চাপলে ব্রাউজারে ফর্ম খোলে।</p>
+  <p lang="en">The Ekushe Next Android app has <b>no permission to use the internet</b>, so there is no way for what you type to leave the phone. In password, email and web address boxes it types plain English letters and learns nothing; apps that ask for no personal learning (such as incognito tabs) get the same. The “Report a problem” link opens a form in your browser only when you tap it.</p>
+</section>
+
 <!-- ═════════════ Studio ═════════════ -->
-<section class="g-sec" id="studio">
+<section class="g-sec" id="studio" data-os="win mac linux">
   <h2><span lang="bn">একুশে স্টুডিও</span><span lang="en">Ekushe Studio</span><a class="anchor" href="#studio" aria-label="link">#</a></h2>
   <p lang="bn">স্টুডিও একুশের সাথে আসা একটি ছোট কাজের জায়গা: লেখার প্যাড, শব্দ এক্স-রে, যুক্তবর্ণের গাইড, বানান পরীক্ষা, বিজয় ⇄ ইউনিকোড রূপান্তর আর সেটিংস। এটি আপনার কম্পিউটারেই চলে, ইন্টারনেট লাগে না।</p>
   <p lang="en">Studio is a small workspace that comes with Ekushe: a writing pad, a word X-ray, the conjunct guide, a spell checker, a Bijoy ⇄ Unicode converter and the settings. It runs on your own computer; no internet needed.</p>
@@ -693,7 +837,7 @@
 </section>
 
 <!-- ═════════════ Settings ═════════════ -->
-<section class="g-sec" id="settings">
+<section class="g-sec" id="settings" data-os="win mac linux">
   <h2><span lang="bn">সেটিংস</span><span lang="en">Settings</span><a class="anchor" href="#settings" aria-label="link">#</a></h2>
   <figure class="shot-fig"><img src="/img/studio-settings-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's settings"></figure>
   <p lang="bn">সব সেটিং আছে স্টুডিওর <b>সেটিংস</b> অংশে। কোনো কিছু বদলালেই সঙ্গে সঙ্গে সংরক্ষিত হয়, আলাদা “Save” চাপতে হয় না।</p>
@@ -760,7 +904,7 @@
 </section>
 
 <!-- ═════════════ Layouts ═════════════ -->
-<section class="g-sec" id="layouts">
+<section class="g-sec" id="layouts" data-os="win mac linux">
   <h2><span lang="bn">অন্যান্য লেআউট</span><span lang="en">Other layouts</span><a class="anchor" href="#layouts" aria-label="link">#</a></h2>
   <p lang="bn">ফোনেটিক ছাড়াও একুশেতে চারটি নির্দিষ্ট বাংলা লেআউট আছে, যেখানে প্রতিটি কী সব সময় একই বাংলা অক্ষর দেয়, বাংলা ছাপা কিবোর্ডের মতো:</p>
   <p lang="en">Besides phonetic typing, Ekushe has four fixed Bangla layouts, where each key always gives the same letter, as printed on Bangla keyboards:</p>
@@ -777,7 +921,7 @@
 </section>
 
 <!-- ═════════════ Advanced ═════════════ -->
-<section class="g-sec" id="advanced">
+<section class="g-sec" id="advanced" data-os="win mac linux">
   <h2><span lang="bn">উন্নত কনফিগারেশন</span><span lang="en">Advanced configuration</span><a class="anchor" href="#advanced" aria-label="link">#</a></h2>
   <p lang="bn">স্টুডিওতে যা বদলান, তা লেখা থাকে <code>config.toml</code> নামের একটি সাধারণ লেখার ফাইলে। কিছু সেটিং শুধু এই ফাইলেই আছে। ফাইলটি না থাকলে স্টুডিওতে যেকোনো একটি সেটিং একবার বদলান, ফাইলটি তৈরি হয়ে যাবে।</p>
   <p lang="en">Whatever you change in Studio is written to a plain text file called <code>config.toml</code>. A few settings exist only there. If the file isn’t there yet, change any setting in Studio once and it will be created.</p>
@@ -924,12 +1068,33 @@ ekn = "এখন"
     <p lang="bn">তারপর <b>Settings → Keyboard → Input Sources</b> থেকে Ekushe Bangla সরান। সেটিংসও মুছতে চাইলে <span class="path">~/.config/Ekushe</span> ফোল্ডারটি মুছুন।</p>
     <p lang="en">Then remove Ekushe Bangla under <b>Settings → Keyboard → Input Sources</b>. To remove your settings too, delete <span class="path">~/.config/Ekushe</span>.</p>
   </div>
+  <div class="os-block" data-os="android">
+    <p class="os-tag"><svg aria-hidden="true"><use href="#i-android"/></svg>Android</p>
+    <h4><span lang="bn">আপডেট</span><span lang="en">Update</span></h4>
+    <p lang="bn">নতুন <code>Ekushe-Next-Android.apk</code> ডাউনলোড করে খুলুন আর <b>Update</b> চাপুন। পুরনোটি সরাতে হয় না; আপনার সেটিংস, থিম, স্নিপেট আর শেখা শব্দ থেকে যায়।</p>
+    <p lang="en">Download the new <code>Ekushe-Next-Android.apk</code>, open it and tap <b>Update</b>. There’s no need to remove the old one; your settings, theme, snippets and learned words stay.</p>
+    <h4><span lang="bn">আনইনস্টল</span><span lang="en">Uninstall</span></h4>
+    <p lang="bn">একুশে নেক্সট আইকন চেপে ধরে <b>Uninstall</b> চাপুন (অথবা <b>Settings → Apps → Ekushe Next → Uninstall</b>)। সঙ্গে সব সেটিংস আর শেখা শব্দও মুছে যায়।</p>
+    <p lang="en">Press and hold the Ekushe Next icon and tap <b>Uninstall</b> (or <b>Settings → Apps → Ekushe Next → Uninstall</b>). Its settings and learned words go with it.</p>
+  </div>
 </section>
 
 <!-- ═════════════ Troubleshooting ═════════════ -->
 <section class="g-sec" id="trouble">
   <h2><span lang="bn">সমস্যা সমাধান</span><span lang="en">Troubleshooting</span><a class="anchor" href="#trouble" aria-label="link">#</a></h2>
   <div class="g-faq">
+    <details data-os="android"><summary><span lang="bn">অ্যান্ড্রয়েড: “App not installed” দেখাচ্ছে</span><span lang="en">Android: it says “App not installed”</span></summary><div>
+      <p lang="bn">সাধারণত ফোনে একুশে নেক্সটের আগের কোনো পরীক্ষামূলক (টেস্ট) সংস্করণ থাকলে এমন হয়, কারণ সেটি অন্য চাবিতে সাইন করা। আগেরটি আনইনস্টল করে নতুনটি ইনস্টল করুন। এরপর থেকে সব আপডেট সরাসরি ওপরে বসবে।</p>
+      <p lang="en">This usually means an earlier test build of Ekushe Next is on the phone, signed with a different key. Uninstall that one, then install the new one. Every update after that installs straight over it.</p>
+    </div></details>
+    <details data-os="android"><summary><span lang="bn">অ্যান্ড্রয়েড: EN চাপলে Gboard খোলে না</span><span lang="en">Android: EN doesn’t open Gboard</span></summary><div>
+      <p lang="bn">Gboard ইনস্টল থাকলেও কিবোর্ড হিসেবে চালু থাকতে হয়। একুশে অ্যাপের <b>ইংরেজির জন্য Gboard</b>-এর নিচে <b>Gboard চালু করুন</b> চাপুন, অথবা <b>Settings → System → Keyboard</b> থেকে Gboard চালু করুন। Samsung-এর মতো যেসব ফোনে Gboard নেই, সেখানে Play Store থেকে Gboard নিন, অথবা এই সেটিং বন্ধ রেখে ইংরেজিও একুশেতে লিখুন।</p>
+      <p lang="en">Gboard has to be turned on as a keyboard, not just installed. In the Ekushe app, tap <b>Gboard চালু করুন</b> under <b>ইংরেজির জন্য Gboard</b>, or turn Gboard on in <b>Settings → System → Keyboard</b>. On phones without Gboard, such as many Samsungs, get Gboard from the Play Store, or leave this setting off and type English in Ekushe.</p>
+    </div></details>
+    <details data-os="android"><summary><span lang="bn">অ্যান্ড্রয়েড: Gboard থেকে একুশেতে ফিরতে পারছি না</span><span lang="en">Android: I can’t get back from Gboard</span></summary><div>
+      <p lang="bn">Gboard-এ 🌐 বোতাম না দেখালে তার Space চেপে ধরুন, কিবোর্ড বাছাইয়ের তালিকা আসবে; একুশে নেক্সট বেছে নিন। 🌐 বোতাম সবসময় দেখাতে Gboard-এর সেটিংসে <b>Preferences → Show language switch key</b> চালু করুন।</p>
+      <p lang="en">If Gboard shows no 🌐 key, press and hold its space bar to open the keyboard picker and choose Ekushe Next. To always show the 🌐 key, turn on <b>Preferences → Show language switch key</b> in Gboard’s settings.</p>
+    </div></details>
     <details data-os="win"><summary><span lang="bn">উইন্ডোজ: ট্রে আইকন দেখছি না</span><span lang="en">Windows: I can’t see the tray icon</span></summary><div>
       <p lang="bn">ঘড়ির পাশের <b>^</b> তীরচিহ্নে দেখুন। সেখানেও না থাকলে একুশে চলছে না: Start Menu থেকে <b>Ekushe Next Bangla Keyboard</b> চালু করুন। প্রতিবার উইন্ডোজ চালুর সময় নিজে থেকে চালু চাইলে Setup আবার চালিয়ে “Auto-Start” বিকল্পটি চালু রাখুন।</p>
       <p lang="en">Check behind the <b>^</b> arrow next to the clock. If it isn’t there either, Ekushe isn’t running: start <b>Ekushe Next Bangla Keyboard</b> from the Start Menu. To have it start with Windows, run Setup again with “Auto-Start” switched on.</p>
@@ -1038,6 +1203,7 @@ ekn = "এখন"
   <symbol id="i-windows" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.6l7.4-1v7H3zm8.4-1.2L21 3v8.6h-9.6zM3 12.6h7.4v7l-7.4-1zm8.4 0H21V21l-9.6-1.4z"/></symbol>
   <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.2zM14 5.3c.7-.9 1.2-2 1-3.3-1 0-2.3.7-3 1.6-.6.7-1.2 1.9-1 3.1 1.1.1 2.3-.6 3-1.4z"/></symbol>
   <symbol id="i-linux" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-2.2 0-3.4 1.9-3.4 4.3 0 1.4.3 2.3-.6 3.7-1 1.6-2.5 3.6-2.5 6.1 0 .6.1 1.1.2 1.6-.9.4-1.7.9-1.7 1.7 0 1.1 1.7 1.3 3.2 1.7 1.2.3 2 .9 3 .9.8 0 1.4-.4 1.8-.9.4.5 1 .9 1.8.9 1 0 1.8-.6 3-.9 1.5-.4 3.2-.6 3.2-1.7 0-.8-.8-1.3-1.7-1.7.1-.5.2-1 .2-1.6 0-2.5-1.5-4.5-2.5-6.1-.9-1.4-.6-2.3-.6-3.7C15.4 3.9 14.2 2 12 2zm-1.5 4c.4 0 .7.5.7 1.1s-.3 1.1-.7 1.1-.7-.5-.7-1.1.3-1.1.7-1.1zm3 0c.4 0 .7.5.7 1.1s-.3 1.1-.7 1.1-.7-.5-.7-1.1.3-1.1.7-1.1zM12 9c.9 0 2 .6 2 1.1 0 .4-1.1 1.2-2 1.2s-2-.8-2-1.2C10 9.6 11.1 9 12 9z"/></symbol>
+  <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" d="M7.2 8.6h9.6c.5 0 .9.4.9.9v7.2c0 .5-.4.9-.9.9h-.9v2.5a1.1 1.1 0 01-2.2 0v-2.5h-3.4v2.5a1.1 1.1 0 01-2.2 0v-2.5h-.9a.9.9 0 01-.9-.9V9.5c0-.5.4-.9.9-.9zM4.4 9a1.1 1.1 0 011.1 1.1v5a1.1 1.1 0 01-2.2 0v-5C3.3 9.5 3.8 9 4.4 9zm15.2 0a1.1 1.1 0 011.1 1.1v5a1.1 1.1 0 01-2.2 0v-5c0-.6.5-1.1 1.1-1.1zM15.6 3.1l-.9 1.5A5.3 5.3 0 0117.6 7.8H6.4a5.3 5.3 0 012.9-3.2l-.9-1.5a.3.3 0 01.5-.3l.9 1.6a5.8 5.8 0 014.4 0l.9-1.6a.3.3 0 01.5.3zM9.6 5.7a.6.6 0 100 1.2.6.6 0 000-1.2zm4.8 0a.6.6 0 100 1.2.6.6 0 000-1.2z"/></symbol>
   <symbol id="i-info" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0-10v6m0-9.5v.5"/></symbol>
   <symbol id="i-warn" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l10 18H2zm0 7v5m0 3v.5"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 11h12v10H6zm2 0V8a4 4 0 018 0v3"/></symbol>

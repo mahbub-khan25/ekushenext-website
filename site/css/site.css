@@ -396,3 +396,54 @@ code { font: 500 .86em/1.4 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; 
 .dl-guide a { color: var(--mint); font-weight: 600; text-underline-offset: 4px; }
 /* Links to the download files stay hidden until launch (js/launch.js adds .live) */
 html:not(.live) [data-when-live] { display: none !important; }
+
+/* ───────────── Android ───────────── */
+.android { overflow: hidden; }
+.android::before { content: ''; position: absolute; inset: 10% -20% auto auto; width: 60vw; height: 60vw; max-width: 760px; max-height: 760px; border-radius: 50%; background: radial-gradient(closest-side, rgba(226, 59, 59, .16), transparent 70%); pointer-events: none; }
+.android-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(40px, 6vw, 88px); align-items: center; }
+.android-kicker { display: inline-block; margin: 0 0 14px; padding: 5px 14px; border-radius: 999px; background: rgba(226, 59, 59, .14); color: #FF8A84; font: 600 var(--s-1)/1.4 var(--f-bn); letter-spacing: .02em; box-shadow: inset 0 0 0 1px rgba(255, 138, 132, .28); }
+html[lang="en"] .android-kicker { font-family: var(--f-body); }
+.and-list { list-style: none; margin: 36px 0 0; padding: 0; display: grid; gap: 20px; }
+.and-list li { display: grid; gap: 2px; padding-left: 22px; position: relative; }
+.and-list li::before { content: ''; position: absolute; left: 0; top: .62em; width: 9px; height: 9px; border-radius: 50%; background: var(--mint-hi); box-shadow: 0 0 0 4px rgba(47, 209, 142, .14); }
+.and-list b { font: 600 var(--s1)/1.4 var(--f-bn); color: var(--ink); }
+html[lang="en"] .and-list b { font-family: var(--f-body); }
+.and-list span { color: var(--muted); }
+
+.phone-wrap { display: grid; justify-items: center; gap: 22px; }
+.phone { --bezel: #0B0F0D; width: min(360px, 86vw); aspect-ratio: 9 / 19; border-radius: 46px; padding: 11px; background: linear-gradient(150deg, #2B3531, #0B0F0D 40%, #1B2420); box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 40px 90px -30px rgba(0,0,0,.8), 0 0 120px -40px rgba(47, 209, 142, .35); position: relative; transform: rotate(-2deg); transition: transform .6s var(--ease); }
+.phone:hover { transform: rotate(0deg) translateY(-4px); }
+.phone::before { content: ''; position: absolute; top: 20px; left: 50%; width: 24%; height: 22px; border-radius: 999px; background: #000; transform: translateX(-50%); z-index: 2; }
+.phone-screen { height: 100%; border-radius: 36px; overflow: hidden; background: #ECE5DD; display: flex; flex-direction: column; position: relative; }
+.phone[data-theme="night"] .phone-screen, .phone[data-theme="padma"] .phone-screen, .phone[data-theme="ekushe"] .phone-screen, .phone[data-theme="3d"] .phone-screen, .phone[data-theme="photo"] .phone-screen { background: #0E1613; }
+.phone-bar { display: flex; justify-content: space-between; padding: 14px 26px 0; font: 600 12px/1 var(--f-bn); color: #5A6F65; }
+.phone[data-theme="night"] .phone-bar, .phone[data-theme="padma"] .phone-bar, .phone[data-theme="ekushe"] .phone-bar, .phone[data-theme="3d"] .phone-bar, .phone[data-theme="photo"] .phone-bar { color: #A0B6AC; }
+.phone-icons { letter-spacing: -1px; font-size: 10px; }
+.phone-head { display: flex; align-items: center; gap: 10px; padding: 14px 16px 10px; border-bottom: 1px solid rgba(0,0,0,.08); font: 500 13px/1.25 var(--f-bn); color: #1B2A23; }
+.phone-head b { display: block; font-weight: 600; font-size: 15px; }
+.phone-head small { color: #2E8B57; font-size: 11px; }
+.phone-av { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, #E23B3B, #F26B4F); color: #fff; font-weight: 600; }
+.phone[data-theme="night"] .phone-head, .phone[data-theme="padma"] .phone-head, .phone[data-theme="ekushe"] .phone-head, .phone[data-theme="3d"] .phone-head, .phone[data-theme="photo"] .phone-head { color: #EAF3EE; border-color: rgba(255,255,255,.08); }
+.phone-chat { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: 26px 14px 12px; }
+.bubble { margin: 0; max-width: 82%; padding: 8px 12px; border-radius: 16px; font: 500 15px/1.45 var(--f-bn); box-shadow: 0 1px 1px rgba(0,0,0,.12); }
+.bubble.them { align-self: flex-start; background: #fff; color: #1B2A23; border-bottom-left-radius: 5px; font-family: var(--f-body); }
+.bubble.me { align-self: flex-end; background: #D9FDD3; color: #0E241B; border-bottom-right-radius: 5px; }
+.phone[data-theme="night"] .bubble.them, .phone[data-theme="padma"] .bubble.them, .phone[data-theme="ekushe"] .bubble.them, .phone[data-theme="3d"] .bubble.them, .phone[data-theme="photo"] .bubble.them { background: #202C27; color: #EAF3EE; }
+.phone[data-theme="night"] .bubble.me, .phone[data-theme="padma"] .bubble.me, .phone[data-theme="ekushe"] .bubble.me, .phone[data-theme="3d"] .bubble.me, .phone[data-theme="photo"] .bubble.me { background: #0B6B4A; color: #F2FBF6; }
+.bubble.typing { opacity: .92; outline: 1.5px dashed rgba(11, 107, 74, .35); outline-offset: 2px; }
+.caret-mini { display: inline-block; width: 2px; height: 1.05em; margin-left: 2px; vertical-align: -0.15em; background: currentColor; animation: blink 1s steps(1) infinite; }
+.phone-kb { width: 100%; height: auto; transition: opacity .25s; }
+.phone-kb.fade { opacity: 0; }
+
+.theme-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 440px; }
+.theme-chips button { display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer; padding: 7px 14px 7px 8px; border-radius: 999px; background: rgba(255,255,255,.04); color: var(--muted); font: 500 var(--s-1)/1.2 var(--f-bn); box-shadow: inset 0 0 0 1px var(--rim); transition: background-color .2s, color .2s; }
+html[lang="en"] .theme-chips button { font-family: var(--f-body); }
+.theme-chips button i { width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, var(--c1) 50%, var(--c2) 50%); box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
+.theme-chips button:hover { color: var(--ink); }
+.theme-chips button[aria-pressed="true"] { background: var(--ink); color: var(--night); box-shadow: none; }
+
+@media (max-width: 980px) {
+  .android-grid { grid-template-columns: 1fr; }
+  .phone { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .phone, .phone:hover { transform: none; } .caret-mini { animation: none; } }
