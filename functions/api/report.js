@@ -71,7 +71,9 @@ export async function onRequestPost({ request, env }) {
   // A few reports a day from one visitor
   if (env.REPORTS && ip) {
     const day = new Date().toISOString().slice(0, 10);
-    const key = `rate:${day}:${ip}`;
+    // The address itself is not stored, only a one-way fingerprint of it for the day
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${day}|${ip}`));
+    const key = `rate:${day}:${[...new Uint8Array(digest)].slice(0, 8).map((x) => x.toString(16).padStart(2, '0')).join('')}`;
     const n = Number(await env.REPORTS.get(key)) || 0;
     if (n >= PER_DAY) return json({ ok: false, error: 'too_many' }, 429);
     await env.REPORTS.put(key, String(n + 1), { expirationTtl: 2 * 86400 });
