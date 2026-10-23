@@ -1,5 +1,6 @@
 import { Ekushe } from '/engine/ekushe.js';
 import { EN, BN_EXTRA } from '/js/i18n.js';
+import { LAUNCHED, latestRelease } from '/js/launch.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -293,9 +294,9 @@ function bijoyLive() {
 
 /* ───────────────────────── Downloads ───────────────────────── */
 const REPO = 'mahbub-khan25/ekushenext';
-// Downloads are shown greyed out with "Coming soon" until launch. Set to false to open them.
-const COMING_SOON = true;
-// Used when GitHub's API can't be reached; updated with each release.
+// Downloads are greyed out ("coming soon") until launch: the switch is LAUNCHED in js/launch.js.
+const COMING_SOON = !LAUNCHED;
+// Used only when the newest release can't be looked up (and while it is older than this one).
 const FALLBACK = {
   tag_name: 'v0.1.0-beta.10', published_at: '2026-10-23T10:55:28Z', html_url: `https://github.com/${REPO}/releases/tag/v0.1.0-beta.10`,
   assets: [
@@ -321,22 +322,6 @@ function detectOS() {
 const os = detectOS();
 let release = FALLBACK;
 
-async function loadRelease() {
-  try {
-    const cached = JSON.parse(sessionStorage.getItem('ekushe-release') || 'null');
-    if (cached && Date.now() - cached.at < 30 * 60e3) return cached.r;
-  } catch (e) {}
-  try {
-    const res = await fetch(`https://api.github.com/repos/${REPO}/releases?per_page=6`, { headers: { Accept: 'application/vnd.github+json' } });
-    if (!res.ok) throw new Error(res.status);
-    const list = await res.json();
-    const r = list.find((x) => !x.draft && x.assets?.some((a) => /Ekushe-Setup\.exe$/.test(a.name)));
-    if (!r) throw new Error('no release');
-    const slim = { tag_name: r.tag_name, published_at: r.published_at, html_url: r.html_url, assets: r.assets.map(({ name, size, browser_download_url }) => ({ name, size, browser_download_url })) };
-    try { sessionStorage.setItem('ekushe-release', JSON.stringify({ at: Date.now(), r: slim })); } catch (e) {}
-    return slim;
-  } catch (e) { return FALLBACK; }
-}
 const fmtSize = (b) => `${num((b / 1048576).toFixed(b > 1048576 * 10 ? 0 : 1))} MB`;
 const fileOf = (osKey, i = 0) => { const [re] = FILES[osKey][i]; return release.assets.find((a) => re.test(a.name)); };
 
@@ -401,7 +386,7 @@ $$('.dl-tabs [data-os]').forEach((b) => b.addEventListener('click', () => pickOS
 pickOS(os === 'mobile' ? 'windows' : os);
 renderDownloads();
 langListeners.push(renderDownloads);
-if (!COMING_SOON) loadRelease().then((r) => { release = r; renderDownloads(); });
+if (!COMING_SOON) latestRelease(FALLBACK).then((r) => { release = r; renderDownloads(); });
 
 /* ───────────────────────── Film ───────────────────────── */
 const film = $('#film'), video = $('#filmVideo');

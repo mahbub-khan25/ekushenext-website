@@ -394,3 +394,5 @@ code { font: 500 .86em/1.4 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; 
 }
 .dl-guide { margin: 36px 0 0; }
 .dl-guide a { color: var(--mint); font-weight: 600; text-underline-offset: 4px; }
+/* Links to the download files stay hidden until launch (js/launch.js adds .live) */
+html:not(.live) [data-when-live] { display: none !important; }

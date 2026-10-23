@@ -1,4 +1,5 @@
 // The guide page (/guide/): language, platform filter, contents, copy buttons and the practice box.
+import '/js/launch.js';
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const store = {
