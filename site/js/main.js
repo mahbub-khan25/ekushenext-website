@@ -460,3 +460,16 @@ enginePromise.then((engine) => {
   if (reduceMotion) { romanLine.dataset.keep = 'jebhabe bolen, shebhabe likhun.'; return; }
   autoplay();
 });
+
+// Menu: highlight the section being read (the guide is a separate page, shown apart from these)
+{
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+  const seen = new Map();
+  const spy = new IntersectionObserver((entries) => {
+    for (const e of entries) seen.set(e.target.id, e.isIntersecting);
+    const current = [...byId.keys()].filter((id) => seen.get(id)).pop();
+    links.forEach((a) => a.classList.toggle('on', a === byId.get(current)));
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  byId.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+}

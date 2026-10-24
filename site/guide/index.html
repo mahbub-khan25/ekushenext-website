@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://ekushenext.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/Kalpurush.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=4">
+<link rel="stylesheet" href="/css/site.css?v=5">
 <link rel="stylesheet" href="/css/guide.css?v=3">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"TechArticle","headline":"Ekushe Next guide","alternativeHeadline":"একুশে নেক্সট ব্যবহার নির্দেশিকা","url":"https://ekushenext.com/guide/","inLanguage":["bn","en"],"about":{"@type":"SoftwareApplication","name":"Ekushe Next","operatingSystem":"Windows 10, Windows 11, macOS 11+, Linux"}}
@@ -34,10 +34,12 @@
   <nav class="nav-links" aria-label="Site">
     <a href="/#features"><span lang="bn">কী আলাদা</span><span lang="en">What’s different</span></a>
     <a href="/#studio"><span lang="bn">স্টুডিও</span><span lang="en">Studio</span></a>
-    <a href="/guide/" aria-current="page"><span lang="bn">নির্দেশিকা</span><span lang="en">Guide</span></a>
+    <a href="/#android"><span lang="bn">অ্যান্ড্রয়েড</span><span lang="en">Android</span></a>
+    <a href="/#ekushe"><span lang="bn">২১শে ফেব্রুয়ারি</span><span lang="en">21 February</span></a>
     <a href="/#faq"><span lang="bn">প্রশ্ন</span><span lang="en">Questions</span></a>
   </nav>
   <div class="nav-end">
+    <a class="nav-guide" href="/guide/" aria-current="page"><svg class="nav-guide-i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5.5C4 4.7 4.7 4 5.5 4H11v15H5.5c-.8 0-1.5.7-1.5 1.5zM20 5.5c0-.8-.7-1.5-1.5-1.5H13v15h5.5c.8 0 1.5.7 1.5 1.5z"/></svg><span><span lang="bn">নির্দেশিকা</span><span lang="en">Guide</span></span></a>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="bn" aria-pressed="true">বাংলা</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -189,8 +191,21 @@
   <!-- Linux -->
   <div class="os-block" data-os="linux" id="install-linux">
     <p class="os-tag"><svg aria-hidden="true"><use href="#i-linux"/></svg>Linux</p>
-    <p lang="bn">একুশে লিনাক্সে একটি <b>IBus</b> কিবোর্ড। আপনার ডিস্ট্রিবিউশন অনুযায়ী ফাইল বেছে নিন। টার্মিনালে যে ফোল্ডারে ফাইলটি ডাউনলোড হয়েছে সেখানে গিয়ে (সাধারণত <code>cd ~/Downloads</code>) কমান্ডটি চালান।</p>
-    <p lang="en">On Linux, Ekushe is an <b>IBus</b> keyboard. Pick the file for your distribution. In a terminal, go to the folder you downloaded it to (usually <code>cd ~/Downloads</code>) and run the command.</p>
+    <p lang="bn">একুশে লিনাক্সে একটি <b>IBus</b> কিবোর্ড। Ubuntu আর Fedora-তে সবচেয়ে সহজ হলো একুশের রিপোজিটরি যোগ করা: একবার দুটি কমান্ড, তারপর সিস্টেমের বাকি আপডেটের সঙ্গে একুশেও আপনাআপনি আপডেট হবে।</p>
+    <p lang="en">On Linux, Ekushe is an <b>IBus</b> keyboard. On Ubuntu and Fedora the easiest way is to add Ekushe's repository: two commands once, and from then on Ekushe updates along with the rest of your system.</p>
+
+    <h4>Ubuntu <small>(22.04, 24.04, 26.04, 26.10)</small></h4>
+    <div class="cmd-box"><pre><code>sudo add-apt-repository ppa:cicadama/ekushe
+sudo apt install ekushe</code></pre></div>
+    <h4>Fedora <small>(43, 44, 45)</small></h4>
+    <div class="cmd-box"><pre><code>sudo dnf copr enable cicadama/ekushe
+sudo dnf install ekushe</code></pre></div>
+    <p lang="bn">Linux Mint আর Pop!_OS Ubuntu-ভিত্তিক, তাই Ubuntu-র কমান্ডই চলে। দুটোই ইন্টেল/এএমডি আর এআরএম কম্পিউটারে চলে।</p>
+    <p lang="en">Linux Mint and Pop!_OS are based on Ubuntu, so the Ubuntu commands work there too. Both work on Intel/AMD and ARM computers.</p>
+
+    <h4><span lang="bn">অথবা ডাউনলোড করা ফাইল দিয়ে</span><span lang="en">Or from a downloaded file</span></h4>
+    <p lang="bn">Debian, openSUSE বা ইন্টারনেট ছাড়া কম্পিউটারে ডাউনলোডের পাতা থেকে ফাইলটি নিন। টার্মিনালে যে ফোল্ডারে ফাইলটি ডাউনলোড হয়েছে সেখানে গিয়ে (সাধারণত <code>cd ~/Downloads</code>) কমান্ডটি চালান। এভাবে ইনস্টল করলে নতুন সংস্করণ নিজে ডাউনলোড করতে হবে।</p>
+    <p lang="en">For Debian, openSUSE or a computer without internet, get the file from the download page. In a terminal, go to the folder you downloaded it to (usually <code>cd ~/Downloads</code>) and run the command. Installed this way, you download new versions yourself.</p>
 
     <h4>Ubuntu, Debian, Linux Mint, Pop!_OS <small>(.deb)</small></h4>
     <div class="cmd-box"><pre><code>sudo apt install ./ekushe_*_amd64.deb</code></pre></div>
@@ -1113,8 +1128,8 @@ ekn = "এখন"
   <div class="os-block" data-os="linux">
     <p class="os-tag"><svg aria-hidden="true"><use href="#i-linux"/></svg>Linux</p>
     <h4><span lang="bn">আপডেট</span><span lang="en">Update</span></h4>
-    <p lang="bn">নতুন প্যাকেজ <a href="#install-linux">ইনস্টলের একই কমান্ডে</a> ইনস্টল করুন (<code>apt</code> বা <code>dnf</code> পুরনোটি বদলে দেয়), তারপর <code>ibus restart</code>। AppImage হলে নতুন ফাইল দিয়ে আবার <code>--install-keyboard</code> চালান।</p>
-    <p lang="en">Install the new package with <a href="#install-linux">the same command</a> (<code>apt</code> or <code>dnf</code> replaces the old one), then run <code>ibus restart</code>. With the AppImage, run <code>--install-keyboard</code> again from the new file.</p>
+    <p lang="bn">রিপোজিটরি থেকে ইনস্টল করলে একুশে সিস্টেমের সাধারণ আপডেটের সঙ্গেই আপডেট হয় (Software Updater, বা <code>sudo apt upgrade</code> / <code>sudo dnf upgrade</code>)। ডাউনলোড করা ফাইল হলে নতুন প্যাকেজ <a href="#install-linux">ইনস্টলের একই কমান্ডে</a> ইনস্টল করুন (<code>apt</code> বা <code>dnf</code> পুরনোটি বদলে দেয়)। দুই ক্ষেত্রেই এরপর <code>ibus restart</code>। AppImage হলে নতুন ফাইল দিয়ে আবার <code>--install-keyboard</code> চালান।</p>
+    <p lang="en">Installed from the repository, Ekushe updates with your normal system updates (Software Updater, or <code>sudo apt upgrade</code> / <code>sudo dnf upgrade</code>). From a downloaded file, install the new package with <a href="#install-linux">the same command</a> (<code>apt</code> or <code>dnf</code> replaces the old one). Either way, run <code>ibus restart</code> afterwards. With the AppImage, run <code>--install-keyboard</code> again from the new file.</p>
     <h4><span lang="bn">আনইনস্টল</span><span lang="en">Uninstall</span></h4>
     <p>Ubuntu, Debian, Mint, Pop!_OS</p>
     <div class="cmd-box"><pre><code>sudo apt remove ekushe</code></pre></div>
