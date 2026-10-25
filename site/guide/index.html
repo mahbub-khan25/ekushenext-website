@@ -705,6 +705,21 @@ sudo dnf install ekushe</code></pre></div>
   <p lang="bn">নিজের স্নিপেট (ঠিকানা, ফোন নম্বর, স্বাক্ষর) যোগ করুন স্টুডিওর <a href="#settings">সেটিংস → স্নিপেট</a> থেকে। শর্টকাট <code>;</code> দিয়ে শুরু করলে সাধারণ শব্দের সাথে মিশে যায় না, যেমন <code>;addr</code>।</p>
   <p lang="en">Add your own (an address, a phone number, a signature) in Studio’s <a href="#settings">Settings → Snippets</a>. Starting the code with <code>;</code>, such as <code>;addr</code>, keeps it from clashing with real words.</p>
 
+  <h3 id="dates"><span lang="bn">আজকের তারিখ ও সময়</span><span lang="en">Today’s date and the time</span></h3>
+  <p lang="bn">এই শর্টকাটগুলো কম্পিউটারের ঘড়ি দেখে বাংলায় তারিখ বা সময় লিখে দেয়। পপ-আপে অন্য ধরনগুলোও থাকে, যেমন <code>;aj</code>-এ “শনিবার, ২৪ অক্টোবর ২০২৬” বা “২৪/১০/২০২৬”। বাংলা তারিখ বাংলাদেশের সংশোধিত বঙ্গাব্দ অনুযায়ী (পহেলা বৈশাখ ১৪ এপ্রিল, ২১ ফেব্রুয়ারি ৮ ফাল্গুন)।</p>
+  <p lang="en">These read the computer’s clock and write the date or time in Bangla. The popup offers other forms too, such as “শনিবার, ২৪ অক্টোবর ২০২৬” or “২৪/১০/২০২৬” for <code>;aj</code>. The Bangla date follows Bangladesh’s revised calendar (1 Boishakh is 14 April, 21 February is 8 Falgun).</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th><span lang="bn">লিখুন</span><span lang="en">Type</span></th><th><span lang="bn">যা বসবে (উদাহরণ)</span><span lang="en">You get (example)</span></th></tr></thead>
+      <tbody>
+        <tr><td><code>;aj</code> <span lang="bn">বা</span><span lang="en">or</span> <code>;tarikh</code></td><td class="bn">২৪ অক্টোবর ২০২৬</td></tr>
+        <tr><td><code>;bar</code></td><td class="bn">শনিবার</td></tr>
+        <tr><td><code>;bongabdo</code></td><td class="bn">৮ কার্তিক ১৪৩৩ বঙ্গাব্দ</td></tr>
+        <tr><td><code>;somoy</code></td><td class="bn">সন্ধ্যা ৭:৫০</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <h3 id="convert-selection"><span lang="bn">যেকোনো অ্যাপে বেছে নেওয়া লেখা বাংলা করা</span><span lang="en">Convert selected text in any app</span></h3>
   <div data-os="win">
     <p lang="bn">উইন্ডোজে যেকোনো অ্যাপে লেখা বেছে নিয়ে (মাউস দিয়ে বা <kbd>Shift</kbd>+তীরচিহ্ন) <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd> চাপুন। একুশে নিজেই বুঝে নেয় লেখাটি কী:</p>
@@ -964,6 +979,14 @@ sudo dnf install ekushe</code></pre></div>
   <p lang="bn">একই শর্টকাট দিয়ে আবার যোগ করলে আগের লেখাটি বদলে যায়। স্নিপেট মুছতে <a href="#advanced">কনফিগারেশন ফাইল</a> থেকে লাইনটি সরান।</p>
   <p lang="en">Adding the same code again replaces its text. To delete a snippet, remove its line from the <a href="#advanced">configuration file</a>.</p>
 
+  <h3 id="backup"><span lang="bn">ব্যাকআপ ও ফিরিয়ে আনা</span><span lang="en">Backup and restore</span></h3>
+  <p lang="bn">সেটিংসের নিচে <b>ব্যাকআপ নিন</b> চাপলে আপনার সেটিংস, স্নিপেট আর একুশের শেখা শব্দ একটি ফাইলে ডাউনলোড হয়। নতুন কম্পিউটারে (উইন্ডোজ বা লিনাক্স) <b>ফিরিয়ে আনুন</b> চেপে ফাইলটি দিলেই সব ফিরে আসে। আগের কিছু মোছে না: সেটিংস ব্যাকআপ থেকে নেয়, আর স্নিপেট ও শেখা শব্দ আগেরগুলোর সাথে যোগ হয়।</p>
+  <p lang="en">Click <b>ব্যাকআপ নিন</b> (back up) at the bottom of Settings to download your settings, snippets and learned words as one file. On a new computer (Windows or Linux), click <b>ফিরিয়ে আনুন</b> (restore) and pick the file. Nothing is lost: settings come from the backup, and snippets and learned words are added to the ones already there.</p>
+
+  <h3 id="wrong-word" data-os="win"><span lang="bn">একুশে ভুল শব্দ বসালে</span><span lang="en">When Ekushe put in the wrong word</span></h3>
+  <p lang="bn" data-os="win">ট্রে আইকনে রাইট-ক্লিক করে <b>ভুল শব্দ ঠিক করুন</b> বেছে নিন। সাম্প্রতিক শব্দগুলো দেখাবে; ভুলটির পাশে ঠিক শব্দটি বেছে নিন বা লিখে দিন, একুশে সঙ্গে সঙ্গে শিখে নেবে। এই তালিকা শুধু মেমোরিতে থাকে, পাসওয়ার্ডের ঘরের লেখা আসে না। ঠিক করা শব্দগুলো কপি করে <a href="/report/">সমস্যা জানানোর ফর্মে</a> দিলে সবার জন্য একুশে আরও ভালো হবে।</p>
+  <p lang="en" data-os="win">Right-click the tray icon and choose <b>ভুল শব্দ ঠিক করুন</b> (a word was wrong). Your recent words are listed; pick or type the right one next to the wrong word and Ekushe learns it at once. The list is kept in memory only, and nothing from password boxes appears in it. Copy your corrections into the <a href="/report/">report form</a> to help make Ekushe better for everyone.</p>
+
   <h3><span lang="bn">বদলানো সেটিং কখন কাজ শুরু করে</span><span lang="en">When a change takes effect</span></h3>
   <ul>
     <li data-os="win" lang="bn"><b>Windows:</b> সঙ্গে সঙ্গে।</li>
@@ -1074,8 +1097,8 @@ ekn = "এখন"
 <section class="g-sec" id="privacy">
   <h2><span lang="bn">গোপনীয়তা ও পাসওয়ার্ড</span><span lang="en">Privacy and password boxes</span><a class="anchor" href="#privacy" aria-label="link">#</a></h2>
   <ul>
-    <li lang="bn"><b>কিছুই বাইরে যায় না।</b> একুশে ইন্টারনেটে কিছু পাঠায় না; অভিধান, পরামর্শ, বানান পরীক্ষা সব আপনার কম্পিউটারেই চলে। স্টুডিও চলে শুধু আপনার কম্পিউটারের ভেতরের ঠিকানায় (127.0.0.1), এককালীন কোড দিয়ে।</li>
-    <li lang="en"><b>Nothing leaves your computer.</b> Ekushe sends nothing over the internet; the dictionary, suggestions and spell check all run locally. Studio runs only at your computer’s internal address (127.0.0.1), behind a one-time code.</li>
+    <li lang="bn"><b>কিছুই বাইরে যায় না।</b> একুশে ইন্টারনেটে কিছু পাঠায় না; অভিধান, পরামর্শ, বানান পরীক্ষা সব আপনার কম্পিউটারেই চলে। স্টুডিও চলে শুধু আপনার কম্পিউটারের ভেতরের ঠিকানায় (127.0.0.1), এককালীন কোড দিয়ে। একমাত্র ব্যতিক্রম উইন্ডোজে <a href="#update">হালনাগাদ দেখা</a>, তাও শুধু আপনি চাইলে: তখন একুশে GitHub-কে সর্বশেষ সংস্করণের নম্বরটা জিজ্ঞেস করে, আপনার কিছু পাঠায় না।</li>
+    <li lang="en"><b>Nothing leaves your computer.</b> Ekushe sends nothing over the internet; the dictionary, suggestions and spell check all run locally. Studio runs only at your computer’s internal address (127.0.0.1), behind a one-time code. The one exception is <a href="#update">checking for updates</a> on Windows, and only when you ask: Ekushe then asks GitHub for the newest version number and sends nothing about you.</li>
     <li lang="bn"><b>পাসওয়ার্ডের ঘরে একুশে সরে দাঁড়ায়।</b> পাসওয়ার্ড বা PIN-এর ঘরে সাধারণ অক্ষর বসে: কোনো বাংলা রূপান্তর নেই, পপ-আপ নেই, কিছু মনে রাখা হয় না।</li>
     <li lang="en"><b>Ekushe steps aside in password boxes.</b> In a password or PIN field, plain characters are typed: no Bangla conversion, no popup, nothing remembered.</li>
     <li lang="bn"><b>পাসওয়ার্ডের মতো দেখতে লেখা মনে রাখা হয় না</b>, যেকোনো ঘরে: অক্ষর আর সংখ্যা মেশানো (<code>abc123</code>), <code>@ # $ %</code>-এর মতো চিহ্ন, বা খুব লম্বা টানা লেখা। সাধারণ শব্দ আর একুশের চিহ্ন (<code>,,</code> <code>^</code> <code>rr</code> …) আগের মতোই শেখা হয়।</li>
@@ -1098,8 +1121,8 @@ ekn = "এখন"
 <!-- ═════════════ Update & uninstall ═════════════ -->
 <section class="g-sec" id="update">
   <h2><span lang="bn">আপডেট ও আনইনস্টল</span><span lang="en">Update and uninstall</span><a class="anchor" href="#update" aria-label="link">#</a></h2>
-  <p lang="bn">একুশে নিজে থেকে আপডেট খোঁজে না। নতুন সংস্করণ এলে এই সাইটের <a href="/#download">ডাউনলোড অংশে</a> পাবেন; আপনার সেটিংস, স্নিপেট আর শেখা শব্দ আপডেটের পরেও থেকে যায়।</p>
-  <p lang="en">Ekushe doesn’t check for updates by itself. New versions appear in this site’s <a href="/#download">download section</a>; your settings, snippets and learned words stay through updates.</p>
+  <p lang="bn">নতুন সংস্করণ এই সাইটের <a href="/#download">ডাউনলোড অংশে</a> পাবেন; আপনার সেটিংস, স্নিপেট আর শেখা শব্দ আপডেটের পরেও থেকে যায়। উইন্ডোজে ট্রে মেনুর <b>হালনাগাদ দেখুন</b> চাপলে একুশে দেখে নেয় নতুন সংস্করণ এসেছে কি না (শুধু GitHub-কে জিজ্ঞেস করে, আপনার কিছু পাঠায় না)। সেটিংসে <b>নতুন সংস্করণের খবর</b> চালু করলে দিনে একবার নিজেই দেখে আর নতুন এলে ট্রে থেকে জানায়; শুরুতে এটা বন্ধ থাকে। লিনাক্সে PPA বা COPR থেকে ইনস্টল করলে সিস্টেমের সাধারণ আপডেটের সাথেই একুশে আপডেট হয়।</p>
+  <p lang="en">New versions appear in this site’s <a href="/#download">download section</a>; your settings, snippets and learned words stay through updates. On Windows, choose <b>হালনাগাদ দেখুন</b> (check for updates) in the tray menu and Ekushe checks whether a new version is out (it only asks GitHub and sends nothing about you). Turn on <b>নতুন সংস্করণের খবর</b> (new version notices) in Settings and it checks once a day by itself and tells you from the tray; it starts off. On Linux, installs from the PPA or COPR update with the rest of your system.</p>
 
   <div class="os-block" data-os="win">
     <p class="os-tag"><svg aria-hidden="true"><use href="#i-windows"/></svg>Windows</p>
@@ -1247,8 +1270,8 @@ ekn = "এখন"
       <p lang="en">On Windows, yes: Setup installs for your account only, and <code>Ekushe-Portable.exe</code> runs without installing anything. On a Mac, the .zip installs into your own account. On Linux, IBus needs your password once.</p>
     </div></details>
     <details><summary><span lang="bn">আমার লেখা কি কোথাও পাঠানো হয়?</span><span lang="en">Is anything I type sent anywhere?</span></summary><div>
-      <p lang="bn">না। একুশে নেটওয়ার্কে কিছু পাঠায় না। বিস্তারিত <a href="#privacy">গোপনীয়তা</a> অংশে।</p>
-      <p lang="en">No. Ekushe sends nothing over the network. See <a href="#privacy">Privacy</a>.</p>
+      <p lang="bn">না। একুশে নেটওয়ার্কে কিছু পাঠায় না (শুধু আপনি হালনাগাদ দেখতে চাইলে সর্বশেষ সংস্করণের নম্বর জিজ্ঞেস করে)। বিস্তারিত <a href="#privacy">গোপনীয়তা</a> অংশে।</p>
+      <p lang="en">No. Ekushe sends nothing over the network (it only asks for the newest version number when you check for updates). See <a href="#privacy">Privacy</a>.</p>
     </div></details>
     <details><summary><span lang="bn">কীভাবে সাহায্য করতে পারি?</span><span lang="en">How can I help?</span></summary><div>
       <p lang="bn">ব্যবহার করুন, ভুল বা অদ্ভুত পরামর্শ দেখলে <a href="/report/">জানান</a>, আর বন্ধুদের বলুন। কোড বা অভিধানে অবদান রাখতে চাইলে <a href="https://github.com/mahbub-khan25/ekushenext">GitHub</a>-এ CONTRIBUTING.md দেখুন।</p>
