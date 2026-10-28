@@ -19,8 +19,8 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/Kalpurush.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="modulepreload" href="/engine/ekushe.js">
-<link rel="stylesheet" href="/css/site.css?v=5">
+<link rel="modulepreload" href="/engine/ekushe.js?v=2">
+<link rel="stylesheet" href="/css/site.css?v=6">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ekushe Next","alternateName":"একুশে নেক্সট","operatingSystem":"Windows 10, Windows 11, macOS 11+, Linux, Android 7+","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://ekushenext.com/","downloadUrl":"https://ekushenext.com/#download","license":"https://www.mozilla.org/MPL/2.0/","inLanguage":["bn","en"]}
 </script>
@@ -116,7 +116,7 @@
       <article class="feat">
         <div class="feat-copy">
           <h3 class="h3" data-t="feat.2.t">নিজস্ব অভিধান, শুদ্ধ বানান আগে</h3>
-          <p data-t="feat.2.p">২৭৪ কোটি শব্দের লেখা থেকে তৈরি ৪,১৮,৭৪৩ শব্দের অভিধান। বাংলা একাডেমির প্রমিত বানান সবসময় আগে আসে, ভুল বানান নয়।</p>
+          <p data-t="feat.2.p">৯৬১ কোটি শব্দের লেখা থেকে তৈরি ৪,০৩,০১৯ শব্দের অভিধান। বাংলা একাডেমির প্রমিত বানান সবসময় আগে আসে, ভুল বানান নয়। যে ৫০০টি বানান নিয়ে সবচেয়ে বেশি প্রশ্ন ওঠে, সেগুলো বাংলাভাষী পর্যালোচকেরা যাচাই করেছেন।</p>
         </div>
         <div class="feat-demo" data-demo="standard" aria-live="polite"></div>
       </article>
@@ -132,7 +132,7 @@
       <article class="feat">
         <div class="feat-copy">
           <h3 class="h3" data-t="feat.4.t">ভুল হলে এক চাপে ফেরত</h3>
-          <p data-t="feat.4.p">শব্দ বসানোর ঠিক পরে Backspace চাপলে আপনার টাইপ করা রোমান অক্ষর ফিরে আসে। ইংরেজি শব্দ রাখতে চাইলে সামনে / দিন, যেমন /office।</p>
+          <p data-t="feat.4.p">শব্দ বসানোর ঠিক পরে Backspace চাপলে শব্দটি আবার খোলে, সব পরামর্শসহ, ইংরেজি বানানটিও সেখানে। নতুন করে টাইপ করতে হয় না। ইংরেজি শব্দ রাখতে চাইলে সামনে / দিন, যেমন /office।</p>
         </div>
         <div class="feat-demo" data-demo="undo" aria-live="polite"></div>
       </article>
@@ -347,7 +347,7 @@
       <ol class="steps">
         <li data-t="dl.linux.1">সহজ উপায়, আপডেটও আপনাআপনি আসবে। Ubuntu-তে টার্মিনালে চালান:<code class="cmd">sudo add-apt-repository ppa:cicadama/ekushe</code><code class="cmd">sudo apt install ekushe</code>Fedora-তে:<code class="cmd">sudo dnf copr enable cicadama/ekushe</code><code class="cmd">sudo dnf install ekushe</code>অন্য ডিস্ট্রিবিউশনে এখানকার .deb, .rpm বা AppImage নিন।</li>
         <li data-t="dl.linux.2">এরপর চালান:<code class="cmd">ibus restart</code>অথবা একবার লগ আউট করে আবার ঢুকুন।</li>
-        <li data-t="dl.linux.3">Settings → Keyboard → Input Sources → + → Bengali → Ekushe Bangla যোগ করুন। Super+Space দিয়ে বদলান।</li>
+        <li data-t="dl.linux.3">একুশে স্টুডিও খুলে <b>কিবোর্ড যোগ করুন</b> চাপুন, অথবা Settings → Keyboard → Input Sources → + → Bangla (Bangladesh) → Ekushe Bangla যোগ করুন। Super+Space দিয়ে বদলান।</li>
       </ol>
       <p class="dl-note" data-t="dl.linux.note">IBus লাগে, যা Ubuntu, Fedora, Debian আর GNOME-এ আগে থেকেই থাকে। AppImage যেকোনো ডিস্ট্রিবিউশনে চলে।</p>
     </div>
@@ -374,7 +374,7 @@
       <details><summary data-t="faq.3.q">কোন কোন অ্যাপে লেখা যায়?</summary><p data-t="faq.3.a">প্রায় সব জায়গায়: Word, Chrome, Facebook, WhatsApp Desktop, Notepad, ইমেইল। কম্পিউটারে বাংলা আর ইংরেজির মধ্যে বদলাতে দুবার Shift চাপুন, কোন অ্যাপে কোন ভাষা ছিল একুশে তা মনে রাখে। ফোনে একুশে নেক্সট হয়ে যায় আপনার কিবোর্ড, তাই WhatsApp, Messenger, Facebook, যেকোনো অ্যাপে লেখা যায়।</p></details>
       <details><summary data-t="faq.4.q">বিজয় বা প্রভাত লেআউটে লিখতে পারব?</summary><p data-t="faq.4.a">ফোনেটিকের পাশাপাশি প্রভাত, জাতীয়, বর্ণনা আর মুনীর অপটিমা লেআউটও আছে। সেটিংস থেকে বেছে নিন। পুরনো বিজয় লেখা ইউনিকোডে বদলাতে স্টুডিওর রূপান্তর ব্যবহার করুন।</p></details>
       <details><summary data-t="faq.5.q">উইন্ডোজ বা ব্রাউজার সতর্কবার্তা দেখাচ্ছে কেন?</summary><p data-t="faq.5.a">একুশে নেক্সট নতুন অ্যাপ। উইন্ডোজ অ্যাপটি নির্মাতার যাচাই করা নামে ডিজিটালি সাইন করা, তবে নতুন সাইন করা অ্যাপের পরিচিতি তৈরি হতে কিছুদিন সময় লাগে। More info → Run anyway চাপলেই চলবে।</p></details>
-      <details><summary data-t="faq.6.q">আনইনস্টল করব কীভাবে?</summary><p data-t="faq.6.a">উইন্ডোজে Settings → Apps থেকে Ekushe Next সরান। ম্যাকে /Library/Input Methods থেকে Ekushe.app মুছে দিন। লিনাক্সে প্যাকেজ ম্যানেজার দিয়ে ekushe সরান। অ্যান্ড্রয়েডে অ্যাপের আইকন চেপে ধরে Uninstall চাপুন।</p></details>
+      <details><summary data-t="faq.6.q">আনইনস্টল করব কীভাবে?</summary><p data-t="faq.6.a">উইন্ডোজে Settings → Apps থেকে Ekushe Next সরান। ম্যাকে /Library/Input Methods থেকে Ekushe.app মুছে দিন। লিনাক্সে আগে স্টুডিওতে <b>কিবোর্ড বাদ দিন</b> চাপুন, তারপর প্যাকেজ ম্যানেজার দিয়ে ekushe সরান। অ্যান্ড্রয়েডে অ্যাপের আইকন চেপে ধরে Uninstall চাপুন।</p></details>
       <details><summary data-t="faq.7.q">কোনো সমস্যা হলে কোথায় জানাব?</summary><p data-t="faq.7.a"><a href="/report/">সমস্যা জানানোর পাতায়</a> লিখুন, কোনো অ্যাকাউন্ট লাগে না। অ্যাপের ভেতর থেকেও খোলা যায়: কম্পিউটারে ট্রে মেনুর 🐞 সমস্যা জানান, ফোনে অ্যাপের সাহায্য অংশে। কী হয়েছে আর কোন অ্যাপে লিখছিলেন, তা লিখলে দ্রুত ঠিক করা যায়।</p></details>
       <details><summary data-t="faq.8.q">আইফোন বা আইপ্যাডে পাওয়া যাবে?</summary><p data-t="faq.8.a">হ্যাঁ, পরে। আইফোন আর আইপ্যাডের কিবোর্ড তৈরি হয়ে গেছে: একই ইঞ্জিন আর অভিধান, সব থিম, ইংরেজি শব্দ পূরণ আর বানান ঠিক করা। এখন পরীক্ষা চলছে, তারপর App Store-এ আসবে। এটিও ইন্টারনেটের অনুমতি চায় না।</p></details>
     </div>

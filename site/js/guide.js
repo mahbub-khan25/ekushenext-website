@@ -92,7 +92,7 @@ if (input) {
   const bnDigits = (s) => String(s).replace(/\d/g, (d) => '০১২৩৪৫৬৭৮৯'[d]);
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   let ek = null, text = '', roman = '', cands = [], sel = 0, hints = [];
-  const enginePromise = import('/engine/ekushe.js')
+  const enginePromise = import('/engine/ekushe.js?v=2')
     .then(({ Ekushe }) => Ekushe.load(new URL('/engine/', location.href)))
     .then((e) => { ek = e; input.disabled = false; render(); })
     .catch(() => { tipsEl.textContent = lang === 'bn' ? 'এই ব্রাউজারে ইঞ্জিনটি চালানো গেল না।' : 'The engine could not start in this browser.'; });

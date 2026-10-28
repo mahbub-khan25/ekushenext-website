@@ -3,8 +3,8 @@
 export class Ekushe {
   static async load(base = new URL('.', import.meta.url)) {
     const [wasm, dict] = await Promise.all([
-      fetch(new URL('ekushe.wasm', base)).then((r) => r.arrayBuffer()),
-      fetch(new URL('ekushe-web.dict.z', base)).then((r) => (r.ok ? r.arrayBuffer() : null)).catch(() => null),
+      fetch(new URL('ekushe.wasm?v=2', base)).then((r) => r.arrayBuffer()),
+      fetch(new URL('ekushe-web.dict.z?v=2', base)).then((r) => (r.ok ? r.arrayBuffer() : null)).catch(() => null),
     ]);
     const { instance } = await WebAssembly.instantiate(wasm, {});
     return new Ekushe(instance.exports, dict);

@@ -77,9 +77,11 @@ pub extern "C" fn ek_key(ch: u32) {
     with(|e| e.push_char(c, false));
 }
 
+/// Backspace. Right after a word it reopens that word with its suggestions (the Roman letters
+/// typed, the English spelling among them), as in the apps: `delete_before` says how much to remove.
 #[no_mangle]
 pub extern "C" fn ek_backspace() {
-    with(|e| e.backspace());
+    with(|e| e.reopen_last_word().unwrap_or_else(|| e.backspace()));
 }
 
 /// Commit candidate `index`; `trailing` is a character to add after it (0 for none).

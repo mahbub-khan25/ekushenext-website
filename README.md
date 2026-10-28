@@ -4,7 +4,7 @@ The website for [Ekushe Next](https://github.com/mahbub-khan25/ekushenext), a fr
 
 It's a static site with no build step: everything Cloudflare Pages serves is in `site/`.
 
-- The hero, the feature examples, the speed test and the Bijoy converter all run Ekushe Next's real engine in the browser. It's ekushe-core compiled to WebAssembly (`site/engine/ekushe.wasm`) with a smaller 30,000-word dictionary (`site/engine/ekushe-web.dict.z`, about 1.7 MB).
+- The hero, the feature examples, the speed test and the Bijoy converter all run Ekushe Next's real engine in the browser. It's ekushe-core compiled to WebAssembly (`site/engine/ekushe.wasm`) with a smaller dictionary (`site/engine/ekushe-web.dict.z`, about 1.7 MB): the 30,000 most common words plus the spoken verb forms, names and chat words the apps' dictionary is packed with.
 - Download buttons always point at the newest published release (betas included), picking the right file for the visitor's computer. They ask `/api/latest` (a Cloudflare Pages Function in `functions/api/latest.js` that asks GitHub at most every five minutes for everyone), then GitHub's API directly, and only if both fail use the release listed in `site/js/main.js`.
 - **Opening the downloads:** until launch, download buttons are greyed out ("coming soon") and links to the release files are hidden. To open them, set `LAUNCHED = true` in `site/js/launch.js` and push. Nothing else needs changing at launch or at later releases.
 - The page is in Bangla, and the English text is in `site/js/i18n.js`.

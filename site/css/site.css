@@ -454,3 +454,15 @@ html[lang="en"] .theme-chips button { font-family: var(--f-body); }
 .nav-guide-i { flex: none; }
 .nav-links a.on { color: var(--ink); background: var(--etch); }
 @media (max-width: 640px) { .nav-guide { width: 38px; padding: 0; justify-content: center; } .nav-guide > span { display: none; } }
+/* small phones: the top bar fits without scrolling sideways (GitHub is still linked in the footer) */
+@media (max-width: 430px) {
+  .nav { gap: 8px; }
+  .nav-end { gap: 6px; }
+  .nav-gh { display: none; }
+  .lang button { padding: 5px 10px; }
+}
+/* the four system tabs share the width on a phone instead of running off the side */
+@media (max-width: 520px) {
+  .dl-tabs { width: 100%; gap: 2px; }
+  .dl-tabs button { flex: 1 1 0; min-width: 0; padding: 9px 4px; font-size: var(--s-1); }
+}

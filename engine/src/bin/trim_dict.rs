@@ -1,8 +1,9 @@
 //! Make a small dictionary for the website demo from the full Ekushe Next dictionary.
 //!
-//! `trim-dict LEXICON.tsv FULL.dict.z N OUT_DIR [PAIRS_PER_WORD]` keeps the N most frequent words of the lexicon
-//! (it is sorted by frequency) and the word pairs between them, and writes `lexicon.tsv` and
-//! `pairs.tsv` into OUT_DIR for `ekushe-dict pack`.
+//! `trim-dict LEXICON.tsv FULL.dict.z N OUT_DIR [PAIRS_PER_WORD] [KEEP.txt]` keeps the N most frequent words of
+//! the lexicon (it is sorted by frequency), plus every word listed in KEEP.txt (one per line: the spoken
+//! forms, names and chat words the full dictionary is packed with), and the word pairs between them, and
+//! writes `lexicon.tsv` and `pairs.tsv` into OUT_DIR for `ekushe-dict pack`.
 use ekushe_core::dict::Dictionary;
 use std::collections::HashSet;
 use std::fmt::Write as _;
@@ -16,16 +17,28 @@ fn main() {
     let mut kept = String::new();
     kept.push_str(lines.next().unwrap());
     kept.push('\n');
+    let keep: HashSet<String> = a
+        .get(6)
+        .map(|p| std::fs::read_to_string(p).unwrap().lines().map(|w| w.trim().to_string()).filter(|w| !w.is_empty()).collect())
+        .unwrap_or_default();
     let mut words = HashSet::new();
+    let mut top = 0;
     for l in lines {
-        if words.len() >= n {
-            break;
-        }
         let f: Vec<&str> = l.split('\t').collect();
-        // skip rare tiers and suspected typos so the small dictionary stays clean
-        if f.len() < 10 || f[9].contains("suspect_typo_of") {
+        if f.len() < 10 {
             continue;
         }
+        if keep.contains(f[0]) {
+            words.insert(f[0].to_string());
+            kept.push_str(l);
+            kept.push('\n');
+            continue;
+        }
+        // skip suspected typos so the small dictionary stays clean
+        if top >= n || f[9].contains("suspect_typo_of") {
+            continue;
+        }
+        top += 1;
         words.insert(f[0].to_string());
         kept.push_str(l);
         kept.push('\n');

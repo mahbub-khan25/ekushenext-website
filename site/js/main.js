@@ -1,4 +1,4 @@
-import { Ekushe } from '/engine/ekushe.js';
+import { Ekushe } from '/engine/ekushe.js?v=2';
 import { EN, BN_EXTRA } from '/js/i18n.js';
 import { LAUNCHED, latestRelease } from '/js/launch.js';
 
@@ -147,7 +147,7 @@ input.addEventListener('beforeinput', (e) => {
     e.preventDefault();
     if (roman) { apply(ek.backspace()); return; }
     if (!committed) return;
-    const out = ek.backspace(); // right after a word this brings the Roman letters back
+    const out = ek.backspace(); // right after a word this reopens it with its suggestions
     if (out.delete_before || out.committed) apply(out);
     else { committed = Array.from(new Intl.Segmenter('bn', { granularity: 'grapheme' }).segment(committed), (g) => g.segment).slice(0, -1).join(''); render(); }
   } else if (e.inputType === 'insertLineBreak' || e.inputType === 'insertParagraph') {
@@ -186,7 +186,13 @@ function computeDemos() {
       const { text, out } = typeAll(ek, w + ' ');
       return { text: text.trim(), preds: (out.next_word_predictions || []).slice(0, 3).map((p) => ({ text: p })) };
     }),
-    undo: { bn: typeAll(ek, 'office ').text.trim(), en: typeAll(ek, '/office ').text.trim() },
+    undo: (() => {
+      const bn = typeAll(ek, 'office ').text.trim();
+      // Backspace right after it: the word opens again; show its first three and the English spelling
+      const all = ek.backspace().candidates || [];
+      const reopened = [...all.filter((c) => c.kind !== 'English').slice(0, 3), ...all.filter((c) => c.kind === 'English').slice(0, 1)];
+      return { bn, reopened, en: typeAll(ek, '/office ').text.trim() };
+    })(),
   };
   ek.reset();
 }
@@ -203,13 +209,14 @@ function buildDemos() {
     el('predict').innerHTML = `<p class="demo-sentence">${esc(d.text)} <span class="ghost">…</span></p><div class="demo-popup"><ol class="popup-cands">${candList(d.preds, 0, 3)}</ol></div><p class="demo-caption">${t('demo.predict')}</p>`;
   };
   let ui = 0;
-  const undoSteps = [[esc(demo.undo.bn), 'demo.undo.1', 'Space'], ['office', 'demo.undo.2', '⌫'], [esc(demo.undo.en), 'demo.undo.3', '/']];
+  const reopenedPopup = `<div class="demo-popup"><ol class="popup-cands">${candList(demo.undo.reopened, 0, 4)}</ol></div>`;
+  const undoSteps = [[esc(demo.undo.bn), '', 'demo.undo.1', 'Space'], [`<span class="ghost">office</span>`, reopenedPopup, 'demo.undo.2', '⌫'], [esc(demo.undo.en), '', 'demo.undo.3', '/']];
   const undo = () => {
-    const [sentence, cap, key] = undoSteps[ui++ % undoSteps.length];
-    el('undo').innerHTML = `<p class="demo-sentence">${sentence}</p><p class="demo-caption"><span class="keycap press">${key}</span> ${t(cap)}</p>`;
+    const [sentence, popup, cap, key] = undoSteps[ui++ % undoSteps.length];
+    el('undo').innerHTML = `<p class="demo-sentence">${sentence}</p>${popup}<p class="demo-caption"><span class="keycap press">${key}</span> ${t(cap)}</p>`;
   };
   predict(); undo();
-  if (!reduceMotion) demoTimers.push(setInterval(predict, 3200), setInterval(undo, 2200));
+  if (!reduceMotion) demoTimers.push(setInterval(predict, 3200), setInterval(undo, 2600));
 }
 
 /* ───────────────────────── Speed, measured here ───────────────────────── */
@@ -298,10 +305,10 @@ const REPO = 'mahbub-khan25/ekushenext';
 const COMING_SOON = !LAUNCHED;
 // Used only when the newest release can't be looked up (and while it is older than this one).
 const FALLBACK = {
-  tag_name: 'v0.1.0-beta.24', published_at: '2026-10-26T13:37:58Z', html_url: `https://github.com/${REPO}/releases/tag/v0.1.0-beta.24`,
+  tag_name: 'v0.2.0-beta.2', published_at: '2026-10-28T16:08:35Z', html_url: `https://github.com/${REPO}/releases/tag/v0.2.0-beta.2`,
   assets: [
-    ['Ekushe-Setup.exe', 18369328], ['Ekushe-Setup.zip', 16119080], ['Ekushe-Portable.exe', 18369328], ['Ekushe-macOS.pkg', 34141404], ['Ekushe-macOS.zip', 34140172], ['ekushe_0.1.0-beta.24_amd64.deb', 31377926], ['ekushe-0.1.0-beta.24.x86_64.rpm', 31619041], ['Ekushe-0.1.0-beta.24-x86_64.AppImage', 31648248], ['Ekushe-Next-Android.apk', 22892566],
-  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.1.0-beta.24/${name}` })),
+    ['Ekushe-Setup.exe', 20545328], ['Ekushe-Setup.zip', 17463823], ['Ekushe-Portable.exe', 20545328], ['Ekushe-macOS.pkg', 35440682], ['Ekushe-macOS.zip', 35439128], ['ekushe_0.2.0-beta.2_amd64.deb', 32677146], ['ekushe-0.2.0-beta.2.x86_64.rpm', 32990636], ['Ekushe-0.2.0-beta.2-x86_64.AppImage', 32967160], ['Ekushe-Next-Android.apk', 23571034],
+  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.2.0-beta.2/${name}` })),
 };
 const FILES = {
   windows: [[/^Ekushe-Setup\.exe$/, 'winSetup', 'windows'], [/^Ekushe-Setup\.zip$/, 'winZip', 'windows'], [/^Ekushe-Portable\.exe$/, 'winPortable', 'windows']],
