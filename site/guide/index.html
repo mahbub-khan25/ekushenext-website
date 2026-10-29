@@ -610,13 +610,31 @@ sudo dnf install ekushe</code></pre></div>
   <h2><span lang="bn">নির্দিষ্ট বানানের চিহ্ন</span><span lang="en">Exact-spelling marks</span><a class="anchor" href="#marks" aria-label="link">#</a></h2>
   <p lang="bn">কখনো কখনো আপনি ঠিক জানেন কোন বানান চাই: হসন্ত, চন্দ্রবিন্দু, রেফ। শব্দে এই চিহ্নগুলোর কোনোটি দিলে একুশে বোঝে আপনি ইচ্ছা করেই দিয়েছেন, তাই <b>সেই বানানের শব্দটি সবার আগে আসে</b>, আর Space চাপলে সেটিই বসে।</p>
   <p lang="en">Sometimes you know exactly which spelling you want: a hasanta, a chandrabindu, a reph. When a word contains one of these marks, Ekushe knows you added it on purpose, so <b>the spelling that honours it comes first</b>, and Space places it.</p>
+
+  <h3 id="join"><span lang="bn">যুক্তবর্ণ, হসন্ত, না আলাদা: <code>+</code> <code>,,</code> <code>`</code></span><span lang="en">Conjunct, hasanta or apart: <code>+</code> <code>,,</code> <code>`</code></span></h3>
+  <p lang="bn">এই তিনটি চিহ্ন সবচেয়ে বেশি গুলিয়ে যায়। তিনটিই দুটি ব্যঞ্জনের মাঝে বসে, কিন্তু ফল আলাদা:</p>
+  <p lang="en">These three are the ones people mix up. All three go between two consonants, with different results:</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th><span lang="bn">লিখুন</span><span lang="en">Type</span></th><th><span lang="bn">পাবেন</span><span lang="en">You get</span></th><th><span lang="bn">চিহ্নটি কী করে</span><span lang="en">What the mark does</span></th></tr></thead>
+      <tbody>
+        <tr><td><button class="try" type="button" data-try="as+te"><code>as+te</code></button></td><td class="bn">আস্তে</td><td><span lang="bn"><code>+</code> দুটি অক্ষর জুড়ে <b>যুক্তবর্ণ</b> বানায় (স + ত = স্ত)। যুক্তবর্ণ চাইলে এটাই।</span><span lang="en"><code>+</code> joins the two letters into a <b>conjunct</b> (স + ত = স্ত). This is the one for a conjunct.</span></td></tr>
+        <tr><td><button class="try" type="button" data-try="as,,te"><code>as,,te</code></button></td><td class="bn">আস্‌তে</td><td><span lang="bn"><code>,,</code> <b>হসন্ত দেখায়</b> (্), অক্ষর দুটি যুক্ত হয় না।</span><span lang="en"><code>,,</code> puts a <b>visible hasanta</b> (্); the letters don't join.</span></td></tr>
+        <tr><td><button class="try" type="button" data-try="as`te"><code>as`te</code></button></td><td class="bn">আসতে</td><td><span lang="bn"><code>`</code> অক্ষর দুটি <b>আলাদা</b> রাখে, কোনো হসন্ত বা যুক্তবর্ণ ছাড়া।</span><span lang="en"><code>`</code> keeps the letters <b>apart</b>, with no hasanta or conjunct.</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p lang="bn">চিহ্ন ছাড়া <code>aste</code> লিখলে অভিধান বেছে নেয়: আসতে প্রথমে, আস্তে দ্বিতীয়তে (Tab চেপে নিন)। <code>,,</code> সাধারণত লাগে শব্দের শেষে, যেমন <code>allah,,</code> → আল্লাহ্।</p>
+  <p lang="en">With no mark, <code>aste</code> lets the dictionary choose: আসতে first, আস্তে second (take it with Tab). <code>,,</code> is mostly for the end of a word, as in <code>allah,,</code> → আল্লাহ্.</p>
+
+  <h3><span lang="bn">সব চিহ্ন</span><span lang="en">All the marks</span></h3>
   <div class="tbl">
     <table>
       <thead><tr><th><span lang="bn">লিখুন</span><span lang="en">Type</span></th><th><span lang="bn">যা চাইছেন</span><span lang="en">Asks for</span></th><th><span lang="bn">উদাহরণ</span><span lang="en">Example</span></th></tr></thead>
       <tbody>
-        <tr><td><code>,,</code></td><td><span lang="bn">হসন্ত ্</span><span lang="en">Hasanta ্</span></td><td><button class="try" type="button" data-try="allah,,"><code>allah,,</code></button> → আল্লাহ্</td></tr>
-        <tr><td><code>+</code></td><td><span lang="bn">যুক্তবর্ণ, ঠিক যেমন লিখলেন</span><span lang="en">A conjunct, exactly as typed</span></td><td><button class="try" type="button" data-try="k+t"><code>k+t</code></button> → ক্ত</td></tr>
-        <tr><td><code>`</code></td><td><span lang="bn">যুক্তবর্ণ নয়, অক্ষর আলাদা</span><span lang="en">No conjunct: letters stay apart</span></td><td><button class="try" type="button" data-try="bol`le"><code>bol`le</code></button> → বললে</td></tr>
+        <tr><td><code>,,</code></td><td><span lang="bn">হসন্ত ্, দেখা যায়, যুক্ত হয় না</span><span lang="en">A visible hasanta ্ (no joining)</span></td><td><button class="try" type="button" data-try="allah,,"><code>allah,,</code></button> → আল্লাহ্</td></tr>
+        <tr><td><code>+</code></td><td><span lang="bn">যুক্তবর্ণ, ঠিক যেমন লিখলেন</span><span lang="en">A conjunct, exactly as typed</span></td><td><button class="try" type="button" data-try="k+t"><code>k+t</code></button> → ক্ত, <button class="try" type="button" data-try="as+te"><code>as+te</code></button> → আস্তে</td></tr>
+        <tr><td><code>`</code></td><td><span lang="bn">যুক্তবর্ণ নয়, অক্ষর আলাদা</span><span lang="en">No conjunct: letters stay apart</span></td><td><button class="try" type="button" data-try="as`te"><code>as`te</code></button> → আসতে</td></tr>
         <tr><td><code>^</code> <span lang="bn">বা</span><span lang="en">or</span> <code>~</code></td><td><span lang="bn">চন্দ্রবিন্দু ঁ</span><span lang="en">Chandrabindu ঁ</span></td><td><button class="try" type="button" data-try="he^se"><code>he^se</code></button> → হেঁসে, <button class="try" type="button" data-try="cha^d"><code>cha^d</code></button> → চাঁদ</td></tr>
         <tr><td><code>rri</code></td><td><span lang="bn">ঋ বা ঋ-কার ৃ</span><span lang="en">ঋ or its sign ৃ</span></td><td><button class="try" type="button" data-try="krrishi"><code>krrishi</code></button> → কৃষি</td></tr>
         <tr><td><code>rr</code> + <span lang="bn">ব্যঞ্জন</span><span lang="en">consonant</span></td><td><span lang="bn">রেফ র্</span><span lang="en">Reph র্</span></td><td><button class="try" type="button" data-try="dhorrmo"><code>dhorrmo</code></button> → ধর্ম</td></tr>
@@ -632,8 +650,20 @@ sudo dnf install ekushe</code></pre></div>
   <h3><span lang="bn">উল্টো দিকেও সাহায্য: পপ-আপের টিপ</span><span lang="en">Help the other way round: tips in the popup</span></h3>
   <p lang="bn">ধরুন লিখলেন <code>hese</code>, আর যে শব্দটি চাইছিলেন (হেঁসে) তালিকায় তিন নম্বরে। তখন পপ-আপের সংকেতের সারিতে সবার আগে সবুজ রেখায় ঘেরা একটি টিপ দেখাবে: <b>হেঁসে <code>he^se</code></b>। পরের বার সরাসরি <code>he^se</code> লিখলেই শব্দটি প্রথমে আসবে। চন্দ্রবিন্দু, খণ্ড-ত আর বিসর্গের জন্য এমন টিপ আসে, ছোট পপ-আপেও।</p>
   <p lang="en">Say you type <code>hese</code>, and the word you want (হেঁসে) is third in the list. The popup’s hint row then shows a tip first, outlined in green: <b>হেঁসে <code>he^se</code></b>. Next time, type <code>he^se</code> and the word comes first. These tips appear for chandrabindu, khanda-ta and bisarga, even in the compact popup.</p>
-  <p lang="bn">সব চিহ্নের তালিকা এক জায়গায় আছে স্টুডিওর যুক্তবর্ণ গাইডের ওপরে; পপ-আপের <b>সহায়িকা</b> বোতাম সরাসরি সেখানে নিয়ে যায়।</p>
-  <p lang="en">All the marks are listed together at the top of Studio’s conjunct guide; the popup’s <b>সহায়িকা</b> (Help) button takes you straight there.</p>
+  <h3 id="marks-where"><span lang="bn">চিহ্নগুলো কোথায় পাবেন, আর সাহায্য কোথায়</span><span lang="en">Where to find the marks, and help</span></h3>
+  <div class="tbl">
+    <table>
+      <thead><tr><th></th><th><span lang="bn">চিহ্ন লেখা</span><span lang="en">Typing the marks</span></th><th><span lang="bn">এই তালিকা দেখতে</span><span lang="en">To see this list</span></th></tr></thead>
+      <tbody>
+        <tr data-os="win"><td><b>Windows</b></td><td><span lang="bn">কিবোর্ডেই আছে (<code>+</code> = Shift + =)</span><span lang="en">On the keyboard (<code>+</code> is Shift + =)</span></td><td><span lang="bn">পপ-আপের <b>সহায়িকা</b>, বা ট্রে মেনুর <b>যুক্তবর্ণ ও চিহ্নের সহায়িকা</b></span><span lang="en">The popup’s <b>সহায়িকা</b> (Help), or <b>যুক্তবর্ণ ও চিহ্নের সহায়িকা</b> in the tray menu</span></td></tr>
+        <tr data-os="mac"><td><b>macOS</b></td><td><span lang="bn">কিবোর্ডেই আছে</span><span lang="en">On the keyboard</span></td><td><span lang="bn">মেনু বারের ইনপুট মেনু → <b>Marks &amp; Conjuncts Guide</b></span><span lang="en">The input menu in the menu bar → <b>Marks &amp; Conjuncts Guide</b></span></td></tr>
+        <tr data-os="linux"><td><b>Linux</b></td><td><span lang="bn">কিবোর্ডেই আছে</span><span lang="en">On the keyboard</span></td><td><span lang="bn">ওপরের বারের IBus মেনু → <b>Marks &amp; conjuncts guide</b></span><span lang="en">The IBus menu in the top bar → <b>Marks &amp; conjuncts guide</b></span></td></tr>
+        <tr data-os="android"><td><b>Android</b></td><td><span lang="bn">কমা চেপে ধরলে <code>,,</code> <code>+</code> <code>`</code>; ফুলস্টপ চেপে ধরলে <code>^</code> <code>:</code> <code>/</code> <code>..</code>। ট্যাবলেটের আলাদা কিবোর্ডে <code>+</code> = Shift + =</span><span lang="en">Hold the comma for <code>,,</code> <code>+</code> <code>`</code>, the full stop for <code>^</code> <code>:</code> <code>/</code> <code>..</code>. On a physical keyboard, <code>+</code> is Shift + =</span></td><td><span lang="bn">কিবোর্ডের ওপরের সারির <b>?</b> বোতাম, বা অ্যাপের <b>চিহ্নের নিয়ম</b> অংশ</span><span lang="en">The <b>?</b> button in the keyboard’s top bar, or <b>চিহ্নের নিয়ম</b> in the app</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p lang="bn">কম্পিউটারে সব চিহ্ন একসাথে আছে স্টুডিওর যুক্তবর্ণ গাইডের ওপরে, তিনটি গুলিয়ে যাওয়া চিহ্ন (<code>+</code> <code>,,</code> <code>`</code>) পাশাপাশি।</p>
+  <p lang="en">On a computer, all the marks are together at the top of Studio’s conjunct guide, with the three that get mixed up (<code>+</code> <code>,,</code> <code>`</code>) side by side.</p>
 </section>
 
 <!-- ═════════════ Popup ═════════════ -->
