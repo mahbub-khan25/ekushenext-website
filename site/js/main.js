@@ -443,8 +443,8 @@ const film = $('#film'), video = $('#filmVideo');
 const openFilm = () => {
   const vertical = innerHeight > innerWidth;
   film.classList.toggle('vertical', vertical);
-  const src = vertical ? '/media/ekushe-film-vertical.mp4' : '/media/ekushe-film-1080.mp4';
-  if (!video.src.endsWith(src)) { video.src = src; video.poster = vertical ? '' : '/media/film-poster.webp'; }
+  const src = vertical ? '/media/ekushe-welcome-vertical.mp4' : '/media/ekushe-welcome-1080.mp4';
+  if (!video.src.endsWith(src)) { video.src = src; video.poster = vertical ? '' : '/media/welcome-poster.webp'; }
   film.showModal();
   video.play().catch(() => {});
 };
