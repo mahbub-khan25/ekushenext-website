@@ -99,6 +99,12 @@ html[lang="en"] .section-lede { font-size: var(--s1); max-width: 54ch; }
 .nav-links a { padding: 8px 12px; border-radius: 999px; text-decoration: none; color: var(--muted); font-size: var(--s-1); font-weight: 500; transition: color .2s, background-color .2s; }
 .nav-links a:hover { color: var(--ink); background: var(--etch); }
 .nav-end { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.nav-links-gh, .nav-links-dl { display: none; }
+.nav-menu { display: none; width: 40px; height: 40px; border: 0; border-radius: 999px; cursor: pointer; background: rgba(255,255,255,.06); box-shadow: inset 0 0 0 1px var(--rim); place-content: center; gap: 5px; padding: 0; }
+.nav-menu span { display: block; width: 18px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .25s var(--ease), opacity .2s; }
+.nav.open .nav-menu span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav.open .nav-menu span:nth-child(2) { opacity: 0; }
+.nav.open .nav-menu span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav-gh { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 999px; color: var(--muted); }
 .nav-gh:hover { color: var(--ink); background: var(--etch); }
 .lang { display: flex; padding: 3px; border-radius: 999px; background: rgba(255,255,255,.05); box-shadow: inset 0 0 0 1px var(--rim); }
@@ -362,6 +368,13 @@ code { font: 500 .86em/1.4 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; 
 /* ── Responsive ── */
 @media (max-width: 980px) {
   .nav-links { display: none; }
+  .nav-menu { display: grid; }
+  .nav.open { background: rgba(3, 18, 12, .92); box-shadow: 0 1px 0 var(--rim); backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%); }
+  .nav.open .nav-links { display: flex; flex-direction: column; gap: 2px; position: absolute; left: 12px; right: 12px; top: calc(100% + 8px); margin: 0; padding: 10px; border-radius: 20px;
+    background: rgba(3, 18, 12, .97); box-shadow: inset 0 0 0 1px var(--rim-hi), 0 24px 60px rgba(0, 0, 0, .5); animation: pop .2s var(--ease); max-height: calc(100vh - 100px); overflow-y: auto; }
+  .nav.open .nav-links a { padding: 14px 16px; border-radius: 14px; font-size: var(--s0); color: var(--ink); }
+  .nav.open .nav-links .nav-links-gh { display: block; }
+  .nav.open .nav-links .nav-links-dl { display: block; margin-top: 6px; text-align: center; font-weight: 700; color: #04140F; background: var(--mint); }
   .feat, .speed-grid, .bijoy-grid, .privacy-grid, .ekushe-grid, .faq-grid, .dl-panel { grid-template-columns: minmax(0, 1fr); }
   .feat:nth-child(even) .feat-copy { order: 0; }
   .dl-files { grid-row: auto; }
