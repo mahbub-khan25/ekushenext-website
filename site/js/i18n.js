@@ -9,6 +9,7 @@ export const EN = {
   'nav.guide': 'Guide',
   'nav.download': 'Download',
 
+  'hero.launched': 'It’s here! Free for everyone since 30 October 2026',
   'hero.kicker': 'A Bangla keyboard for Windows, Mac, Linux and Android',
   'hero.tryLabel': 'Click here and type Bangla in English letters',
   'hero.lede': 'Type Bangla the way it sounds, in English letters, and Ekushe Next writes it in correct Bangla. Free, open source, and nothing you type ever leaves your computer or phone.',
