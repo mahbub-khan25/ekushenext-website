@@ -1,7 +1,7 @@
 // The one switch for opening downloads, used by every page.
 // false: download buttons are greyed out ("coming soon") and links to the files are hidden.
 // true: downloads are open, and always point at the newest release.
-export const LAUNCHED = false;
+export const LAUNCHED = true;
 
 const REPO = 'mahbub-khan25/ekushenext';
 if (LAUNCHED) document.documentElement.classList.add('live');
