@@ -1,7 +1,7 @@
 import { Ekushe } from '/engine/ekushe.js?v=2';
-import { EN, BN_EXTRA } from '/js/i18n.js';
-import { LAUNCHED, latestRelease } from '/js/launch.js';
-import '/js/menu.js';
+import { EN, BN_EXTRA } from '/js/i18n.js?v=7';
+import { LAUNCHED, latestRelease } from '/js/launch.js?v=7';
+import '/js/menu.js?v=7';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
