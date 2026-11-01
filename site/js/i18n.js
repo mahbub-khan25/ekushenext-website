@@ -71,7 +71,7 @@ export const EN = {
 
   'priv.title': 'What you type stays yours',
   'priv.1.t': 'Works without the internet',
-  'priv.1.p': 'The whole dictionary and engine live on your computer or phone. Ekushe never sends anything anywhere. The Android keyboard doesn’t even have permission to use the internet.',
+  'priv.1.p': 'The whole dictionary and engine live on your computer or phone. Ekushe never sends anything on its own; only if you press “Send to Ekushe” on a page read in Studio does that page and your corrected text go to us, to make picture reading better. The Android keyboard doesn’t even have permission to use the internet.',
   'priv.2.t': 'No account needed',
   'priv.2.p': 'No sign-up, no ads, no tracking.',
   'priv.3.t': 'Open source',
