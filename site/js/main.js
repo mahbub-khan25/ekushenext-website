@@ -1,5 +1,5 @@
 import { Ekushe } from '/engine/ekushe.js?v=2';
-import { EN, BN_EXTRA } from '/js/i18n.js?v=8';
+import { EN, BN_EXTRA } from '/js/i18n.js?v=9';
 import { LAUNCHED, latestRelease } from '/js/launch.js?v=7';
 import '/js/menu.js?v=7';
 
@@ -239,7 +239,7 @@ function measureSpeed() {
 let shotName = 'playground', shotTheme = 'dark';
 const shotImg = $('#shotImg');
 function showShot() {
-  const src = `/img/studio-${shotName}-${shotTheme}.webp`;
+  const src = `/img/studio-${shotName}-${shotTheme}.webp?v=2`;
   if (shotImg.getAttribute('src') === src) return;
   const pre = new Image(); pre.src = src;
   shotImg.classList.add('fade');
@@ -259,7 +259,7 @@ $$('[data-shot-theme]').forEach((b) => b.addEventListener('click', () => {
 }));
 // preload the rest once the page is idle
 setTimeout(() => {
-  ['playground', 'xray', 'signs', 'spell', 'converter', 'settings'].forEach((n) => ['dark', 'light'].forEach((th) => { const i = new Image(); i.src = `/img/studio-${n}-${th}.webp`; }));
+  ['playground', 'xray', 'signs', 'spell', 'converter', 'ocr', 'settings'].forEach((n) => ['dark', 'light'].forEach((th) => { const i = new Image(); i.src = `/img/studio-${n}-${th}.webp?v=2`; }));
 }, 4000);
 // gentle tilt toward the pointer
 const shot = $('#shot');
@@ -306,10 +306,10 @@ const REPO = 'mahbub-khan25/ekushenext';
 const COMING_SOON = !LAUNCHED;
 // Used only when the newest release can't be looked up (and while it is older than this one).
 const FALLBACK = {
-  tag_name: 'v0.2.0-beta.6', published_at: '2026-10-29T14:30:46Z', html_url: `https://github.com/${REPO}/releases/tag/v0.2.0-beta.6`,
+  tag_name: 'v0.2.0-beta.10', published_at: '2026-11-01T11:08:58Z', html_url: `https://github.com/${REPO}/releases/tag/v0.2.0-beta.10`,
   assets: [
-    ['Ekushe-Setup.exe', 20600624], ['Ekushe-Setup.zip', 17484476], ['Ekushe-Portable.exe', 20600624], ['Ekushe-macOS.pkg', 35493254], ['Ekushe-macOS.zip', 35492157], ['ekushe_0.2.0-beta.6_amd64.deb', 32705686], ['ekushe-0.2.0-beta.6.x86_64.rpm', 32940473], ['Ekushe-0.2.0-beta.6-x86_64.AppImage', 32987640], ['Ekushe-Next-Android.apk', 23574674],
-  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.2.0-beta.6/${name}` })),
+    ['Ekushe-Setup.exe', 37255984], ['Ekushe-Setup.zip', 25753747], ['Ekushe-Portable.exe', 37255984], ['Ekushe-macOS.pkg', 52149887], ['Ekushe-macOS.zip', 52146435], ['ekushe_0.2.0-beta.10_amd64.deb', 73840982], ['ekushe-0.2.0-beta.10.x86_64.rpm', 75863251], ['Ekushe-0.2.0-beta.10-x86_64.AppImage', 73017848], ['Ekushe-Next-Android.apk', 24436894],
+  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.2.0-beta.10/${name}` })),
 };
 const FILES = {
   windows: [[/^Ekushe-Setup\.exe$/, 'winSetup', 'windows'], [/^Ekushe-Setup\.zip$/, 'winZip', 'windows'], [/^Ekushe-Portable\.exe$/, 'winPortable', 'windows']],

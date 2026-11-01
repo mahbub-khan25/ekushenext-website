@@ -175,7 +175,7 @@
     <div class="studio-head">
       <div>
         <h2 class="h2" data-t="studio.title">একুশে স্টুডিও</h2>
-        <p class="section-lede" data-t="studio.lede">লেখার প্যাড, যুক্তবর্ণের সহজ গাইড, বানান পরীক্ষা আর বিজয় থেকে ইউনিকোড রূপান্তর, সব এক জায়গায়। ট্রে আইকনে রাইট-ক্লিক করলেই খোলে।</p>
+        <p class="section-lede" data-t="studio.lede">লেখার প্যাড, যুক্তবর্ণের সহজ গাইড, বানান পরীক্ষা, বিজয় থেকে ইউনিকোড রূপান্তর (পুরো Word ফাইলও) আর ছাপা লেখার ছবি থেকে লেখা, সব এক জায়গায়। ট্রে আইকনে রাইট-ক্লিক করলেই খোলে।</p>
       </div>
       <div class="seg" role="group" aria-label="Theme" id="studioTheme">
         <button type="button" data-shot-theme="dark" aria-pressed="true" data-t="studio.dark">ডার্ক</button>
@@ -188,11 +188,12 @@
       <button role="tab" aria-selected="false" data-shot="signs" data-t="studio.t.signs">যুক্তবর্ণ</button>
       <button role="tab" aria-selected="false" data-shot="spell" data-t="studio.t.spell">বানান</button>
       <button role="tab" aria-selected="false" data-shot="converter" data-t="studio.t.conv">রূপান্তর</button>
+      <button role="tab" aria-selected="false" data-shot="ocr" data-t="studio.t.ocr">ছবি থেকে লেখা</button>
       <button role="tab" aria-selected="false" data-shot="settings" data-t="studio.t.settings">সেটিংস</button>
     </div>
     <p class="studio-caption" id="studioCaption" data-t="studio.c.playground">রোমান হরফে লিখুন, পরামর্শ থেকে শব্দ বেছে নিন, তারপর যেকোনো জায়গায় কপি করুন।</p>
     <figure class="shot" id="shot">
-      <img id="shotImg" src="/img/studio-playground-dark.webp" width="1600" height="1000" alt="একুশে স্টুডিওর লেখার প্যাড" loading="lazy" decoding="async">
+      <img id="shotImg" src="/img/studio-playground-dark.webp?v=2" width="1600" height="1000" alt="একুশে স্টুডিওর লেখার প্যাড" loading="lazy" decoding="async">
     </figure>
   </div>
 </section>
@@ -353,7 +354,7 @@
         <li data-t="dl.linux.2">এরপর চালান:<code class="cmd">ibus restart</code>অথবা একবার লগ আউট করে আবার ঢুকুন।</li>
         <li data-t="dl.linux.3">একুশে স্টুডিও খুলে <b>কিবোর্ড যোগ করুন</b> চাপুন, অথবা Settings → Keyboard → Input Sources → + → Bangla (Bangladesh) → Ekushe Bangla যোগ করুন। Super+Space দিয়ে বদলান।</li>
       </ol>
-      <p class="dl-note" data-t="dl.linux.note">IBus লাগে, যা Ubuntu, Fedora, Debian আর GNOME-এ আগে থেকেই থাকে। AppImage যেকোনো ডিস্ট্রিবিউশনে চলে।</p>
+      <p class="dl-note" data-t="dl.linux.note">IBus বা Fcitx 5 লাগে; Ubuntu, Fedora, Debian আর GNOME-এ IBus আগে থেকেই থাকে। AppImage যেকোনো ডিস্ট্রিবিউশনে চলে।</p>
     </div>
     <div class="dl-panel" data-panel="android" hidden>
       <div class="dl-files" data-files="android"></div>
@@ -376,7 +377,7 @@
       <details><summary data-t="faq.1.q">একুশে নেক্সট কি সত্যিই ফ্রি?</summary><p data-t="faq.1.a">হ্যাঁ। কোনো লুকানো খরচ, বিজ্ঞাপন বা প্রিমিয়াম সংস্করণ নেই। কোড MPL-2.0 আর অভিধান CC BY-SA 4.0 লাইসেন্সে খোলা।</p></details>
       <details><summary data-t="faq.2.q">আমি অভ্র ব্যবহার করি। নতুন করে শিখতে হবে?</summary><p data-t="faq.2.a">না। ফোনেটিক নিয়ম অভ্রের মতোই, তাই আপনার হাত যেভাবে অভ্যস্ত সেভাবেই লিখতে পারবেন। পার্থক্য হলো, যুক্তবর্ণ ঠিকঠাক না লিখলেও একুশে বুঝে নেয়।</p></details>
       <details><summary data-t="faq.3.q">কোন কোন অ্যাপে লেখা যায়?</summary><p data-t="faq.3.a">প্রায় সব জায়গায়: Word, Chrome, Facebook, WhatsApp Desktop, Notepad, ইমেইল। কম্পিউটারে বাংলা আর ইংরেজির মধ্যে বদলাতে দুবার Shift চাপুন, কোন অ্যাপে কোন ভাষা ছিল একুশে তা মনে রাখে। ফোনে একুশে নেক্সট হয়ে যায় আপনার কিবোর্ড, তাই WhatsApp, Messenger, Facebook, যেকোনো অ্যাপে লেখা যায়।</p></details>
-      <details><summary data-t="faq.4.q">বিজয় বা প্রভাত লেআউটে লিখতে পারব?</summary><p data-t="faq.4.a">ফোনেটিকের পাশাপাশি প্রভাত, জাতীয়, বর্ণনা আর মুনীর অপটিমা লেআউটও আছে। সেটিংস থেকে বেছে নিন। পুরনো বিজয় লেখা ইউনিকোডে বদলাতে স্টুডিওর রূপান্তর ব্যবহার করুন।</p></details>
+      <details><summary data-t="faq.4.q">আমি নির্দিষ্ট লেআউটে, মুখস্থ হাতে লিখি। একুশেতে পারব?</summary><p data-t="faq.4.a">পারবেন। জাতীয়, প্রভাত, বর্ণনা আর মুনীর অপটিমা লেআউট একুশেতেই আছে, সেটিংস থেকে বেছে নিন। একুশে নিজস্ব লেআউটও সমর্থন করে: অন্য কোনো লেআউটে হাত অভ্যস্ত হলে তার লেআউট ফাইল যোগ করুন, একুশের সব সুবিধাসহ সেভাবেই লিখবেন, আর লেখা হবে ইউনিকোডে। পুরনো বিজয় লেখা বা পুরো Word ফাইল ইউনিকোডে বদলাতে স্টুডিওর রূপান্তর ব্যবহার করুন।</p></details>
       <details><summary data-t="faq.5.q">উইন্ডোজ বা ব্রাউজার সতর্কবার্তা দেখাচ্ছে কেন?</summary><p data-t="faq.5.a">একুশে নেক্সট নতুন অ্যাপ। উইন্ডোজ অ্যাপটি নির্মাতার যাচাই করা নামে ডিজিটালি সাইন করা, তবে নতুন সাইন করা অ্যাপের পরিচিতি তৈরি হতে কিছুদিন সময় লাগে। More info → Run anyway চাপলেই চলবে।</p></details>
       <details><summary data-t="faq.6.q">আনইনস্টল করব কীভাবে?</summary><p data-t="faq.6.a">উইন্ডোজে Settings → Apps থেকে Ekushe Next সরান। ম্যাকে /Library/Input Methods থেকে Ekushe.app মুছে দিন। লিনাক্সে আগে স্টুডিওতে <b>কিবোর্ড বাদ দিন</b> চাপুন, তারপর প্যাকেজ ম্যানেজার দিয়ে ekushe সরান। অ্যান্ড্রয়েডে অ্যাপের আইকন চেপে ধরে Uninstall চাপুন।</p></details>
       <details><summary data-t="faq.7.q">কোনো সমস্যা হলে কোথায় জানাব?</summary><p data-t="faq.7.a"><a href="/report/">সমস্যা জানানোর পাতায়</a> লিখুন, কোনো অ্যাকাউন্ট লাগে না। অ্যাপের ভেতর থেকেও খোলা যায়: কম্পিউটারে ট্রে মেনুর 🐞 সমস্যা জানান, ফোনে অ্যাপের সাহায্য অংশে। কী হয়েছে আর কোন অ্যাপে লিখছিলেন, তা লিখলে দ্রুত ঠিক করা যায়।</p></details>
@@ -421,6 +422,6 @@
   <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 7l-5 5 5 5m8-10l5 5-5 5M14 4l-4 16"/></symbol>
 </svg>
 
-<script type="module" src="/js/main.js?v=8"></script>
+<script type="module" src="/js/main.js?v=9"></script>
 </body>
 </html>
