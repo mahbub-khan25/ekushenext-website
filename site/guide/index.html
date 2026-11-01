@@ -89,7 +89,9 @@
       <li><a href="#android"><span lang="bn">অ্যান্ড্রয়েড কিবোর্ড</span><span lang="en">The Android keyboard</span></a></li>
       <li data-os="win mac linux"><a href="#studio"><span lang="bn">একুশে স্টুডিও</span><span lang="en">Ekushe Studio</span></a></li>
       <li data-os="win mac linux"><a href="#settings"><span lang="bn">সেটিংস</span><span lang="en">Settings</span></a></li>
-      <li data-os="win mac linux"><a href="#layouts"><span lang="bn">অন্যান্য লেআউট</span><span lang="en">Other layouts</span></a></li>
+      <li data-os="win mac linux"><a href="#layouts"><span lang="bn">কীবোর্ড লেআউট</span><span lang="en">Keyboard layouts</span></a></li>
+      <li data-os="win mac"><a href="#design"><span lang="bn">ডিজাইন অ্যাপ ও বিজয় ফাইল</span><span lang="en">Design apps and Bijoy files</span></a></li>
+      <li data-os="win"><a href="#office"><span lang="bn">অফিসে ইনস্টল</span><span lang="en">Installing across an office</span></a></li>
       <li data-os="win mac linux"><a href="#advanced"><span lang="bn">উন্নত কনফিগারেশন</span><span lang="en">Advanced configuration</span></a></li>
       <li><a href="#privacy"><span lang="bn">গোপনীয়তা ও পাসওয়ার্ড</span><span lang="en">Privacy and passwords</span></a></li>
       <li><a href="#update"><span lang="bn">আপডেট ও আনইনস্টল</span><span lang="en">Update and uninstall</span></a></li>
@@ -117,7 +119,7 @@
       <tbody>
         <tr data-os="win"><td><b>Windows</b></td><td lang="bn">Windows 10 বা 11, ৬৪-বিট। অ্যাডমিন অধিকার লাগে না।</td><td lang="en">Windows 10 or 11, 64-bit. No admin rights needed.</td><td lang="bn">প্রায় সব অ্যাপে: Word, Chrome, Edge, Firefox, WhatsApp, Notepad, ইমেইল।</td><td lang="en">Almost every app: Word, Chrome, Edge, Firefox, WhatsApp, Notepad, email.</td></tr>
         <tr data-os="mac"><td><b>macOS</b></td><td lang="bn">macOS 11 (Big Sur) বা পরের সংস্করণ। Apple silicon (M1 থেকে) আর Intel দুটোতেই চলে।</td><td lang="en">macOS 11 (Big Sur) or later, on Apple silicon (M1 and newer) and Intel.</td><td lang="bn">যে অ্যাপে macOS-এর ইনপুট সোর্স কাজ করে, সব জায়গায়।</td><td lang="en">Any app that accepts macOS input sources.</td></tr>
-        <tr data-os="linux"><td><b>Linux</b></td><td lang="bn">৬৪-বিট, IBus সহ। Ubuntu, Debian, Mint, Pop!_OS, Fedora আর GNOME-এ IBus আগে থেকেই থাকে; KDE-তেও চলে।</td><td lang="en">64-bit, with IBus. Ubuntu, Debian, Mint, Pop!_OS, Fedora and GNOME already have it; it also works on KDE.</td><td lang="bn">GTK আর Qt অ্যাপ, ব্রাউজার, LibreOffice ইত্যাদি।</td><td lang="en">GTK and Qt apps, browsers, LibreOffice and so on.</td></tr>
+        <tr data-os="linux"><td><b>Linux</b></td><td lang="bn">৬৪-বিট, IBus বা Fcitx 5 সহ। Ubuntu, Debian, Mint, Pop!_OS, Fedora আর GNOME-এ IBus আগে থেকেই থাকে; KDE আর COSMIC-এও চলে।</td><td lang="en">64-bit, with IBus or Fcitx 5. Ubuntu, Debian, Mint, Pop!_OS, Fedora and GNOME already have IBus; it also works on KDE and COSMIC.</td><td lang="bn">GTK আর Qt অ্যাপ, ব্রাউজার, LibreOffice ইত্যাদি।</td><td lang="en">GTK and Qt apps, browsers, LibreOffice and so on.</td></tr>
         <tr data-os="android"><td><b>Android</b></td><td lang="bn">অ্যান্ড্রয়েড ৭ বা নতুন, ফোন ও ট্যাবলেট। ইংরেজির জন্য Gboard থাকলে ভালো (প্রায় সব ফোনেই থাকে)।</td><td lang="en">Android 7 or later, phones and tablets. Gboard is handy for English (most phones have it).</td><td lang="bn">ফোনের সব অ্যাপে: WhatsApp, Messenger, Facebook, Gmail, ব্রাউজার।</td><td lang="en">Every app on the phone: WhatsApp, Messenger, Facebook, Gmail, the browser.</td></tr>
       </tbody>
     </table>
@@ -126,8 +128,8 @@
   <div class="note">
     <svg aria-hidden="true"><use href="#i-info"/></svg>
     <div>
-      <p lang="bn">একুশে নেক্সট এখন বিটা পর্যায়ে। নিচের নির্দেশনা সর্বশেষ সংস্করণ (<b>v0.2.0-beta.6</b>) অনুযায়ী লেখা। কোথাও কিছু না মিললে <a href="/report/">আমাদের জানান</a>।</p>
-      <p lang="en">Ekushe Next is in beta. This guide follows the latest version (<b>v0.2.0-beta.6</b>). If something here doesn’t match what you see, please <a href="/report/">let us know</a>.</p>
+      <p lang="bn">একুশে নেক্সট এখন বিটা পর্যায়ে। নিচের নির্দেশনা সর্বশেষ সংস্করণ (<b>v0.2.0-beta.10</b>) অনুযায়ী লেখা। কোথাও কিছু না মিললে <a href="/report/">আমাদের জানান</a>।</p>
+      <p lang="en">Ekushe Next is in beta. This guide follows the latest version (<b>v0.2.0-beta.10</b>). If something here doesn’t match what you see, please <a href="/report/">let us know</a>.</p>
     </div>
   </div>
 </section>
@@ -148,7 +150,7 @@
           <tr><td><code>Ekushe-Setup.exe</code></td><td><span lang="bn">বেশিরভাগ মানুষের জন্য এটাই। আপনার ইউজার অ্যাকাউন্টে ইনস্টল হয়, উইন্ডোজের সাথে চালু হয়, Start Menu-তে শর্টকাট বসায়।</span><span lang="en">The one most people want. Installs for your user account, starts with Windows and adds a Start Menu shortcut.</span></td></tr>
           <tr><td><code>Ekushe-Setup.zip</code></td><td><span lang="bn">ব্রাউজার .exe ডাউনলোড আটকে দিলে। ভেতরে একই Setup.exe।</span><span lang="en">If your browser blocks the .exe. The same Setup.exe, zipped.</span></td></tr>
           <tr><td><code>Ekushe-Portable.exe</code></td><td><span lang="bn">ইনস্টল না করে চালাতে চাইলে, যেমন অফিসের কম্পিউটারে বা পেনড্রাইভে। নিজে থেকে উইন্ডোজের সাথে চালু হয় না।</span><span lang="en">To run it without installing, say on a work computer or from a USB stick. It doesn’t start with Windows on its own.</span></td></tr>
-          <tr><td><code>Ekushe-Developer-Tools-x64.zip</code></td><td><span lang="bn">শুধু পরীক্ষক ও ডেভেলপারদের জন্য: পরীক্ষামূলক উইন্ডোজ ইনপুট মেথড (<code>ekushe_tsf.dll</code>) আর কমান্ড-লাইন টুল (<code>ekushe-cli.exe</code>)। সাধারণ ব্যবহারে লাগে না। beta.12 পর্যন্ত এর নাম ছিল <code>Ekushe-Extras-x64.zip</code>।</span><span lang="en">For testers and developers only: the experimental Windows input method (<code>ekushe_tsf.dll</code>) and the command-line tool (<code>ekushe-cli.exe</code>). Not needed for everyday use. Up to beta.12 it was called <code>Ekushe-Extras-x64.zip</code>.</span></td></tr>
+          <tr><td><code>Ekushe-Developer-Tools-x64.zip</code></td><td><span lang="bn">শুধু পরীক্ষক ও ডেভেলপারদের জন্য: পরীক্ষামূলক উইন্ডোজ ইনপুট মেথড (<code>ekushe_tsf.dll</code>) আর কমান্ড-লাইন টুল (<code>ekushe-cli.exe</code>)। সাধারণ ব্যবহারে লাগে না। v0.1.0-beta.12 পর্যন্ত এর নাম ছিল <code>Ekushe-Extras-x64.zip</code>।</span><span lang="en">For testers and developers only: the experimental Windows input method (<code>ekushe_tsf.dll</code>) and the command-line tool (<code>ekushe-cli.exe</code>). Not needed for everyday use. Up to v0.1.0-beta.12 it was called <code>Ekushe-Extras-x64.zip</code>.</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -194,8 +196,8 @@
   <!-- Linux -->
   <div class="os-block" data-os="linux" id="install-linux">
     <p class="os-tag"><svg aria-hidden="true"><use href="#i-linux"/></svg>Linux</p>
-    <p lang="bn">একুশে লিনাক্সে একটি <b>IBus</b> কিবোর্ড। Ubuntu আর Fedora-তে সবচেয়ে সহজ হলো একুশের রিপোজিটরি যোগ করা: একবার দুটি কমান্ড, তারপর সিস্টেমের বাকি আপডেটের সঙ্গে একুশেও আপনাআপনি আপডেট হবে।</p>
-    <p lang="en">On Linux, Ekushe is an <b>IBus</b> keyboard. On Ubuntu and Fedora the easiest way is to add Ekushe's repository: two commands once, and from then on Ekushe updates along with the rest of your system.</p>
+    <p lang="bn">একুশে লিনাক্সে <b>IBus</b> আর <b>Fcitx 5</b>, দুটোতেই চলে; একই প্যাকেজ দুটোই ইনস্টল করে, আপনার ডেস্কটপ যেটা ব্যবহার করে একুশে সেটাতেই কাজ করে। Ubuntu আর Fedora-তে সবচেয়ে সহজ হলো একুশের রিপোজিটরি যোগ করা: একবার দুটি কমান্ড, তারপর সিস্টেমের বাকি আপডেটের সঙ্গে একুশেও আপনাআপনি আপডেট হবে।</p>
+    <p lang="en">On Linux, Ekushe works with both <b>IBus</b> and <b>Fcitx 5</b>: the same package installs both, and Ekushe works with whichever your desktop uses. On Ubuntu and Fedora the easiest way is to add Ekushe's repository: two commands once, and from then on Ekushe updates along with the rest of your system.</p>
 
     <h4>Ubuntu <small>(22.04, 24.04, 26.04, 26.10)</small></h4>
     <div class="cmd-box"><pre><code>sudo add-apt-repository ppa:cicadama/ekushe
@@ -307,6 +309,9 @@ sudo dnf install ekushe</code></pre></div>
     <h4>COSMIC <small>(পরীক্ষামূলক · experimental)</small></h4>
     <p lang="bn">অ্যাপের মেনু থেকে <b>Ekushe Studio</b> খুলে <b>কিবোর্ড যোগ করুন</b> চাপুন, তারপর একবার লগ আউট করে আবার ঢুকুন। একুশে Firefox, LibreOffice ও অন্য GTK/Qt অ্যাপে কাজ করবে। COSMIC-এর নিজের অ্যাপে (Text Editor, Terminal, Files) এখনো কাজ করবে না, কারণ COSMIC সেগুলোতে এখনো কোনো ইনপুট মেথড চালায় না; COSMIC এটা যোগ করলে একুশেও সেখানে চলবে। Pop!_OS অ্যাপগুলোকে আগে থেকেই IBus ব্যবহার করতে বলে দেয়; অন্য সিস্টেমে ডিস্ট্রিবিউশনের ইনপুট-মেথড সেটিংসে IBus বেছে নিন (একুশে নিজে এটা বদলায় না, যাতে আপনার GNOME বা KDE সেশনে কোনো প্রভাব না পড়ে)। সব অ্যাপে বাংলা দরকার হলে লগ ইন স্ক্রিন থেকে GNOME বা KDE সেশন বেছে নিন।</p>
     <p lang="en">Open <b>Ekushe Studio</b> from the applications menu, click <b>কিবোর্ড যোগ করুন</b> (add keyboard), then log out and back in once. Ekushe then types in Firefox, LibreOffice and other GTK and Qt apps. It doesn’t work in COSMIC’s own apps (Text Editor, Terminal, Files) yet, because COSMIC doesn’t support any input method in them so far; when COSMIC adds that, Ekushe will work there too. Pop!_OS already tells apps to use IBus; on other systems choose IBus in the distribution’s input-method settings (Ekushe doesn’t change this itself, so your GNOME and KDE sessions stay untouched). If you need Bangla in every app, pick a GNOME or KDE session at the login screen.</p>
+    <h4>Fcitx 5</h4>
+    <p lang="bn">আপনার ডেস্কটপ Fcitx 5 ব্যবহার করলে স্টুডিওর <b>কিবোর্ড যোগ করুন</b> একুশেকে Fcitx-এর ইনপুট মেথডের তালিকায় যোগ করে; তারপর <kbd>Ctrl</kbd>+<kbd>Space</kbd> চাপলে একুশে আর ইংরেজির মধ্যে বদলায়। COSMIC-এ Fcitx 5-ই ভালো পছন্দ। নিজে করতে চাইলে <b>Fcitx 5 Configuration</b> খুলে <b>Ekushe Bangla</b> যোগ করুন। IBus ব্যবহারকারীদের জন্য কিছুই বদলায় না।</p>
+    <p lang="en">If your desktop uses Fcitx 5, Studio’s <b>কিবোর্ড যোগ করুন</b> (add keyboard) adds Ekushe to Fcitx’s input methods; then <kbd>Ctrl</kbd>+<kbd>Space</kbd> switches between Ekushe and English. On COSMIC, Fcitx 5 is the better choice. To do it by hand, open <b>Fcitx 5 Configuration</b> and add <b>Ekushe Bangla</b>. Nothing changes for IBus users.</p>
   </div>
   <div class="os-block" data-os="android">
     <p class="os-tag"><svg aria-hidden="true"><use href="#i-android"/></svg>Android</p>
@@ -920,8 +925,8 @@ sudo dnf install ekushe</code></pre></div>
 <!-- ═════════════ Studio ═════════════ -->
 <section class="g-sec" id="studio" data-os="win mac linux">
   <h2><span lang="bn">একুশে স্টুডিও</span><span lang="en">Ekushe Studio</span><a class="anchor" href="#studio" aria-label="link">#</a></h2>
-  <p lang="bn">স্টুডিও একুশের সাথে আসা একটি ছোট কাজের জায়গা: লেখার প্যাড, শব্দ এক্স-রে, যুক্তবর্ণের গাইড, বানান পরীক্ষা, বিজয় ⇄ ইউনিকোড রূপান্তর আর সেটিংস। এটি আপনার কম্পিউটারেই চলে, ইন্টারনেট লাগে না।</p>
-  <p lang="en">Studio is a small workspace that comes with Ekushe: a writing pad, a word X-ray, the conjunct guide, a spell checker, a Bijoy ⇄ Unicode converter and the settings. It runs on your own computer; no internet needed.</p>
+  <p lang="bn">স্টুডিও একুশের সাথে আসা একটি ছোট কাজের জায়গা: লেখার প্যাড, শব্দ এক্স-রে, যুক্তবর্ণের গাইড, বানান পরীক্ষা, বিজয় ⇄ ইউনিকোড রূপান্তর, ছবি থেকে লেখা আর সেটিংস। এটি আপনার কম্পিউটারেই চলে, ইন্টারনেট লাগে না। প্রথমবার খুললে একুশে জিজ্ঞেস করে আপনি কীভাবে বাংলা লেখেন, আর সেই অনুযায়ী সাজিয়ে দেয়। বাঁ দিকের নিচে একুশের সংস্করণ, নির্মাতা আর যোগাযোগের ঠিকানা থাকে; ক্লিক করলে বিস্তারিত দেখায়।</p>
+  <p lang="en">Studio is a small workspace that comes with Ekushe: a writing pad, a word X-ray, the conjunct guide, a spell checker, a Bijoy ⇄ Unicode converter, picture to text and the settings. It runs on your own computer; no internet needed. The first time it opens, Ekushe asks how you type Bangla and sets itself up to match. The bottom of the side bar shows Ekushe’s version, its maker and the support address; click it for details.</p>
 
   <h3><span lang="bn">স্টুডিও খোলা</span><span lang="en">Opening Studio</span></h3>
   <div class="tbl">
@@ -942,7 +947,7 @@ sudo dnf install ekushe</code></pre></div>
   </div>
 
   <h3 id="studio-pad"><span lang="bn">লেখার প্যাড</span><span lang="en">Writing pad</span></h3>
-  <figure class="shot-fig"><img src="/img/studio-playground-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's writing pad"></figure>
+  <figure class="shot-fig"><img src="/img/studio-playground-dark.webp?v=2" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's writing pad"></figure>
   <p lang="bn">ওপরের বাক্সে রোমান হরফে লিখুন; পরামর্শ থেকে শব্দ বসে নিচের প্যাডে জমা হয়। তারপর <b>কপি করুন</b> চেপে যেকোনো জায়গায় বসান। প্যাডের সরঞ্জাম:</p>
   <p lang="en">Type in Roman letters in the top box; words from the suggestions collect in the pad below. Then press <b>কপি করুন</b> (copy) and paste anywhere. The pad’s tools:</p>
   <ul>
@@ -961,30 +966,49 @@ sudo dnf install ekushe</code></pre></div>
   <p lang="en">Below that, <b>এক ক্লিকে যুক্তবর্ণ ও চিহ্ন</b> (conjuncts and signs in one click): click one to place it, and each shows the Roman letters that type it. Filter by all, conjuncts, folas, vowel signs or marks.</p>
 
   <h3 id="studio-xray"><span lang="bn">শব্দ এক্স-রে</span><span lang="en">Word X-ray</span></h3>
-  <figure class="shot-fig"><img src="/img/studio-xray-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's word X-ray"></figure>
+  <figure class="shot-fig"><img src="/img/studio-xray-dark.webp?v=2" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's word X-ray"></figure>
   <p lang="bn">যেকোনো বাংলা শব্দ বসালে এক্স-রে সেটি অক্ষরে অক্ষরে ভেঙে দেখায়, আর প্রতিটি অংশ কীভাবে টাইপ করতে হয়। কোনো শব্দ কীভাবে লিখবেন বুঝতে না পারলে সেটি কোথাও থেকে কপি করে এখানে দিন। <b>দুই ক্লিকে যুক্তবর্ণ</b>-এ প্রথম অক্ষর, তারপর দ্বিতীয় অক্ষর বেছে নিলে যুক্তবর্ণটি আর তার রোমান লেখা দেখায়।</p>
   <p lang="en">Paste any Bangla word and the X-ray breaks it down letter by letter, with how to type each part. Not sure how to type a word? Copy it from anywhere and drop it here. In <b>দুই ক্লিকে যুক্তবর্ণ</b> (two-click conjuncts), pick a first letter, then a second, and you see the conjunct and its Roman spelling.</p>
 
   <h3 id="studio-signs"><span lang="bn">যুক্তবর্ণ ও শব্দ</span><span lang="en">Conjuncts and words</span></h3>
-  <figure class="shot-fig"><img src="/img/studio-signs-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's conjunct guide"></figure>
+  <figure class="shot-fig"><img src="/img/studio-signs-dark.webp?v=2" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's conjunct guide"></figure>
   <p lang="bn">একুশের সব যুক্তবর্ণ, কার আর ফলা, উচ্চারণের ধারা (ক-ধারা, চ-ধারা …) অনুযায়ী সাজানো, প্রতিটির সাথে উদাহরণ শব্দ আর কী চাপতে হয়। ওপরের কার্ডে আছে <a href="#marks">নির্দিষ্ট বানানের সব চিহ্ন</a>। খোঁজার ঘরে বাংলা বা রোমান যেকোনোটিতে খুঁজুন; কোনোটিতে ক্লিক করলে কপি হয় আর প্যাডে বসে।</p>
   <p lang="en">Every conjunct, vowel sign and fola, grouped by sound series (the ক series, the চ series …), each with example words and the keys that make it. The card at the top lists all the <a href="#marks">exact-spelling marks</a>. Search in Bangla or Roman letters; click any item to copy it and place it in the pad.</p>
 
   <h3 id="studio-spell"><span lang="bn">বানান পরীক্ষা</span><span lang="en">Spell checker</span></h3>
-  <figure class="shot-fig"><img src="/img/studio-spell-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's spell checker"></figure>
+  <figure class="shot-fig"><img src="/img/studio-spell-dark.webp?v=2" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's spell checker"></figure>
   <p lang="bn">লেখা বসালে বাংলা একাডেমির প্রমিত বানান অনুযায়ী ভুল বা অপ্রমিত শব্দগুলো চিহ্নিত করে, আর সঠিক বানান দেখায়।</p>
   <p lang="en">Paste your text and it marks misspelled and non-standard words against the Bangla Academy standard, with the right spelling.</p>
 
   <h3 id="studio-converter"><span lang="bn">রূপান্তর</span><span lang="en">Converter</span></h3>
-  <figure class="shot-fig"><img src="/img/studio-converter-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's converter"></figure>
+  <figure class="shot-fig"><img src="/img/studio-converter-dark.webp?v=2" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's converter"></figure>
   <p lang="bn">পুরনো বিজয় (SutonnyMJ ফন্টে লেখা) লেখাকে ইউনিকোডে, আর ইউনিকোডকে বিজয়ে বদলায়। বাংলিশে (রোমান হরফে) লেখা পুরো অনুচ্ছেদও একবারে বাংলা করা যায়। ফলাফল <b>কপি করুন</b> চেপে নিয়ে নিন। <span data-os="win">উইন্ডোজে স্টুডিও না খুলেও যেকোনো অ্যাপে লেখা বেছে <a href="#convert-selection"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd></a> চাপলে একই কাজ হয়।</span></p>
   <p lang="en">Turns old Bijoy text (typed with SutonnyMJ-style fonts) into Unicode, and Unicode into Bijoy. It can also turn a whole paragraph of Banglish (Bangla in Roman letters) into Bangla at once. Press <b>ফলাফল কপি করুন</b> (copy result) to take it. <span data-os="win">On Windows you can skip Studio: select text in any app and press <a href="#convert-selection"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd></a>.</span></p>
+  <p lang="bn"><b>পুরো ফাইল রূপান্তর:</b> Word (<code>.docx</code>) বা লেখার (<code>.txt</code>) ফাইল বেছে নিন, দিক (বিজয় → ইউনিকোড বা উল্টো) ঠিক করে <b>ফাইল বেছে নিন</b> চাপুন। বোল্ড, রং, টেবিল ঠিক থাকে; শুধু বিজয় ফন্টের (SutonnyMJ বা অন্য …MJ) লেখা বদলায়, ইংরেজি অংশ যেমন ছিল তেমনই থাকে। আসল ফাইলে হাত পড়ে না, নতুন একটি ফাইল ডাউনলোড হয়।</p>
+  <p lang="en"><b>Whole files:</b> pick a Word (<code>.docx</code>) or text (<code>.txt</code>) file, choose the direction (Bijoy → Unicode or back) and press <b>ফাইল বেছে নিন</b> (choose file). Bold, colours and tables are kept; only text in Bijoy fonts (SutonnyMJ or another …MJ font) changes, and English stays as it was. Your original file isn’t touched; a new file is downloaded.</p>
+
+  <h3 id="studio-ocr"><span lang="bn">ছবি থেকে লেখা</span><span lang="en">Picture to text</span></h3>
+  <figure class="shot-fig"><img src="/img/studio-ocr-dark.webp?v=2" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's picture to text"></figure>
+  <p lang="bn">ছাপা বাংলা লেখার ছবি, ফোনে তোলা পাতা, স্ক্রিনশট বা স্ক্যান করা PDF দিন (ছেড়ে দিন, বেছে নিন, বা <kbd>Ctrl</kbd>+<kbd>V</kbd>); একুশে লেখাটি পড়ে ইউনিকোডে দেয়, যা এখানেই ঠিক করা, কপি করা, <code>.txt</code> হিসেবে রাখা বা লেখার প্যাডে নেওয়া যায়। একসাথে কয়েকটি পাতাও দেওয়া যায়; একেকটি পাতায় ৫–১০ সেকেন্ড লাগে।</p>
+  <p lang="en">Give it a photo of printed Bangla, a page shot on your phone, a screenshot or a scanned PDF (drop it, choose it, or press <kbd>Ctrl</kbd>+<kbd>V</kbd>); Ekushe reads the text and gives it back as Unicode that you can correct right there, copy, save as <code>.txt</code> or send to the writing pad. You can give several pages at once; each takes 5–10 seconds.</p>
+  <ul>
+    <li lang="bn"><b>পরিষ্কার করে পড়ে:</b> একুশে আগে ছবি সোজা ও পরিষ্কার করে, তারপর তিনটি বাংলা মডেল দিয়ে পড়ে, যার একটি পুরনো ও নতুন আসল বইয়ের স্ক্যানে শেখানো।</li>
+    <li lang="en"><b>Cleans up, then reads:</b> Ekushe straightens and cleans the picture first, then reads it with three Bangla models, one of them trained on real scanned books, old and new.</li>
+    <li lang="bn"><b>অভিধান দিয়ে বানান ঠিক করে:</b> ভুল পড়া শব্দ একুশের অভিধান দিয়ে ঠিক হয়; প্রতিটি বদল নিচে তালিকায় থাকে, ক্লিক করলে আগের মতো হয়। ছবি, নকশা বা দাগ থেকে আসা আজেবাজে অক্ষর বাদ যায় (সেটিও দেখা যায়)।</li>
+    <li lang="en"><b>Fixes spelling with the dictionary:</b> misread words are corrected with Ekushe’s dictionary; every change is listed below the text, and a click undoes it. Stray letters from pictures, borders and stains are left out (and listed too).</li>
+    <li lang="bn"><b>PDF:</b> যে PDF-এ নিজের লেখা আছে (বিজয়ে লেখা PDF-ও), সেখান থেকে লেখা হুবহু নেয়, ছবি পড়তে হয় না। কোন পাতাগুলো পড়বে তা লিখে দিন (যেমন <code>১-১০, ১৫</code>), আর যেকোনো সময় <b>থামান</b>।</li>
+    <li lang="en"><b>PDFs:</b> when a PDF carries its own text (Bijoy PDFs too), the text is taken over exactly, without reading the picture. Type which pages to read (such as <code>১-১০, ১৫</code>) and press <b>থামান</b> (stop) at any time.</li>
+    <li lang="bn"><b>ইংরেজি শব্দ থাকলে</b> “লেখায় ইংরেজি শব্দও আছে” চালু করুন; নইলে অস্পষ্ট বাংলা লাইন ইংরেজি হিজিবিজি হিসেবে পড়া হতে পারে।</li>
+    <li lang="en"><b>If the text has English words,</b> tick “লেখায় ইংরেজি শব্দও আছে”; otherwise a smudged Bangla line could be read as English nonsense.</li>
+  </ul>
+  <p lang="bn">লেখা ঠিক করার পর দুটি বোতাম একুশের ছবি পড়া ভালো করতে সাহায্য করে: <b>শেখার জন্য রাখুন</b> পাতা আর ঠিক করা লেখা শুধু আপনার কম্পিউটারে রাখে। <b>একুশেকে পাঠান</b> সেই পাতার ছবি আর আপনার ঠিক করা লেখা আমাদের কাছে পাঠায়, যাতে একুশে আসল পাতা আরও ভালো পড়তে শেখে; কী যাবে তা আগে দেখায় আর আপনি রাজি হলে তবেই পাঠায়। আপনার নাম বা অন্য কোনো ফাইল যায় না। পরিচয়পত্র, চিঠি বা ব্যাংকের কাগজের মতো ব্যক্তিগত পাতা পাঠাবেন না।</p>
+  <p lang="en">After correcting the text, two buttons help make Ekushe’s reading better: <b>শেখার জন্য রাখুন</b> (keep for learning) keeps the page and your corrected text on your computer only. <b>একুশেকে পাঠান</b> (send to Ekushe) sends that page’s picture and your corrected text to us, so Ekushe learns to read real pages better; it shows what will go first and sends only if you agree. Your name and other files are never sent. Please don’t send private pages such as ID cards, letters or bank papers.</p>
 </section>
 
 <!-- ═════════════ Settings ═════════════ -->
 <section class="g-sec" id="settings" data-os="win mac linux">
   <h2><span lang="bn">সেটিংস</span><span lang="en">Settings</span><a class="anchor" href="#settings" aria-label="link">#</a></h2>
-  <figure class="shot-fig"><img src="/img/studio-settings-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's settings"></figure>
+  <figure class="shot-fig"><img src="/img/studio-settings-dark.webp?v=2" width="1600" height="1000" loading="lazy" decoding="async" alt="Studio's settings"></figure>
   <p lang="bn">সব সেটিং আছে স্টুডিওর <b>সেটিংস</b> অংশে। কোনো কিছু বদলালেই সঙ্গে সঙ্গে সংরক্ষিত হয়, আলাদা “Save” চাপতে হয় না।</p>
   <p lang="en">All settings live in Studio’s <b>সেটিংস</b> (Settings) tab. Every change is saved straight away; there’s no Save button to press.</p>
 
@@ -1007,7 +1031,9 @@ sudo dnf install ekushe</code></pre></div>
       <tbody>
         <tr><td><span lang="bn">বাংলা ⇄ English বদলানোর কী</span><span lang="en">Switch key</span></td><td><span lang="bn"><b>দুবার Shift</b>, Ctrl+Space, F12, Ctrl+Alt+B</span><span lang="en"><b>Double-tap Shift</b>, Ctrl+Space, F12, Ctrl+Alt+B</span></td><td><span lang="bn">ভাষা বদলানোর কী। Ctrl+Space, F12 আর Ctrl+Alt+B শুধু উইন্ডোজে কাজ করে; ম্যাক আর লিনাক্সে এগুলো বেছে নিলে দুবার Shift বন্ধ হয়ে যায়।</span><span lang="en">The key that switches language. Ctrl+Space, F12 and Ctrl+Alt+B work on Windows only; on Mac and Linux choosing one of them just turns double-tap Shift off.</span></td></tr>
         <tr><td><span lang="bn">টাইপিং মোড</span><span lang="en">Typing mode</span></td><td><span lang="bn"><b>স্মার্ট</b>, ফোনেটিক আগে, শুধু ফোনেটিক</span><span lang="en"><b>Smart</b>, phonetic first, phonetic only</span></td><td><span lang="bn"><b>স্মার্ট:</b> অভিধানের সেরা শব্দ আগে আসে, কাছাকাছি বানান থেকেও। <b>ফোনেটিক আগে:</b> যা টাইপ করলেন ঠিক সেই অক্ষরগুলো আগে, যদি সেটা প্রচলিত শব্দ হয়; নইলে অভিধানের পছন্দ। <b>শুধু ফোনেটিক:</b> কোনো পপ-আপ বা পরামর্শ নেই, প্রতিটি অক্ষর নিয়ম অনুযায়ী সরাসরি বসে, পুরনো অভ্রের মতো।</span><span lang="en"><b>Smart:</b> the dictionary’s best word comes first, even from a near spelling. <b>Phonetic first:</b> the exact letters you typed come first when they form a common word; otherwise the dictionary’s choice. <b>Phonetic only:</b> no popup or suggestions; every letter goes in by the rules, like classic Avro.</span></td></tr>
-        <tr><td><span lang="bn">কিবোর্ড লেআউট</span><span lang="en">Keyboard layout</span></td><td><span lang="bn"><b>একুশে ফোনেটিক</b>, প্রভাত, জাতীয়, বর্ণনা, মুনীর অপটিমা</span><span lang="en"><b>Ekushe Phonetic</b>, Probhat, National (Jatiya), Bornona, Munir Optima</span></td><td><span lang="bn">ফোনেটিক বা কোনো নির্দিষ্ট বাংলা লেআউট। দেখুন <a href="#layouts">অন্যান্য লেআউট</a>।</span><span lang="en">Phonetic, or a fixed Bangla layout. See <a href="#layouts">Other layouts</a>.</span></td></tr>
+        <tr><td><span lang="bn">কিবোর্ড লেআউট</span><span lang="en">Keyboard layout</span></td><td><span lang="bn"><b>একুশে ফোনেটিক</b>, জাতীয়, প্রভাত, বর্ণনা, মুনীর অপটিমা, আর আপনার যোগ করা লেআউট ফাইল</span><span lang="en"><b>Ekushe Phonetic</b>, National (Jatiya), Probhat, Bornona, Munir Optima, and any layout files you add</span></td><td><span lang="bn">ফোনেটিক বা কোনো নির্দিষ্ট বাংলা লেআউট। দেখুন <a href="#layouts">কীবোর্ড লেআউট</a>।</span><span lang="en">Phonetic, or a fixed Bangla layout. See <a href="#layouts">Keyboard layouts</a>.</span></td></tr>
+        <tr><td><span lang="bn">প্রমিত বানানের ইঙ্গিত</span><span lang="en">Standard spelling hint</span></td><td><span lang="bn"><b>চালু</b></span><span lang="en"><b>On</b></span></td><td><span lang="bn">নির্দিষ্ট লেআউটে কোনো শব্দের প্রমিত বানান আলাদা হলে পাশে দেখায় (সরকারী → সরকারি)। Space চাপলে আপনি যা লিখেছেন তা-ই বসে।</span><span lang="en">With a fixed layout, shows the standard spelling next to a word that differs (সরকারী → সরকারি). Space still keeps what you typed.</span></td></tr>
+        <tr><td><span lang="bn">শব্দের পরামর্শ</span><span lang="en">Word suggestions</span></td><td><span lang="bn"><b>বন্ধ</b></span><span lang="en"><b>Off</b></span></td><td><span lang="bn">নির্দিষ্ট লেআউটে টাইপ করার সময় ওই অক্ষর দিয়ে শুরু হওয়া প্রচলিত শব্দ দেখায় (বাং → বাংলা, বাংলাদেশ)।</span><span lang="en">With a fixed layout, shows common words that start with what you’ve typed (বাং → বাংলা, বাংলাদেশ).</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -1021,7 +1047,9 @@ sudo dnf install ekushe</code></pre></div>
       <tbody>
         <tr><td><span lang="bn">ছোট পপ-আপ</span><span lang="en">Compact popup</span></td><td><span lang="bn">বন্ধ</span><span lang="en">Off</span></td><td><span lang="bn">উইন্ডোজের পপ-আপে সংকেতের সারি লুকায়, শুধু পরামর্শ থাকে (চিহ্নের টিপ তবুও দেখায়)। পপ-আপের “যুক্তবর্ণ লুকান” বোতামও একই কাজ করে।</span><span lang="en">Hides the hint row in the Windows popup, leaving just the suggestions (mark tips still show). The popup’s “যুক্তবর্ণ লুকান” button does the same.</span></td></tr>
         <tr><td><span lang="bn">শুরুতে বাংলা</span><span lang="en">Start in Bangla</span></td><td><span lang="bn">বন্ধ</span><span lang="en">Off</span></td><td><span lang="bn">বন্ধ থাকলে কম্পিউটার চালু (লগ ইন) হলে একুশে ইংরেজিতে শুরু হয়; দুবার Shift চাপলে বাংলা। চালু করলে শুরু থেকেই বাংলা।</span><span lang="en">Off: when you log in, Ekushe starts in English and double-tap Shift gives Bangla. On: it starts in Bangla.</span></td></tr>
+        <tr data-os="win mac"><td><span lang="bn">ডিজাইন অ্যাপে বিজয় লেখা</span><span lang="en">Bijoy text in design apps</span></td><td><span lang="bn">বন্ধ</span><span lang="en">Off</span></td><td><span lang="bn">চালু করলে তালিকার অ্যাপগুলোতে (Photoshop, Illustrator, InDesign, CorelDRAW ইত্যাদি) একুশে ইউনিকোডের বদলে বিজয় (SutonnyMJ) লেখা দেয়; বাকি সব অ্যাপে ইউনিকোডই থাকে। দেখুন <a href="#design">ডিজাইন অ্যাপ ও পুরনো বিজয় ফাইল</a>।</span><span lang="en">When on, Ekushe types Bijoy (SutonnyMJ) text instead of Unicode in the listed apps (Photoshop, Illustrator, InDesign, CorelDRAW and others); every other app stays Unicode. See <a href="#design">Design apps and old Bijoy files</a>.</span></td></tr>
         <tr><td><span lang="bn">টার্মিনালে ইংরেজি</span><span lang="en">English in terminals</span></td><td><span lang="bn">চালু</span><span lang="en">On</span></td><td><span lang="bn">টার্মিনাল (Windows Terminal, Command Prompt, PowerShell, ম্যাকের Terminal ও iTerm) ইংরেজিতে শুরু হয়; দুবার Shift চাপলে সেখানেও বাংলা লেখা যায়। বন্ধ করলে টার্মিনাল অন্য যেকোনো অ্যাপের মতো আচরণ করে।</span><span lang="en">Terminals (Windows Terminal, Command Prompt, PowerShell, and Terminal and iTerm on a Mac) start in English; double-tap Shift to type Bangla there anyway. Turn it off and terminals behave like any other app.</span></td></tr>
+        <tr data-os="win"><td><span lang="bn">নতুন সংস্করণের খবর</span><span lang="en">New version notices</span></td><td><span lang="bn">বন্ধ</span><span lang="en">Off</span></td><td><span lang="bn">চালু করলে দিনে একবার দেখে নতুন সংস্করণ এসেছে কি না; শুধু GitHub-কে সংস্করণের নম্বর জিজ্ঞেস করে, আপনার কিছু পাঠায় না।</span><span lang="en">When on, checks once a day whether a new version is out; it only asks GitHub for the version number and sends nothing about you.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -1039,8 +1067,8 @@ sudo dnf install ekushe</code></pre></div>
   <p lang="en">Adding the same code again replaces its text. To delete a snippet, remove its line from the <a href="#advanced">configuration file</a>.</p>
 
   <h3 id="backup"><span lang="bn">ব্যাকআপ ও ফিরিয়ে আনা</span><span lang="en">Backup and restore</span></h3>
-  <p lang="bn">সেটিংসের নিচে <b>ব্যাকআপ নিন</b> চাপলে আপনার সেটিংস, স্নিপেট আর একুশের শেখা শব্দ একটি ফাইলে ডাউনলোড হয়। নতুন কম্পিউটারে (উইন্ডোজ বা লিনাক্স) <b>ফিরিয়ে আনুন</b> চেপে ফাইলটি দিলেই সব ফিরে আসে। আগের কিছু মোছে না: সেটিংস ব্যাকআপ থেকে নেয়, আর স্নিপেট ও শেখা শব্দ আগেরগুলোর সাথে যোগ হয়।</p>
-  <p lang="en">Click <b>ব্যাকআপ নিন</b> (back up) at the bottom of Settings to download your settings, snippets and learned words as one file. On a new computer (Windows or Linux), click <b>ফিরিয়ে আনুন</b> (restore) and pick the file. Nothing is lost: settings come from the backup, and snippets and learned words are added to the ones already there.</p>
+  <p lang="bn">সেটিংসের নিচে <b>ব্যাকআপ নিন</b> চাপলে আপনার সেটিংস, স্নিপেট, যোগ করা কীবোর্ড লেআউট আর একুশের শেখা শব্দ একটি ফাইলে ডাউনলোড হয়। নতুন কম্পিউটারে (উইন্ডোজ বা লিনাক্স) <b>ফিরিয়ে আনুন</b> চেপে ফাইলটি দিলেই সব ফিরে আসে। আগের কিছু মোছে না: সেটিংস ব্যাকআপ থেকে নেয়, আর স্নিপেট ও শেখা শব্দ আগেরগুলোর সাথে যোগ হয়।</p>
+  <p lang="en">Click <b>ব্যাকআপ নিন</b> (back up) at the bottom of Settings to download your settings, snippets, added keyboard layouts and learned words as one file. On a new computer (Windows or Linux), click <b>ফিরিয়ে আনুন</b> (restore) and pick the file. Nothing is lost: settings come from the backup, and snippets and learned words are added to the ones already there.</p>
 
   <h3 id="wrong-word" data-os="win"><span lang="bn">একুশে ভুল শব্দ বসালে</span><span lang="en">When Ekushe put in the wrong word</span></h3>
   <p lang="bn" data-os="win">ট্রে আইকনে রাইট-ক্লিক করে <b>ভুল শব্দ ঠিক করুন</b> বেছে নিন। সাম্প্রতিক শব্দগুলো দেখাবে; ভুলটির পাশে ঠিক শব্দটি বেছে নিন বা লিখে দিন, একুশে সঙ্গে সঙ্গে শিখে নেবে। এই তালিকা শুধু মেমোরিতে থাকে, পাসওয়ার্ডের ঘরের লেখা আসে না। ঠিক করা শব্দগুলো কপি করে <a href="/report/">সমস্যা জানানোর ফর্মে</a> দিলে সবার জন্য একুশে আরও ভালো হবে।</p>
@@ -1059,19 +1087,76 @@ sudo dnf install ekushe</code></pre></div>
 
 <!-- ═════════════ Layouts ═════════════ -->
 <section class="g-sec" id="layouts" data-os="win mac linux">
-  <h2><span lang="bn">অন্যান্য লেআউট</span><span lang="en">Other layouts</span><a class="anchor" href="#layouts" aria-label="link">#</a></h2>
-  <p lang="bn">ফোনেটিক ছাড়াও একুশেতে চারটি নির্দিষ্ট বাংলা লেআউট আছে, যেখানে প্রতিটি কী সব সময় একই বাংলা অক্ষর দেয়, বাংলা ছাপা কিবোর্ডের মতো:</p>
-  <p lang="en">Besides phonetic typing, Ekushe has four fixed Bangla layouts, where each key always gives the same letter, as printed on Bangla keyboards:</p>
+  <h2><span lang="bn">কীবোর্ড লেআউট</span><span lang="en">Keyboard layouts</span><a class="anchor" href="#layouts" aria-label="link">#</a></h2>
+  <p lang="bn">ফোনেটিক ছাড়াও একুশেতে চারটি নির্দিষ্ট বাংলা লেআউট আছে, যেখানে প্রতিটি কী সব সময় একই বাংলা অক্ষর দেয়, বাংলা ছাপা কিবোর্ডের মতো। এর বাইরে অন্য কোনো সাজানোয় হাত অভ্যস্ত হলে তার লেআউট ফাইল যোগ করা যায় (নিচে)।</p>
+  <p lang="en">Besides phonetic typing, Ekushe has four fixed Bangla layouts, where each key always gives the same letter, as printed on Bangla keyboards. If your hands know another arrangement, you can add its layout file (below).</p>
   <div class="cards">
-    <div class="card"><h4><span lang="bn">প্রভাত</span><span lang="en">Probhat</span></h4><p lang="bn">জনপ্রিয় মুক্ত লেআউট, লিনাক্সে বহুল ব্যবহৃত।</p><p lang="en">A popular open layout, widely used on Linux.</p></div>
     <div class="card"><h4><span lang="bn">জাতীয়</span><span lang="en">National (Jatiya)</span></h4><p lang="bn">বাংলাদেশ কম্পিউটার কাউন্সিলের প্রমিত লেআউট।</p><p lang="en">The standard layout of the Bangladesh Computer Council.</p></div>
+    <div class="card"><h4><span lang="bn">প্রভাত</span><span lang="en">Probhat</span></h4><p lang="bn">জনপ্রিয় মুক্ত লেআউট, লিনাক্সে বহুল ব্যবহৃত।</p><p lang="en">A popular open layout, widely used on Linux.</p></div>
     <div class="card"><h4><span lang="bn">বর্ণনা</span><span lang="en">Bornona</span></h4><p lang="bn">অভ্রের সাথে আসা পরিচিত লেআউট।</p><p lang="en">The familiar layout that came with Avro.</p></div>
     <div class="card"><h4><span lang="bn">মুনীর অপটিমা</span><span lang="en">Munir Optima</span></h4><p lang="bn">মুনীর চৌধুরীর টাইপরাইটার লেআউটের আধুনিক রূপ।</p><p lang="en">A modern take on Munier Chowdhury’s typewriter layout.</p></div>
   </div>
-  <p lang="bn">বেছে নিন স্টুডিওর <b>সেটিংস → কিবোর্ড লেআউট</b> থেকে<span data-os="win">, বা উইন্ডোজে ট্রে মেনুর <b>লেআউট</b> অংশ থেকে</span>। এই লেআউটে কিছু কাজ একুশে নিজেই সামলায়: কার আগে বা পরে যেভাবেই টাইপ করুন সঠিক জায়গায় বসায়, দুটি স্বরচিহ্ন মিলিয়ে সঠিক রূপ দেয় আর চন্দ্রবিন্দুর জায়গা ঠিক করে। ফোনেটিকে ফিরতে <b>একুশে ফোনেটিক</b> বেছে নিন।</p>
-  <p lang="en">Choose one in Studio’s <b>Settings → Keyboard layout</b><span data-os="win">, or on Windows from the <b>layout</b> items in the tray menu</span>. With these layouts Ekushe tidies a few things for you: a vowel sign lands in the right place whether you type it before or after the consonant, two vowel parts combine into the correct form, and the chandrabindu is put where it belongs. Choose <b>Ekushe Phonetic</b> to go back to phonetic typing.</p>
-  <p lang="bn">বিজয় লেআউট লাইসেন্সের কারণে নেই। পুরনো বিজয় লেখা ইউনিকোডে বদলাতে স্টুডিওর <a href="#studio-converter">রূপান্তর</a> ব্যবহার করুন।</p>
-  <p lang="en">The Bijoy layout isn’t included, for licensing reasons. To turn old Bijoy text into Unicode, use Studio’s <a href="#studio-converter">converter</a>.</p>
+  <p lang="bn">বেছে নিন স্টুডিওর <b>সেটিংস → কীবোর্ড লেআউট</b> থেকে<span data-os="win">, বা উইন্ডোজে ট্রে মেনুর <b>লেআউট</b> অংশ থেকে</span>। ফোনেটিকে ফিরতে <b>একুশে ফোনেটিক</b> বেছে নিন। অ্যান্ড্রয়েডে একুশে অ্যাপের <b>কীবোর্ড লেআউট</b> থেকে বেছে নিন; স্ক্রিনের কী আর আলাদা কিবোর্ড, দুটোতেই চলে।</p>
+  <p lang="en">Choose one in Studio’s <b>Settings → Keyboard layout</b><span data-os="win">, or on Windows from the <b>layout</b> items in the tray menu</span>. Choose <b>Ekushe Phonetic</b> to go back to phonetic typing. On Android, pick it under <b>Keyboard layout</b> in the Ekushe app; it works on the on-screen keys and on a physical keyboard.</p>
+
+  <h3><span lang="bn">নির্দিষ্ট লেআউটে একুশে যা সামলায়</span><span lang="en">What Ekushe handles with a fixed layout</span></h3>
+  <ul>
+    <li lang="bn"><b>কার আগে বা পরে:</b> ি, ে, ৈ অক্ষরের আগে দিলেও ঠিক জায়গায় বসে (কি, কে, কৈ); দুটি স্বরচিহ্ন মিলে সঠিক রূপ হয় (ে + া → ো)।</li>
+    <li lang="en"><b>Vowel signs before or after:</b> ি, ে and ৈ land in the right place even when typed before the letter (কি, কে, কৈ), and two parts combine into the right sign (ে + া → ো).</li>
+    <li lang="bn"><b>যুক্তাক্ষর:</b> লেআউটের লিংক কী দিয়ে অক্ষর জোড়া লাগে (যেমন জাতীয় লেআউটে j g k → ক্ত)।</li>
+    <li lang="en"><b>Conjuncts:</b> the layout’s link key joins letters (on National, j g k → ক্ত).</li>
+    <li lang="bn"><b>Backspace</b> একবারে ঠিক একটি কী-চাপ মোছে, তাই যুক্তাক্ষর ভাঙা সহজ।</li>
+    <li lang="en"><b>Backspace</b> takes back exactly one key press, so undoing a conjunct is easy.</li>
+    <li lang="bn"><b>তৃতীয় স্তর:</b> ডান Alt (ম্যাকে Option) চেপে পূর্ণ স্বরবর্ণের মতো বাড়তি অক্ষর।</li>
+    <li lang="en"><b>A third layer:</b> hold the right Alt key (Option on a Mac) for extra characters such as the full vowels.</li>
+    <li lang="bn"><b>প্রমিত বানানের ইঙ্গিত</b> আর চাইলে <b>শব্দের পরামর্শ</b> (দেখুন <a href="#settings">সেটিংস</a>)। লেখা সব সময় সঠিক ইউনিকোডে থাকে, তাই যেকোনো জায়গায় ঠিক দেখায়।</li>
+    <li lang="en">The <b>standard spelling hint</b> and, if you like, <b>word suggestions</b> (see <a href="#settings">Settings</a>). The text is always proper Unicode, so it shows correctly everywhere.</li>
+    <li lang="bn"><b>কী-ম্যাপ:</b> <b>সেটিংস → কী-ম্যাপ দেখুন</b> এক পাতায় পুরো কিবোর্ড দেখায়, প্রিন্ট করে মনিটরের পাশে রাখা যায়।</li>
+    <li lang="en"><b>Key map:</b> <b>Settings → কী-ম্যাপ দেখুন</b> (show key map) shows the whole keyboard on one page, ready to print and keep by your screen.</li>
+  </ul>
+
+  <h3 id="layout-files"><span lang="bn">নিজের লেআউট ফাইল</span><span lang="en">Your own layout file</span></h3>
+  <p lang="bn">একুশে নিজস্ব লেআউট সমর্থন করে: কোনো লেআউটের <b>লেআউট ফাইল</b> (<code>.ekushe-layout</code>) থাকলে, অফিসের নিজের সাজানো, কারও বানিয়ে দেওয়া বা নিজের বানানো, সেটি যোগ করে একুশের সব সুবিধাসহ লিখতে পারবেন। ফাইলটি কোনো প্রোগ্রাম নয়, শুধু কোন কী-তে কোন অক্ষর তার তালিকা; একুশে যোগ করার আগে পুরোটা যাচাই করে নেয়।</p>
+  <p lang="en">Ekushe supports custom layouts: if you have a <b>layout file</b> (<code>.ekushe-layout</code>) for a layout, whether your office’s own arrangement, one someone made for you or your own, add it and type with all of Ekushe’s help. The file isn’t a program, just a list of which key gives which letter, and Ekushe checks all of it before adding it.</p>
+  <ol class="steps">
+    <li lang="bn"><b>যোগ করুন</b>স্টুডিও → <b>সেটিংস → কীবোর্ড লেআউট → লেআউট ফাইল যোগ করুন</b> (অ্যান্ড্রয়েডে একুশে অ্যাপ → কীবোর্ড লেআউট → লেআউট ফাইল যোগ করুন)।</li>
+    <li lang="en"><b>Add it</b>Studio → <b>Settings → Keyboard layout → লেআউট ফাইল যোগ করুন</b> (add a layout file). On Android: Ekushe app → Keyboard layout → add a layout file.</li>
+    <li lang="bn"><b>বেছে নিন</b>নামটি তালিকায় চলে আসে; বেছে নিলেই চালু। ট্রে, মেনু আর কী-ম্যাপে সেই নামই দেখায়।</li>
+    <li lang="en"><b>Pick it</b>Its name appears in the list; choose it and it’s on. The same name shows in the tray, the menus and the key map.</li>
+  </ol>
+  <p lang="bn">নিজে বানাতে: কাছাকাছি একটি লেআউট বেছে <b>এই লেআউট ফাইল হিসেবে নিন</b> চাপুন, যেকোনো টেক্সট এডিটরে বদলান, তারপর আবার যোগ করুন। ফাইলে বলে দেওয়া যায় লিংক কী কোনটি, রেফ অক্ষরের পরে দেওয়া হয় কি না, আর কার সব সময় অক্ষরের আগে দেওয়া হয় কি না। যোগ করা লেআউট <a href="#backup">ব্যাকআপে</a> থাকে, তাই নতুন কম্পিউটারেও ফিরে আসে। ফাইলের পুরো নিয়ম আছে <a href="https://github.com/mahbub-khan25/ekushenext/blob/main/docs/guides/custom-layouts.md">এই নির্দেশিকায়</a>।</p>
+  <p lang="en">To make one: pick a similar layout, press <b>এই লেআউট ফাইল হিসেবে নিন</b> (save this layout as a file), edit it in any text editor, then add it back. A file can say which key is the link key, whether the reph is typed after its letter, and whether vowel signs always come before the letter. Added layouts are part of your <a href="#backup">backup</a>, so they come back on a new computer too. The full file format is in <a href="https://github.com/mahbub-khan25/ekushenext/blob/main/docs/guides/custom-layouts.md">this guide</a> (in Bangla).</p>
+  <p lang="bn">পুরনো বিজয় লেখা ইউনিকোডে বদলাতে স্টুডিওর <a href="#studio-converter">রূপান্তর</a> ব্যবহার করুন।</p>
+  <p lang="en">To turn old Bijoy text into Unicode, use Studio’s <a href="#studio-converter">converter</a>.</p>
+</section>
+
+<!-- ═════════════ Design apps & Bijoy files ═════════════ -->
+<section class="g-sec" id="design" data-os="win mac">
+  <h2><span lang="bn">ডিজাইন অ্যাপ ও পুরনো বিজয় ফাইল</span><span lang="en">Design apps and old Bijoy files</span><a class="anchor" href="#design" aria-label="link">#</a></h2>
+  <p lang="bn">Photoshop, Illustrator আর InDesign ইউনিকোড বাংলা ঠিকমতোই দেখায়, শুধু একটি সেটিং চালু করতে হয়; নইলে যুক্তাক্ষর ভেঙে যায় আর কার ভুল জায়গায় বসে:</p>
+  <p lang="en">Photoshop, Illustrator and InDesign show Unicode Bangla correctly once one setting is on; without it, conjuncts break apart and vowel signs land in the wrong place:</p>
+  <ul>
+    <li lang="bn"><b>Photoshop:</b> Edit → Preferences → Type (ম্যাকে Photoshop → Settings → Type) → <b>World-Ready Layout</b>, তারপর ফটোশপ আবার খুলে নতুন টেক্সট লেয়ারে লিখুন।</li>
+    <li lang="en"><b>Photoshop:</b> Edit → Preferences → Type (on a Mac, Photoshop → Settings → Type) → <b>World-Ready Layout</b>; restart Photoshop and type in a new text layer.</li>
+    <li lang="bn"><b>Illustrator:</b> Preferences → Type → <b>Show Indic Options</b> চালু করুন, তারপর Paragraph প্যানেলের মেনু থেকে <b>Middle Eastern &amp; South Asian Every-line Composer</b>।</li>
+    <li lang="en"><b>Illustrator:</b> turn on Preferences → Type → <b>Show Indic Options</b>, then choose <b>Middle Eastern &amp; South Asian Every-line Composer</b> from the Paragraph panel menu.</li>
+    <li lang="bn"><b>InDesign:</b> Paragraph প্যানেলের মেনু থেকে <b>Adobe World-Ready Paragraph Composer</b>, আর Character প্যানেলে ভাষা বাংলা।</li>
+    <li lang="en"><b>InDesign:</b> choose <b>Adobe World-Ready Paragraph Composer</b> from the Paragraph panel menu, and set the language to Bengali in the Character panel.</li>
+  </ul>
+  <p lang="bn">পুরনো টেমপ্লেট বা ছাপাখানার ফাইলে যদি এখনো SutonnyMJ লাগে, স্টুডিওর <b>সেটিংস → ডিজাইন অ্যাপে বিজয় (SutonnyMJ) লেখা</b> চালু করুন। তখন শুধু তালিকার অ্যাপগুলোতে একুশে বিজয় লেখা দেয়, আপনি লেখেন আগের মতোই; বাকি সব অ্যাপে ইউনিকোড থাকে। তালিকায় অ্যাপ যোগ বা বাদ দেওয়া যায়। <span data-os="win">উইন্ডোজে <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> ক্লিপবোর্ডের লেখা অ্যাপ বুঝে বসায়: এসব অ্যাপে বিজয় হিসেবে, অন্য অ্যাপে ইউনিকোড হিসেবে।</span></p>
+  <p lang="en">If an old template or a print shop’s file still needs SutonnyMJ, turn on <b>Settings → ডিজাইন অ্যাপে বিজয় (SutonnyMJ) লেখা</b> (Bijoy text in design apps) in Studio. Ekushe then types Bijoy text in the listed apps only, while you type as usual; every other app stays Unicode. You can add apps to the list or remove them. <span data-os="win">On Windows, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> pastes the clipboard in the form the app needs: Bijoy in those apps, Unicode everywhere else.</span></p>
+  <p lang="bn">পুরনো বিজয় Word ফাইল একবারে ইউনিকোডে বদলাতে স্টুডিওর <a href="#studio-converter">পুরো ফাইল রূপান্তর</a> ব্যবহার করুন।</p>
+  <p lang="en">To turn a whole old Bijoy Word file into Unicode, use Studio’s <a href="#studio-converter">whole-file conversion</a>.</p>
+</section>
+
+<!-- ═════════════ Office install ═════════════ -->
+<section class="g-sec" id="office" data-os="win">
+  <h2><span lang="bn">অফিসের সব কম্পিউটারে একসাথে</span><span lang="en">Installing across an office</span><a class="anchor" href="#office" aria-label="link">#</a></h2>
+  <p lang="bn">আইটি বিভাগের জন্য: একুশে প্রতিটি ব্যবহারকারীর নিজের ফোল্ডারে ইনস্টল হয়, অ্যাডমিন অধিকার লাগে না। একটি কম্পিউটারে স্টুডিওতে যেভাবে চান সাজিয়ে <b>সেটিংস → ব্যাকআপ নিন</b> চাপুন, ফাইলটির নাম দিন <code>ekushe-settings.json</code>। তারপর সব কম্পিউটারে একই সেটিংস দিয়ে নীরবে ইনস্টল করুন:</p>
+  <p lang="en">For IT departments: Ekushe installs into each user’s own folder, with no admin rights needed. Set up Studio the way you want on one computer, press <b>Settings → ব্যাকআপ নিন</b> (back up) and name the file <code>ekushe-settings.json</code>. Then install silently on every computer with the same settings:</p>
+  <div class="cmd-box"><pre><code>Ekushe-Setup.exe /S --settings \\server\share\ekushe-settings.json</code></pre></div>
+  <p lang="bn"><code>ekushe-settings.json</code> ফাইলটি <code>Ekushe-Setup.exe</code>-এর পাশে রাখলে <code>/S</code> দিলেই, বা কেউ ডাবল-ক্লিক করে ইনস্টল করলেও, সেটিংস নিজে থেকে বসে। আরও সুইচ: <code>--no-launch</code>, <code>--no-desktop-shortcut</code>, <code>--no-startup</code>। সফল হলে exit code 0, সমস্যা হলে 1 আর কারণ লেখা থাকে <code>%TEMP%\ekushe-install.log</code>-এ। Intune, SCCM বা লগইন স্ক্রিপ্টে ব্যবহারকারীর নিজের পরিচয়ে চালান। সরাতে: <code>"%LOCALAPPDATA%\Programs\Ekushe\ekushe.exe" --uninstall</code>।</p>
+  <p lang="en">Put <code>ekushe-settings.json</code> next to <code>Ekushe-Setup.exe</code> and the settings are applied with just <code>/S</code>, or even when someone double-clicks the installer. More switches: <code>--no-launch</code>, <code>--no-desktop-shortcut</code>, <code>--no-startup</code>. The exit code is 0 on success and 1 on a problem, with the reason in <code>%TEMP%\ekushe-install.log</code>. In Intune, SCCM or a logon script, run it in the user’s own context. To remove it: <code>"%LOCALAPPDATA%\Programs\Ekushe\ekushe.exe" --uninstall</code>.</p>
 </section>
 
 <!-- ═════════════ Advanced ═════════════ -->
@@ -1095,7 +1180,9 @@ sudo dnf install ekushe</code></pre></div>
 switch_hotkey = "DoubleTapShift"
 # Windows: convert the selected text in any app (Ctrl, Alt or Win plus a letter, digit or F-key)
 convert_selection_hotkey = "Ctrl+Alt+C"
-# AvroPhonetic, Probhat, NationalJatiya, Bornona or MunirOptima
+# Windows: paste the clipboard as the app needs it (Bijoy in Bijoy-output apps)
+smart_paste_hotkey = "Ctrl+Alt+V"
+# AvroPhonetic, Probhat, NationalJatiya, Bornona, MunirOptima, or Custom for an added layout file
 active_layout = "AvroPhonetic"
 # Smart, PhoneticFirst or PhoneticOnly
 typing_mode = "Smart"
@@ -1115,6 +1202,14 @@ enable_next_word_prediction = true
 max_candidates = 9
 # Backspace right after a word reopens it with its suggestions
 backspace_undo = true
+
+# Fixed layouts: show the standard spelling next to a word (সরকারী → সরকারি)
+fixed_spelling_hint = true
+# Fixed layouts: offer common words that start with what you've typed
+fixed_word_suggestions = false
+# Windows and Mac: type Bijoy (SutonnyMJ) text in these design apps
+bijoy_output = false
+bijoy_output_apps = ["photoshop.exe", "illustrator.exe", "indesign.exe"]
 
 # Fixed layouts only: tidy vowel signs and chandrabindu
 [layout_automation]
@@ -1156,8 +1251,8 @@ ekn = "এখন"
 <section class="g-sec" id="privacy">
   <h2><span lang="bn">গোপনীয়তা ও পাসওয়ার্ড</span><span lang="en">Privacy and password boxes</span><a class="anchor" href="#privacy" aria-label="link">#</a></h2>
   <ul>
-    <li lang="bn"><b>কিছুই বাইরে যায় না।</b> একুশে ইন্টারনেটে কিছু পাঠায় না; অভিধান, পরামর্শ, বানান পরীক্ষা সব আপনার কম্পিউটারেই চলে। স্টুডিও চলে শুধু আপনার কম্পিউটারের ভেতরের ঠিকানায় (127.0.0.1), এককালীন কোড দিয়ে। একমাত্র ব্যতিক্রম উইন্ডোজে <a href="#update">হালনাগাদ দেখা</a>, তাও শুধু আপনি চাইলে: তখন একুশে GitHub-কে সর্বশেষ সংস্করণের নম্বরটা জিজ্ঞেস করে, আপনার কিছু পাঠায় না।</li>
-    <li lang="en"><b>Nothing leaves your computer.</b> Ekushe sends nothing over the internet; the dictionary, suggestions and spell check all run locally. Studio runs only at your computer’s internal address (127.0.0.1), behind a one-time code. The one exception is <a href="#update">checking for updates</a> on Windows, and only when you ask: Ekushe then asks GitHub for the newest version number and sends nothing about you.</li>
+    <li lang="bn"><b>কিছুই বাইরে যায় না।</b> একুশে ইন্টারনেটে কিছু পাঠায় না; অভিধান, পরামর্শ, বানান পরীক্ষা সব আপনার কম্পিউটারেই চলে। স্টুডিও চলে শুধু আপনার কম্পিউটারের ভেতরের ঠিকানায় (127.0.0.1), এককালীন কোড দিয়ে। ব্যতিক্রম দুটি, দুটোই শুধু আপনি চাইলে: উইন্ডোজে <a href="#update">হালনাগাদ দেখা</a> (একুশে GitHub-কে সর্বশেষ সংস্করণের নম্বরটা জিজ্ঞেস করে, আপনার কিছু পাঠায় না), আর স্টুডিওর <a href="#studio-ocr">ছবি থেকে লেখায়</a> আপনি নিজে <b>একুশেকে পাঠান</b> চেপে রাজি হলে সেই পাতার ছবি আর ঠিক করা লেখা।</li>
+    <li lang="en"><b>Nothing leaves your computer.</b> Ekushe sends nothing over the internet; the dictionary, suggestions and spell check all run locally. Studio runs only at your computer’s internal address (127.0.0.1), behind a one-time code. There are two exceptions, both only when you ask: <a href="#update">checking for updates</a> on Windows (Ekushe asks GitHub for the newest version number and sends nothing about you), and in Studio’s <a href="#studio-ocr">picture to text</a>, a page’s picture and your corrected text when you press <b>একুশেকে পাঠান</b> (send to Ekushe) and agree.</li>
     <li lang="bn"><b>পাসওয়ার্ডের ঘরে একুশে সরে দাঁড়ায়।</b> পাসওয়ার্ড বা PIN-এর ঘরে সাধারণ অক্ষর বসে: কোনো বাংলা রূপান্তর নেই, পপ-আপ নেই, কিছু মনে রাখা হয় না।</li>
     <li lang="en"><b>Ekushe steps aside in password boxes.</b> In a password or PIN field, plain characters are typed: no Bangla conversion, no popup, nothing remembered.</li>
     <li lang="bn"><b>পাসওয়ার্ডের মতো দেখতে লেখা মনে রাখা হয় না</b>, যেকোনো ঘরে: অক্ষর আর সংখ্যা মেশানো (<code>abc123</code>), <code>@ # $ %</code>-এর মতো চিহ্ন, বা খুব লম্বা টানা লেখা। সাধারণ শব্দ আর একুশের চিহ্ন (<code>,,</code> <code>^</code> <code>rr</code> …) আগের মতোই শেখা হয়।</li>
@@ -1315,8 +1410,8 @@ ekn = "এখন"
       <p lang="en">Yes. No ads, hidden costs or premium edition. The code is MPL-2.0 and the dictionary CC BY-SA 4.0.</p>
     </div></details>
     <details><summary><span lang="bn">অভ্র আর একুশে একসাথে রাখা যায়?</span><span lang="en">Can I keep Avro installed alongside?</span></summary><div>
-      <p lang="bn">যায়, তবে একসাথে দুটি চালু রাখবেন না; দুটোই একই কী ধরতে চায়। উইন্ডোজে একটি ব্যবহারের সময় অন্যটি বন্ধ রাখুন। ফোনেটিক নিয়ম একই, তাই অভ্যাস বদলাতে হয় না।</p>
-      <p lang="en">Yes, but don’t run both at once; they both want the same keys. On Windows, exit one while you use the other. The phonetic rules are the same, so your habits carry over.</p>
+      <p lang="bn">যায়, তবে একসাথে দুটি চালু রাখবেন না; দুটোই একই কী ধরতে চায়। উইন্ডোজে একটি ব্যবহারের সময় অন্যটি বন্ধ রাখুন। অন্য কোনো বাংলা কিবোর্ড প্রোগ্রাম একসাথে চললে একুশে নিজেই জানায়। ফোনেটিক নিয়ম একই, তাই অভ্যাস বদলাতে হয় না।</p>
+      <p lang="en">Yes, but don’t run both at once; they both want the same keys. On Windows, exit one while you use the other; Ekushe tells you if it finds another Bangla keyboard program running. The phonetic rules are the same, so your habits carry over.</p>
     </div></details>
     <details><summary><span lang="bn">ইন্টারনেট ছাড়া চলবে?</span><span lang="en">Does it work offline?</span></summary><div>
       <p lang="bn">হ্যাঁ, পুরোপুরি। অভিধানসহ সবকিছু অ্যাপের ভেতরেই আছে।</p>
