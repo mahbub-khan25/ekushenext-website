@@ -16,8 +16,10 @@
 //   OCR_ADMIN_KEY   secret: long random text; needed to list and download samples
 //   REPORTS         optional KV namespace (already used by /api/report): limits sends per visitor
 const PER_DAY = 30;          // sends per visitor per day
-const ALL_PER_DAY = 3000;    // sends per day from everyone together (keeps storage in check)
-const MAX_PAGES = 20;
+const ALL_PER_DAY = 1000;    // sends per day from everyone together
+const MB_PER_DAY = 250;      // stored megabytes per day from everyone together (with a 30-day
+                             // delete rule on the bucket this stays inside R2's free 10 GB)
+const MAX_PAGES = 10;
 const MAX_JPG = 4 * 1024 * 1024;
 const MAX_TEXT = 300000;
 
@@ -107,6 +109,10 @@ export async function onRequestPost({ request, env }) {
   const day = new Date().toISOString().slice(0, 10);
   if (env.REPORTS) {
     if (!(await hit(env, `ocr-all:${day}`, ALL_PER_DAY))) return json({ ok: false, error: 'too_many' }, 429);
+    const bytes = jpgs.reduce((n, j) => n + j.bytes.length, 0) + corrected.length * 3;
+    const used = Number(await env.REPORTS.get(`ocr-bytes:${day}`)) || 0;
+    if (used + bytes > MB_PER_DAY * 1048576) return json({ ok: false, error: 'too_many' }, 429);
+    await env.REPORTS.put(`ocr-bytes:${day}`, String(used + bytes), { expirationTtl: 2 * 86400 });
     if (ip) {
       const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`ocr|${day}|${ip}`));
       const fp = [...new Uint8Array(digest)].slice(0, 8).map((x) => x.toString(16).padStart(2, '0')).join('');
