@@ -141,13 +141,13 @@ export const EN = {
   'faq.3.q': 'Which apps can I type in?',
   'faq.3.a': 'Almost anywhere: Word, Chrome, Facebook, WhatsApp Desktop, Notepad, email. On a computer, double-tap Shift to switch between Bangla and English, and Ekushe remembers which language you used in each app. On a phone, Ekushe Next becomes your keyboard, so it works in WhatsApp, Messenger, Facebook and every other app.',
   'faq.4.q': 'I type with a fixed layout, from memory. Can I use Ekushe?',
-  'faq.4.a': 'Yes. National (Jatiya), Probhat, Bornona and Munir Optima are built in; pick one in Settings. Ekushe also supports custom layouts: if your hands know another layout, add its layout file and type the way you always have, with all of Ekushe’s help, and the text comes out as Unicode. To turn old Bijoy text or whole Word files into Unicode, use the converter in Studio.',
+  'faq.4.a': 'Yes. National (Jatiya), Probhat, Bornona and Munir Optima are built in; pick one in Settings. Ekushe also supports custom layouts: make your own by clicking keys in Studio, or add a layout file (on Android, on tablets), and type the way you always have, with all of Ekushe’s help; the text comes out as Unicode. To turn old Bijoy text or whole Word files into Unicode, use the converter in Studio.',
   'faq.5.q': 'Why does Windows or my browser show a warning?',
   'faq.5.a': 'Ekushe Next is a new app. The Windows app is digitally signed under its maker’s verified name, but a newly signed app takes a little while to build a reputation. Click More info → Run anyway.',
   'faq.6.q': 'How do I uninstall it?',
   'faq.6.a': 'On Windows, remove Ekushe Next in Settings → Apps. On a Mac, delete Ekushe.app from /Library/Input Methods. On Linux, first click <b>কিবোর্ড বাদ দিন</b> (remove keyboard) in Studio, then remove the ekushe package with your package manager. On Android, press and hold the app icon and tap Uninstall.',
   'faq.7.q': 'Where do I report a problem?',
-  'faq.7.a': 'Use the <a href="/report/">report page</a>; no account is needed. You can also open it from the app: 🐞 Report a problem in the tray menu on a computer, or the Help section of the app on a phone. Saying what happened and which app you were typing in helps get it fixed quickly.',
+  'faq.7.a': 'Use the <a href="/report/">report page</a>; no account is needed. You can also open it from the app: Report a problem in the tray menu on a computer, or the Help section of the app on a phone. Saying what happened and which app you were typing in helps get it fixed quickly.',
 
   'nav.android': 'Android',
   'and.ios': 'The iPhone and iPad keyboard is built too and being tested now. It will come later.',
@@ -174,6 +174,15 @@ export const EN = {
   'foot.guide': 'User guide',
   'foot.releases': 'All versions',
   'foot.issues': 'Report a problem',
+  'foot.press': 'For the press',
+  'nav.more': 'More',
+  'more.title': 'What else it does',
+  'more.1.t': 'Speak, and it types (experimental)',
+  'more.1.p': 'On Windows, press Ctrl+Alt+Space in any app and speak Bangla: the words are typed as you speak. Say “দাঁড়ি”, “কমা” or “নতুন লাইন” for marks and new lines. Everything runs on your computer; the internet is used only to download the model once. It is still learning, so some words may come out wrong.',
+  'more.2.t': 'Make your own layout',
+  'more.2.p': 'National (Jatiya), Probhat, Bornona and Munir Optima are built in. Or click keys on an on-screen keyboard in Studio to make your own layout, try it as you go, and take it to another computer or a tablet as a file.',
+  'more.3.t': 'Picture to text',
+  'more.3.p': 'Give it a photo of a printed Bangla page, a screenshot or a scanned PDF: Ekushe reads it into Unicode and fixes the spelling with its dictionary. All of it on your computer.',
 };
 
 // Bangla strings that only the script needs (everything else is read from the page).
