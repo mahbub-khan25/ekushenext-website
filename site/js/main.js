@@ -306,10 +306,10 @@ const REPO = 'mahbub-khan25/ekushenext';
 const COMING_SOON = !LAUNCHED;
 // Used only when the newest release can't be looked up (and while it is older than this one).
 const FALLBACK = {
-  tag_name: 'v0.2.0-beta.10', published_at: '2026-11-01T11:08:58Z', html_url: `https://github.com/${REPO}/releases/tag/v0.2.0-beta.10`,
+  tag_name: 'v0.2.0-beta.14', published_at: '2026-11-04T08:54:12Z', html_url: `https://github.com/${REPO}/releases/tag/v0.2.0-beta.14`,
   assets: [
-    ['Ekushe-Setup.exe', 37255984], ['Ekushe-Setup.zip', 25753747], ['Ekushe-Portable.exe', 37255984], ['Ekushe-macOS.pkg', 52149887], ['Ekushe-macOS.zip', 52146435], ['ekushe_0.2.0-beta.10_amd64.deb', 73840982], ['ekushe-0.2.0-beta.10.x86_64.rpm', 75863251], ['Ekushe-0.2.0-beta.10-x86_64.AppImage', 73017848], ['Ekushe-Next-Android.apk', 24436894],
-  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.2.0-beta.10/${name}` })),
+    ['Ekushe-Setup.exe', 37558064], ['Ekushe-Setup.zip', 25838514], ['Ekushe-Portable.exe', 37558064], ['Ekushe-macOS.pkg', 52275973], ['Ekushe-macOS.zip', 52274281], ['ekushe_0.2.0-beta.14_amd64.deb', 73999498], ['ekushe-0.2.0-beta.14.x86_64.rpm', 76062794], ['Ekushe-0.2.0-beta.14-x86_64.AppImage', 73140728], ['Ekushe-Next-Android.apk', 24470238]
+  ].map(([name, size]) => ({ name, size, browser_download_url: `https://github.com/${REPO}/releases/download/v0.2.0-beta.14/${name}` })),
 };
 const FILES = {
   windows: [[/^Ekushe-Setup\.exe$/, 'winSetup', 'windows'], [/^Ekushe-Setup\.zip$/, 'winZip', 'windows'], [/^Ekushe-Portable\.exe$/, 'winPortable', 'windows']],

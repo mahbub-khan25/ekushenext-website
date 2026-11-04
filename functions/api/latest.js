@@ -8,6 +8,7 @@ const FRESH = 300; // seconds
 export async function onRequestGet(context) {
   const cache = caches.default;
   const key = new Request(new URL('/api/latest', context.request.url).toString());
+  const staleKey = new Request(new URL('/api/latest-last-good', context.request.url).toString());
   const hit = await cache.match(key);
   if (hit) return hit;
 
@@ -29,6 +30,9 @@ export async function onRequestGet(context) {
       assets: r.assets.map(({ name, size, browser_download_url }) => ({ name, size, browser_download_url })),
     };
   } catch (e) {
+    // GitHub busy or rate-limited: hand out the last good answer (kept a week) instead of an error
+    const stale = await cache.match(staleKey);
+    if (stale) return new Response(stale.body, { status: 200, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' } });
     body = { error: String(e.message || e) };
     status = 502;
   }
@@ -39,6 +43,9 @@ export async function onRequestGet(context) {
       'Cache-Control': status === 200 ? `public, max-age=${FRESH}` : 'no-store',
     },
   });
-  if (status === 200) context.waitUntil(cache.put(key, out.clone()));
+  if (status === 200) {
+    context.waitUntil(cache.put(key, out.clone()));
+    context.waitUntil(cache.put(staleKey, new Response(JSON.stringify(body), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=604800' } })));
+  }
   return out;
 }
