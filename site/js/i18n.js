@@ -175,6 +175,7 @@ export const EN = {
   'foot.releases': 'All versions',
   'foot.issues': 'Report a problem',
   'foot.press': 'For the press',
+  'foot.privacy': 'Privacy policy',
   'nav.more': 'More',
   'more.title': 'What else it does',
   'more.1.t': 'Speak, and it types (experimental)',

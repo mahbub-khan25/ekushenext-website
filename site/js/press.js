@@ -4,7 +4,9 @@ const store = {
   get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
   set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } },
 };
-const TITLES = { bn: 'সংবাদমাধ্যমের জন্য — একুশে নেক্সট | Press', en: 'Press — Ekushe Next' };
+const TITLES = location.pathname.startsWith('/privacy')
+  ? { bn: 'গোপনীয়তা নীতি — একুশে নেক্সট | Privacy policy', en: 'Privacy policy — Ekushe Next' }
+  : { bn: 'সংবাদমাধ্যমের জন্য — একুশে নেক্সট | Press', en: 'Press — Ekushe Next' };
 function applyLang(lang) {
   document.documentElement.lang = lang;
   store.set('ekushe-lang', lang);
